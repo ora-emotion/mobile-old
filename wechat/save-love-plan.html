@@ -22,5 +22,23 @@
 <!-- import save-love-plan javascript -->
 <script type="text/javascript" src="js/save-love-plan.js"></script>
 
+<script type="text/javascript">
+    /** 字体大小自适应 */
+    (function () {
+        // 获取 html 元素
+        var rootEle = document.documentElement;
+        // 获取设备宽度
+        var deviceWidth = rootEle.clientWidth;
+        // 改变 html 字体大小 - 以 iPhone6 为准
+        rootEle.style.fontSize = deviceWidth / 6.4 + "px";
+
+        window.onresize = function () {
+            var rootEle = document.documentElement;
+            var deviceWidth = rootEle.clientWidth;
+            rootEle.style.fontSize = deviceWidth / 6.4 + "px";
+        }
+    }());
+</script>
+
 </body>
 </html>
