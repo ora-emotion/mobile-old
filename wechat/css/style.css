@@ -1,0 +1,34 @@
+/** 样式预设 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    min-width: 750px;
+    margin: 0 auto;
+}
+
+.inner {
+    margin: 0 20px;
+}
+
+a {
+    text-decoration: none;
+}
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        text-decoration: none;
+    }
+
+ol, ul, li {
+    list-style: none inside;
+}
+
+p {
+    font-size: .26rem;
+    color: #000;
+}
+

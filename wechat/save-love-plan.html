@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>橘子情感--挽爱计划</title>
+
+    <!-- logo -->
+    <link rel="shortcut icon" href="images/ora.jpg" type="image/x-icon">
+
+    <!-- import stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/save-love-plan.css">
+
+
+    <!-- import third-party javascript -->
+    <script type="text/javascript" src="js/jq/jquery-3.2.1.js"></script>
+
+</head>
+<body>
+
+<div class="preface">
+    <div class="preface-img">
+        <div class="preface-btn"></div>
+    </div>
+</div>
+
+<!-- import save-love-plan javascript -->
+<script type="text/javascript" src="js/save-love-plan.js"></script>
+
+<script type="text/javascript">
+
+    var oraMoveBtn = (function (btn) {
+        //-------------------------------------------- Start config map ----------------------------------------------------
+
+        //-------------------------------------------- End config map ------------------------------------------------------
+
+        //-------------------------------------------- Start Animate -------------------------------------------------------
+        var btnMove = function () {
+
+            var mainBtn = $(".preface-btn"),
+                bottom = mainBtn.css("bottom"),
+                state = false;
+
+            if (state === false) {
+
+                mainBtn.animate({ bottom : 0, opacity : 0 }, 1000);
+
+                mainBtn.animate({ bottom : 100 });
+
+                mainBtn.animate({ bottom : 100, opacity : 1 }, 300);
+
+            }
+
+        };
+        //-------------------------------------------- End Animate ---------------------------------------------------------
+
+        //-------------------------------------------- Set time interval ---------------------------------------------------
+        setInterval(btnMove, 1000);
+        //-------------------------------------------- Set time interval ---------------------------------------------------
+
+    }());
+
+</script>
+
+</body>
+</html>
