@@ -14,10 +14,10 @@
 }
 .preface-btn {
     position: absolute;
-    bottom: 100px;
+    bottom: 1rem;
 
-    width: 80px;
-    height: 80px;
+    width: .80rem;
+    height: .80rem;
 
     border-radius: 50%;
 
@@ -29,3 +29,63 @@
     height: 100%;
 }
 /** 头图上下移动的小按钮 */
+
+/** preface icons and texts*/
+.preface .preface-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fefdf8;
+}
+
+.preface .preface-icons .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 .4rem;
+}
+.preface .preface-icons .row:last-child {
+    margin-bottom: .35rem;
+}
+
+.preface .preface-icons .row .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.preface .preface-icons .row .item .item-icon {
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: .85rem;
+    height: .85rem;
+    margin-top: .35rem;
+}
+
+.preface .preface-icons .row:first-child .item:nth-child(1) .item-icon {
+    background: url("../images/save-love-plan/preface-icon-top-01.png") no-repeat center center;
+}
+.preface .preface-icons .row:first-child .item:nth-child(2) .item-icon {
+    background: url("../images/save-love-plan/preface-icon-top-02.png") no-repeat center center;
+}
+.preface .preface-icons .row:first-child .item:nth-child(3) .item-icon {
+    background: url("../images/save-love-plan/preface-icon-top-03.png") no-repeat center center;
+}
+.preface .preface-icons .row:first-child .item:nth-child(4) .item-icon {
+    background: url("../images/save-love-plan/preface-icon-top-04.png") no-repeat center center;
+}
+
+.preface .preface-icons .row:last-child .item:nth-child(1) .item-icon {
+    background: url("../images/save-love-plan/preface-icon-bot-01.png") no-repeat center center;
+}
+.preface .preface-icons .row:last-child .item:nth-child(2) .item-icon {
+    background: url("../images/save-love-plan/preface-icon-bot-02.png") no-repeat center center;
+}
+.preface .preface-icons .row:last-child .item:nth-child(3) .item-icon {
+    background: url("../images/save-love-plan/preface-icon-bot-03.png") no-repeat center center;
+}
+.preface .preface-icons .row:last-child .item:nth-child(4) .item-icon {
+    background: url("../images/save-love-plan/preface-icon-bot-04.png") no-repeat center center;
+}
+
+/** preface icons and texts*/
