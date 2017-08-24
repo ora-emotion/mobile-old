@@ -27,27 +27,6 @@ var oraMoveBtn = (function (btn) {
             bottom = mainBtn.css("bottom"),
             state = false;
 
-        // console.log(deviceWidth);
-
-        // mainBtn.css({
-        //
-        //     left : (deviceWidth - btnWidth) / 2
-        //
-        // });
-
-        var dis = (parseInt($(".preface-img").css("width")) - parseInt($(".preface-btn").css("width"))) / 2;
-
-        console.log(dis * 2);
-
-
-        // $(".preface-btn").css({
-        //
-        //     "position" : "absolute",
-        //     "left" : dis/100
-        //
-        // });
-
-
         if (state === false) {
 
             // mainBtn.css({ bottom : "-90vh", opacity : 1 });
@@ -59,10 +38,6 @@ var oraMoveBtn = (function (btn) {
             mainBtn.animate({ bottom : "-88%", opacity : 1 }, 300);
 
         }
-
-        console.log($(".preface-btn"));
-
-
 
     };
     //-------------------------------------------- End Animate ---------------------------------------------------------
