@@ -87,5 +87,96 @@
 .preface .preface-icons .row:last-child .item:nth-child(4) .item-icon {
     background: url("../images/save-love-plan/preface-icon-bot-04.png") no-repeat center center;
 }
-
 /** preface icons and texts*/
+
+
+/** module area */
+.module {
+    background-color: transparent;
+}
+/** module area */
+
+
+/** split line */
+.split-line {
+    background: url("../images/save-love-plan/split-line.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: .19rem;
+    margin-top: .1rem;
+    margin-bottom: .4rem;
+}
+/** split line */
+
+
+/** text indent */
+.indent {
+    text-indent: .52rem;
+}
+/** text indent */
+
+
+/** module 01 area */
+.module-01 .txt {
+    padding: 0 .31rem;
+    /*text-align: justify;*/
+    letter-spacing: .02rem;
+}
+.module-01 .txt .indent:last-child {
+    margin-top: .4rem;
+}
+
+.module-01 .circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: .23rem;
+    padding: .27rem 0;
+}
+.module-01 .circle .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: .43rem;
+}
+.module-01 .circle .row:last-child {
+    margin-bottom: 0;
+}
+
+.module-01 .circle .row .icon {
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 1.45rem;
+    height: 1.44rem;
+    margin-left: .15rem;
+    margin-right: .65rem;
+}
+
+.module-01 .circle .row:first-child .icon {
+    background: url("../images/save-love-plan/module01-circle-01.png") no-repeat center center;
+}
+
+.module-01 .circle .row:nth-child(2) .icon {
+    background: url("../images/save-love-plan/module01-circle-02.png") no-repeat center center;
+}
+
+.module-01 .circle .row:last-child .icon {
+    background: url("../images/save-love-plan/module01-circle-03.png") no-repeat center center;
+}
+
+.module-01 .circle .row .des .num {
+    font-size: .26rem;
+    font-weight: bold;
+    color: #f83962;
+}
+.module-01 .circle .row:last-child .des .num {
+    color: #539cff;
+}
+/** module 01 area */
+
+
+/** module 02 area */
+.module-02 {
+
+}
+/** module 02 area */

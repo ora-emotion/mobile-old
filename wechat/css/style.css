@@ -5,17 +5,21 @@
 }
 
 html, body {
-    min-width: 750px;
+    min-width: 7.5rem;
     margin: 0 auto;
     font-family: "Microsoft YaHei";
 }
 
-.inner {
+.bg {
     width: 100%;
     height: 60.53rem;
     background: url("../images/save-love-plan/bg.jpg") no-repeat center center;
     -webkit-background-size: cover;
     background-size: cover;
+}
+
+.inner {
+    padding: 0 .2rem;
 }
 
 a {
@@ -35,5 +39,6 @@ ol, ul, li {
 p {
     font-size: .26rem;
     color: #333;
+    line-height: .4rem;
 }
 
