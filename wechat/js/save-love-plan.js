@@ -18,11 +18,8 @@ var changeFontSize = (function () {
 }());
 
 
+/** 头图上下移动的小箭头 */
 var oraMoveBtn = (function (btn) {
-    //-------------------------------------------- Start config map ----------------------------------------------------
-
-    //-------------------------------------------- End config map ------------------------------------------------------
-
     //-------------------------------------------- Start Animate -------------------------------------------------------
     var btnMove = function () {
 
@@ -30,15 +27,42 @@ var oraMoveBtn = (function (btn) {
             bottom = mainBtn.css("bottom"),
             state = false;
 
+        // console.log(deviceWidth);
+
+        // mainBtn.css({
+        //
+        //     left : (deviceWidth - btnWidth) / 2
+        //
+        // });
+
+        var dis = (parseInt($(".preface-img").css("width")) - parseInt($(".preface-btn").css("width"))) / 2;
+
+        console.log(dis * 2);
+
+
+        // $(".preface-btn").css({
+        //
+        //     "position" : "absolute",
+        //     "left" : dis/100
+        //
+        // });
+
+
         if (state === false) {
 
-            mainBtn.animate({ bottom : 0, opacity : 0 }, 800);
+            // mainBtn.css({ bottom : "-90vh", opacity : 1 });
 
-            mainBtn.animate({ bottom : 100 });
+            mainBtn.animate({ bottom : "-95%", opacity : 0 }, 1000);
 
-            mainBtn.animate({ bottom : 100, opacity : 1 }, 300);
+            mainBtn.animate({ bottom : "-88%" });
+
+            mainBtn.animate({ bottom : "-88%", opacity : 1 }, 300);
 
         }
+
+        console.log($(".preface-btn"));
+
+
 
     };
     //-------------------------------------------- End Animate ---------------------------------------------------------
@@ -46,7 +70,6 @@ var oraMoveBtn = (function (btn) {
     //-------------------------------------------- Set time interval ---------------------------------------------------
     setInterval(btnMove, 1000);
     //-------------------------------------------- Set time interval ---------------------------------------------------
-
 }());
 
 

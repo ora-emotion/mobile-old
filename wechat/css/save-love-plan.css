@@ -13,15 +13,18 @@
     justify-content: center;
 }
 .preface-btn {
-    position: absolute;
-    bottom: 1rem;
+    position: relative;
+    bottom: -88%;
+    opacity: 1;
 
-    width: .80rem;
-    height: .80rem;
+    width: 124px;
+    height: 124px;
 
     border-radius: 50%;
 
     background: url("../images/save-love-plan/preface-btn.png") no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
 
 }
 .preface-img img {
@@ -131,7 +134,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: .23rem;
+    margin-top: .26rem;
     padding: .27rem 0;
 }
 .module-01 .circle .row {
