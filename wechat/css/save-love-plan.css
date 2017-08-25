@@ -79,6 +79,8 @@
     flex-direction: column;
     justify-content: center;
     background-color: #fefdf8;
+
+    padding: 0 .2rem;
 }
 
 .preface .preface-icons .row {
