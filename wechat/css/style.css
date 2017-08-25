@@ -5,12 +5,17 @@
 }
 
 html, body {
-    min-width: 750px;
+    min-width: 7.5rem;
     margin: 0 auto;
+    font-family: "Microsoft YaHei";
 }
 
 .inner {
-    margin: 0 20px;
+    padding: 0 .2rem;
+}
+
+.text-center {
+    text-align: center;
 }
 
 a {
@@ -29,6 +34,7 @@ ol, ul, li {
 
 p {
     font-size: .26rem;
-    color: #000;
+    color: #333;
+    line-height: .4rem;
 }
 
