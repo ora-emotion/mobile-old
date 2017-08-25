@@ -179,6 +179,7 @@
 
 
 /** module 02 area */
+/* title area */
 .module-02 .title {
     width: 100%;
     display: flex;
@@ -203,4 +204,12 @@
     width: .37rem;
     height: .02rem;
 }
+/* title area */
+
+/* para area */
+.module-02 .para p {
+    padding: 0 .44rem;
+    margin-bottom: .21rem;
+}
+/* para area */
 /** module 02 area */
