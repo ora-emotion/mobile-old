@@ -133,6 +133,16 @@
 /** preface icons and texts*/
 
 
+.bg {
+    width: 100%;
+    height: 60.53rem;
+    background: url("../images/save-love-plan/bg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+
 /** module area */
 .module {
     background-color: transparent;

@@ -25,7 +25,17 @@ var oraMoveBtn = (function (btn) {
 
         var mainBtn = $(".preface-btn"),
             bottom = mainBtn.css("bottom"),
+            btnWidth = mainBtn.css("width"),
+            deviceWidth = $(document).width(),
             state = false;
+
+        mainBtn.css({
+
+            left : (deviceWidth - btnWidth) / 2
+
+        });
+
+        console.log(mainBtn.css("left"));
 
         if (state === false) {
 
