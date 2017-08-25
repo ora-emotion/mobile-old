@@ -472,28 +472,17 @@
 /** module 06 area */
 .module-06 .main {
     display: flex;
-    /*justify-content: space-between;*/
 
     padding-top: .3rem;
     padding-left: .62rem;
+    padding-bottom: .76rem;
 }
-/*.module-06 .main .icon-line {*/
-    /*background: url("../images/save-love-plan/module06-column-line.png") no-repeat center center;*/
-    /*-webkit-background-size: cover;*/
-    /*background-size: cover;*/
-
-    /*width: .63rem;*/
-    /*height: 7.27rem;*/
-
-/*}*/
 .module-06 .main .icons-group {
     width: .63rem;
-    height: 7.27rem;
+    height: 7.6rem;
 
     display: flex;
     justify-content: center;
-
-    background: rgba(0, 0, 0, .1);
 }
 .module-06 .main .icons-group .column-line {
     width: .02rem;
@@ -504,6 +493,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    position: relative;
 }
 
 .module-06 .main .icons-group .icons .icon-wrap {
@@ -511,6 +502,13 @@
     height: .53rem;
 
     position: absolute;
+    top: 0;
+    left: -.31rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .module-06 .main .icons-group .icons .icon-wrap .icon-bg {
@@ -532,32 +530,103 @@
     height: 100%;
 
     position: absolute;
-    left: 0;
+    left: .04rem;
 
     -webkit-background-size: cover;
     background-size: cover;
 }
 
+.module-06 .main .icons-group .icons .icon-wrap:first-child {
+    top: 0;
+}
+.module-06 .main .icons-group .icons .icon-wrap:nth-child(2) {
+    top: 4.75rem;
+}
+.module-06 .main .icons-group .icons .icon-wrap:nth-child(3) {
+    top: 5.9rem;
+}
+.module-06 .main .icons-group .icons .icon-wrap:last-child {
+    top: 7.1rem;
+}
 
-/*.module-06 .main .icons-group .icons .icon {*/
-    /*display: inline-block;*/
-    /*width: .53rem;*/
-    /*height: .53rem;*/
-    /*background-color: #ff5378;*/
-    /**/
-    /*border: 5px solid #fd849e;*/
-    /*border-radius: 50%;*/
+.module-06 .main .icons-group .icons .icon-wrap:first-child .icon {
+    background: url("../images/save-love-plan/module06-icon-01.png") no-repeat center center;
+}
+.module-06 .main .icons-group .icons .icon-wrap:nth-child(2) .icon {
+    background: url("../images/save-love-plan/module06-icon-02.png") no-repeat center center;
+}
+.module-06 .main .icons-group .icons .icon-wrap:nth-child(3) .icon {
+    background: url("../images/save-love-plan/module06-icon-03.png") no-repeat center center;
+}
+.module-06 .main .icons-group .icons .icon-wrap:last-child .icon {
+    background: url("../images/save-love-plan/module06-icon-04.png") no-repeat center center;
+}
 
-/*}*/
-/*.module-06 .main .icons-group .icons .phone-icon i {*/
-    /*-webkit-background-size: cover;*/
-    /*background-size: cover;*/
+.module-06 .main .txt {
+    padding-left: .32rem;
+}
 
-    /*display: inline-block;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
-/*.module-06 .main .icons-group .icons .phone-icon i {*/
-    /*background: url("../images/save-love-plan/module06-icon-01.png") no-repeat center center;*/
-/*}*/
+.module-06 .main .txt p:first-child .phone-num {
+    color: #ff5378;
+}
+
+.module-06 .main .txt .qrcode {
+    display: flex;
+    justify-content: center;
+
+    padding-top: .27rem;
+    padding-bottom: .32rem;
+
+    position: relative;
+    right: .2rem;
+}
+
+.module-06 .main .txt .qrcode i {
+    background: url("../images/save-love-plan/qrcode.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    display: inline-block;
+    width: 2.21rem;
+    height: 2.21rem;
+}
+
+.module-06 .main .txt p:nth-child(4),
+.module-06 .main .txt p:nth-child(5) {
+    padding-top: .38rem;
+}
 /** module 06 area */
+
+
+/** module 07 area */
+.module-07 .main {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: .52rem;
+    padding-bottom: .69rem;
+}
+.module-07 .main .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 2.3rem;
+    height: 2.96rem;
+
+    background-color: #e8e8e8;
+
+    position: relative;
+}
+.module-07 .main .item img {
+    position: absolute;
+    top: -.52rem;
+
+    width: .81rem;
+    height: .81rem;
+}
+.module-07 .main .item p {
+    padding: .12rem .22rem 0;
+}
+/** module 07 area */
