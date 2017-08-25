@@ -1,3 +1,31 @@
+/** title line */
+.inner>.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: .12rem;
+}
+.inner>.title>p {
+    font-size: .3rem;
+    font-weight: bold;
+    height: .7rem;
+    line-height: .7rem;
+    padding: 0 .1rem;
+}
+.inner>.title>.title-line {
+    display: inline-block;
+    background: url("../images/save-love-plan/title-line.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    width: .37rem;
+    height: .02rem;
+}
+/** title line */
+
+
 /** 头图上下移动的小按钮 */
 .preface {
     width: 100%;
@@ -180,30 +208,30 @@
 
 /** module 02 area */
 /* title area */
-.module-02 .title {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/*.module-02 .title {*/
+    /*width: 100%;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
 
-    margin-bottom: .12rem;
-}
-.module-02 .title p {
-    font-size: .3rem;
-    font-weight: bold;
-    height: .7rem;
-    line-height: .7rem;
-    padding: 0 .1rem;
-}
-.title-line {
-    display: inline-block;
-    background: url("../images/save-love-plan/title-line.png") no-repeat center center;
-    -webkit-background-size: cover;
-    background-size: cover;
+    /*margin-bottom: .12rem;*/
+/*}*/
+/*.module-02 .title p {*/
+    /*font-size: .3rem;*/
+    /*font-weight: bold;*/
+    /*height: .7rem;*/
+    /*line-height: .7rem;*/
+    /*padding: 0 .1rem;*/
+/*}*/
+/*.title-line {*/
+    /*display: inline-block;*/
+    /*background: url("../images/save-love-plan/title-line.png") no-repeat center center;*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
 
-    width: .37rem;
-    height: .02rem;
-}
+    /*width: .37rem;*/
+    /*height: .02rem;*/
+/*}*/
 /* title area */
 
 /* para area */
@@ -345,3 +373,24 @@
     background: url("../images/save-love-plan/module03-icon-03.png") no-repeat center center;
 }
 /** module 03 area */
+
+
+/** module 04 area */
+.module-04 .indent {
+    padding: 0 .1rem;
+    /*letter-spacing: .02rem;*/
+}
+.module-04 .pics-group {
+    display: flex;
+    justify-content: space-between;
+
+    padding: .12rem .1rem .65rem;
+}
+.module-04 .pics-group .pic {
+    width: 3.29rem;
+    height: 2.07rem;
+}
+.module-04 .pics-group .pic img {
+    width: 100%;
+}
+/** module 04 area */
