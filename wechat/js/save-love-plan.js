@@ -39,11 +39,13 @@ var oraMoveBtn = (function (btn) {
 
         if (state === false) {
 
-            mainBtn.animate({ bottom : 0, opacity : 0 }, 800);
+            // mainBtn.css({ bottom : "-90vh", opacity : 1 });
 
-            mainBtn.animate({ bottom : 100 });
+            mainBtn.animate({ bottom : "-95%", opacity : 0 }, 1000);
 
-            mainBtn.animate({ bottom : 100, opacity : 1 }, 300);
+            mainBtn.animate({ bottom : "-88%" });
+
+            mainBtn.animate({ bottom : "-88%", opacity : 1 }, 300);
 
         }
 

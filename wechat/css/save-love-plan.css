@@ -13,14 +13,18 @@
     justify-content: center;
 }
 .preface-btn {
-    position: absolute;
-    bottom: 1rem;
+    position: relative;
+    bottom: -88%;
+    opacity: 1;
 
     width: .94rem;
     height: .94rem;
+
     border-radius: 50%;
 
     background: url("../images/save-love-plan/preface-btn.png") no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
 
 }
 .preface-img img {
@@ -175,7 +179,5 @@
 
 
 /** module 02 area */
-.module-02 {
 
-}
 /** module 02 area */
