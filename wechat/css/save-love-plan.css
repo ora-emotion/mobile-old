@@ -394,3 +394,54 @@
     width: 100%;
 }
 /** module 04 area */
+
+
+/** module 05 area */
+.module-05 .avatars-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-bottom: .98rem;
+}
+
+.module-05 .avatars-group .row {
+    display: flex;
+    justify-content: space-around;
+}
+.module-05 .avatars-group .row:last-child {
+    padding-top: .25rem;
+}
+
+.module-05 .avatars-group .row .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.module-05 .avatars-group .row .item .icon {
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    width: 2.55rem;
+    height: 2.55rem;
+}
+
+.module-05 .avatars-group .row:first-child .item:first-child .icon {
+    background: url("../images/save-love-plan/module05-pic-01.png") no-repeat center center;
+}
+.module-05 .avatars-group .row:first-child .item:last-child .icon {
+    background: url("../images/save-love-plan/module05-pic-02.png") no-repeat center center;
+}
+.module-05 .avatars-group .row:last-child .item:first-child .icon {
+    background: url("../images/save-love-plan/module05-pic-03.png") no-repeat center center;
+}
+.module-05 .avatars-group .row:last-child .item:last-child .icon {
+    background: url("../images/save-love-plan/module05-pic-04.png") no-repeat center center;
+}
+
+.module-05 .avatars-group .row .item .mentor {
+    font-weight: bold;
+}
+/** module 05 area */
