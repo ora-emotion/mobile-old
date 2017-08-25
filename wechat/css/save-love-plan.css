@@ -45,8 +45,8 @@
     bottom: -88%;
     opacity: 1;
 
-    width: 94px;
-    height: 94px;
+    width: .94rem;
+    height: .94rem;
 
     border-radius: 50%;
 
@@ -60,6 +60,18 @@
     height: 100%;
 }
 /** 头图上下移动的小按钮 */
+
+
+/** 页面背景图 */
+.bg {
+    width: 100%;
+    height: 60.53rem;
+    background: url("../images/save-love-plan/bg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+/** 页面背景图 */
+
 
 /** preface icons and texts*/
 .preface .preface-icons {
@@ -445,3 +457,97 @@
     font-weight: bold;
 }
 /** module 05 area */
+
+
+/** module 06 area */
+.module-06 .main {
+    display: flex;
+    /*justify-content: space-between;*/
+
+    padding-top: .3rem;
+    padding-left: .62rem;
+}
+/*.module-06 .main .icon-line {*/
+    /*background: url("../images/save-love-plan/module06-column-line.png") no-repeat center center;*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+
+    /*width: .63rem;*/
+    /*height: 7.27rem;*/
+
+/*}*/
+.module-06 .main .icons-group {
+    width: .63rem;
+    height: 7.27rem;
+
+    display: flex;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, .1);
+}
+.module-06 .main .icons-group .column-line {
+    width: .02rem;
+    height: 100%;
+    background: #fdcfd9;
+}
+.module-06 .main .icons-group .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.module-06 .main .icons-group .icons .icon-wrap {
+    width: .53rem;
+    height: .53rem;
+
+    position: absolute;
+}
+
+.module-06 .main .icons-group .icons .icon-wrap .icon-bg {
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: #ff5378;
+
+    border: 5px solid #fd849e;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.module-06 .main .icons-group .icons .icon-wrap .icon {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+/*.module-06 .main .icons-group .icons .icon {*/
+    /*display: inline-block;*/
+    /*width: .53rem;*/
+    /*height: .53rem;*/
+    /*background-color: #ff5378;*/
+    /**/
+    /*border: 5px solid #fd849e;*/
+    /*border-radius: 50%;*/
+
+/*}*/
+/*.module-06 .main .icons-group .icons .phone-icon i {*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+
+    /*display: inline-block;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+/*}*/
+/*.module-06 .main .icons-group .icons .phone-icon i {*/
+    /*background: url("../images/save-love-plan/module06-icon-01.png") no-repeat center center;*/
+/*}*/
+/** module 06 area */
