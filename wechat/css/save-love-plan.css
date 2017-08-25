@@ -16,9 +16,8 @@
     position: absolute;
     bottom: 1rem;
 
-    width: .80rem;
-    height: .80rem;
-
+    width: .94rem;
+    height: .94rem;
     border-radius: 50%;
 
     background: url("../images/save-love-plan/preface-btn.png") no-repeat center center;
@@ -131,7 +130,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: .23rem;
+    margin-top: .26rem;
     padding: .27rem 0;
 }
 .module-01 .circle .row {

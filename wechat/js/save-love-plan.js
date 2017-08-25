@@ -18,17 +18,24 @@ var changeFontSize = (function () {
 }());
 
 
+/** 头图上下移动的小箭头 */
 var oraMoveBtn = (function (btn) {
-    //-------------------------------------------- Start config map ----------------------------------------------------
-
-    //-------------------------------------------- End config map ------------------------------------------------------
-
     //-------------------------------------------- Start Animate -------------------------------------------------------
     var btnMove = function () {
 
         var mainBtn = $(".preface-btn"),
             bottom = mainBtn.css("bottom"),
+            btnWidth = mainBtn.css("width"),
+            deviceWidth = $(document).width(),
             state = false;
+
+        mainBtn.css({
+
+            left : (deviceWidth - btnWidth) / 2
+
+        });
+
+        console.log(mainBtn.css("left"));
 
         if (state === false) {
 
@@ -46,7 +53,6 @@ var oraMoveBtn = (function (btn) {
     //-------------------------------------------- Set time interval ---------------------------------------------------
     setInterval(btnMove, 1000);
     //-------------------------------------------- Set time interval ---------------------------------------------------
-
 }());
 
 
