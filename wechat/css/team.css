@@ -152,10 +152,14 @@ p {
     padding-top: .18rem;
 }
 
+.module-02 .main .paras-group {
+    padding: 0 .13rem;
+}
+
 .module-02 .main .paras-group p {
     font-size: .26rem;
     letter-spacing: .02rem;
-    text-indent: .52rem;
+    text-indent: .55rem;
 }
 .module-02 .main .paras-group p:first-child {
     padding-bottom: .36rem;
