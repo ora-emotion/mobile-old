@@ -180,6 +180,9 @@
 .p2,.p3{
 	margin-top: -1rem;
 }
+.bottom{
+	margin-top: 1.5rem;
+}
 .email{
 	font-weight: bold;
 	font-size: .28rem;
