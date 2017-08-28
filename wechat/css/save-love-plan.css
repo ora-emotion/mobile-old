@@ -1,3 +1,5 @@
+@import "style.css";
+
 /** title line */
 .inner>.title {
     width: 100%;
@@ -244,32 +246,6 @@
 
 
 /** module 02 area */
-/* title area */
-/*.module-02 .title {*/
-    /*width: 100%;*/
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-
-    /*margin-bottom: .12rem;*/
-/*}*/
-/*.module-02 .title p {*/
-    /*font-size: .3rem;*/
-    /*font-weight: bold;*/
-    /*height: .7rem;*/
-    /*line-height: .7rem;*/
-    /*padding: 0 .1rem;*/
-/*}*/
-/*.title-line {*/
-    /*display: inline-block;*/
-    /*background: url("../images/save-love-plan/title-line.png") no-repeat center center;*/
-    /*-webkit-background-size: cover;*/
-    /*background-size: cover;*/
-
-    /*width: .37rem;*/
-    /*height: .02rem;*/
-/*}*/
-/* title area */
 
 /* para area */
 .module-02 .para p {
