@@ -87,6 +87,13 @@ p {
 /** color */
 
 
+/** module 0 area */
+.module-0 .para {
+    text-indent: .55rem;
+    padding: 0 .13rem;
+}
+/** module 0 area */
+
 /** module 01 area */
 .module-01 .main .row {
     display: flex;
