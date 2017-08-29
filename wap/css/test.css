@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+ol, ul, dl {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:active {
+    text-underline: none;
+}
+
+p {
+    font-size: .20rem;
+    line-height: .27rem;
+}
+
+
+/** Start header area */
+header {
+    width: 100%;
+    height: .77rem;
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    background: url("../images/test/logo.png") no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 2.04rem;
+    height: .56rem;
+
+    margin-left: .37rem;
+}
+
+header .contact-us {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-right: .37rem;
+}
+header .contact-us .icon {
+    background: url("../images/test/header-icon.png") no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: .43rem;
+    height: .43rem;
+}
+header .contact-us .txt {
+    padding-left: .08rem;
+}
+/** End header area */
+
+
+/** Start preface area */
+.preface .banner-img {
+    width: 100%;
+    height: 3.46rem;
+}
+
+.preface .banner-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.preface .icon-txt-group {
+    display: flex;
+    justify-content: space-around;
+
+    padding-top: .33rem;
+    padding-left: .2rem;
+    padding-right: .2rem;
+}
+.preface .icon-txt-group .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.preface .icon-txt-group .item .icon {
+    -webkit-background-size: contain;
+    background-size: contain;
+
+    width: 1.58rem;
+    height: 1.58rem;
+
+    background: url("../images/test/preface-icon.png") no-repeat center center;
+}
+.preface .icon-txt-group .item p {
+    padding-top: .14rem;
+    font-size: .28rem;
+    line-height: .25rem;
+}
+/** End preface area */
