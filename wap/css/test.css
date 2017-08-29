@@ -94,11 +94,35 @@ header .contact-us .txt {
 
     width: 1.58rem;
     height: 1.58rem;
-
-    background: url("../images/test/preface-icon.png") no-repeat center center;
 }
+
+.preface .icon-txt-group:nth-child(1) .item:nth-child(1) .icon {
+    background: url("../images/test/preface-icon-top-01.png") no-repeat center center;
+}
+.preface .icon-txt-group:nth-child(1) .item:nth-child(2) .icon {
+    background: url("../images/test/preface-icon-top-02.png") no-repeat center center;
+}
+.preface .icon-txt-group:nth-child(1) .item:nth-child(3) .icon {
+    background: url("../images/test/preface-icon-top-03.png") no-repeat center center;
+}
+.preface .icon-txt-group:nth-child(1) .item:nth-child(4) .icon {
+    background: url("../images/test/preface-icon-top-04.png") no-repeat center center;
+}
+
+.preface .icon-txt-group:nth-child(2) .item:nth-child(1) .icon {
+    background: url("../images/test/preface-icon-top-01.png") no-repeat center center;
+}
+.preface .icon-txt-group:nth-child(2) .item:nth-child(2) .icon {
+    background: url("../images/test/preface-icon-top-02.png") no-repeat center center;
+}
+.preface .icon-txt-group:nth-child(2) .item:nth-child(3) .icon {
+    background: url("../images/test/preface-icon-top-03.png") no-repeat center center;
+}
+.preface .icon-txt-group:nth-child(2) .item:nth-child(4) .icon {
+    background: url("../images/test/preface-icon-top-04.png") no-repeat center center;
+}
+
 .preface .icon-txt-group .item p {
-    padding-top: .14rem;
     font-size: .28rem;
     line-height: .25rem;
 }
