@@ -90,9 +90,10 @@
     /*text-align: justify;*/
     letter-spacing: .02rem;
 }
-/*.module-01 .txt p{
-	font-size: 17px;
-}*/
+.module-01 .txt .indent {
+    width: 100%;
+    height: 100%;
+}
 .module-01 .txt .indent:last-child {
     margin-top: .4rem;
 }
