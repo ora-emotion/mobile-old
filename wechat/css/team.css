@@ -1,5 +1,13 @@
 @import "style.css";
 
+
+/** para font size stylesheet*/
+p.para-font-size {
+    width: 100%;
+    height: 100%;
+}
+/** para font size stylesheet*/
+
 /** title line */
 .inner>.title {
     width: 100%;
@@ -18,7 +26,7 @@
 }
 .inner>.title>.title-line {
     display: inline-block;
-    background: url("../images/team/title-line.png") no-repeat center center;
+    background: url("../images/save-love-plan/title-line.png") no-repeat center center;
     -webkit-background-size: cover;
     background-size: cover;
 
@@ -86,6 +94,13 @@ p {
 }
 /** color */
 
+
+/** module 0 area */
+.module-0 .para {
+    text-indent: .55rem;
+    padding: 0 .13rem;
+}
+/** module 0 area */
 
 /** module 01 area */
 .module-01 .main .row {

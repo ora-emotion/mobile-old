@@ -1,0 +1,66 @@
+/** Start nav list */
+.nav-list .icon-txt-group {
+    display: flex;
+    justify-content: space-around;
+
+    padding-top: .33rem;
+    padding-left: .2rem;
+    padding-right: .2rem;
+}
+.nav-list .icon-txt-group .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-list .icon-txt-group .item .icon {
+    -webkit-background-size: contain;
+    background-size: contain;
+
+    width: 1.58rem;
+    height: 1.58rem;
+}
+
+.nav-list .icon-txt-group:nth-child(1) .item:nth-child(1) .icon {
+    background: url("../images/index/preface-icon-top-01.png") no-repeat center center;
+}
+.nav-list .icon-txt-group:nth-child(1) .item:nth-child(2) .icon {
+    background: url("../images/index/preface-icon-top-02.png") no-repeat center center;
+}
+.nav-list .icon-txt-group:nth-child(1) .item:nth-child(3) .icon {
+    background: url("../images/index/preface-icon-top-03.png") no-repeat center center;
+}
+.nav-list .icon-txt-group:nth-child(1) .item:nth-child(4) .icon {
+    background: url("../images/index/preface-icon-top-04.png") no-repeat center center;
+}
+
+.nav-list .icon-txt-group:nth-child(2) .item:nth-child(1) .icon {
+    background: url("../images/index/preface-icon-top-01.png") no-repeat center center;
+}
+.nav-list .icon-txt-group:nth-child(2) .item:nth-child(2) .icon {
+    background: url("../images/index/preface-icon-top-02.png") no-repeat center center;
+}
+.nav-list .icon-txt-group:nth-child(2) .item:nth-child(3) .icon {
+    background: url("../images/index/preface-icon-top-03.png") no-repeat center center;
+}
+.nav-list .icon-txt-group:nth-child(2) .item:nth-child(4) .icon {
+    background: url("../images/index/preface-icon-top-04.png") no-repeat center center;
+}
+
+.nav-list .icon-txt-group .item p {
+    font-size: .28rem;
+    line-height: .25rem;
+}
+/** End nav list */
+
+
+/** Start module 01 area: introduction*/
+
+/** End module 01 area: introduction */
+
+
+/** Start footer area */
+/*footer .txt-group .item span {*/
+    /*display: inline-block;*/
+/*}*/
+/** End footer area */

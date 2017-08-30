@@ -1,3 +1,8 @@
+.change-font-size {
+    width: 100%;
+    height: 100%;
+}
+
 
 /** title line */
 .inner>.title {
@@ -20,7 +25,6 @@
     background: url("../images/save-love-plan/title-line.png") no-repeat center center;
     -webkit-background-size: cover;
     background-size: cover;
-
     width: .37rem;
     height: .02rem;
 }
@@ -99,11 +103,12 @@
 }
 
 .module-02-bg{
-	background: url(../images/about_us/development_left.png) no-repeat .5rem .05rem;
-	-webkit-background-size: cover;
-    background-size: .36rem 10.09rem;
+	background: url(../images/about_us/development_left.png) no-repeat .3rem 0.01rem;
+	-webkit-background-size: .36rem 25.9rem;
+    background-size: .36rem 25.9rem;
+    /*background-size: .4rem 26rem;*/
     width: 100%;
-    height: 5.3rem;
+    height: 9.5rem;
     margin-top: .3rem;
     overflow: hidden;
 }
@@ -115,6 +120,9 @@
 	width: 77%;
 	
 }
+.module-02-bg img{
+	margin-left: 1.1rem;
+}
 .module-02-bg .indent{
 	height: 1.50rem;
 }
@@ -122,22 +130,25 @@
 	height: .4rem;	
 }
 .module-02-bg .p1{
-	margin-top: .06rem;
+	margin-top: -.01rem;
 }
 .module-02-bg .p2{
-	margin-top: -0.05rem;
+	margin-top: 0.4rem;
 }
 .module-02-bg .p3{
-	margin-top: -0.01rem;
+	margin-top: 0.45rem;
 }
 .module-02-bg .p4{
-	margin-top: -0.05rem;
+	margin-top: 0.45rem;
 }
 .module-02-bg .p5{
-	margin-top: -0.01rem;
+	margin-top: 0.5rem;
+}
+.img5{
+	margin-top: .3rem;
 }
 .module-02-bg .year.last{
-	margin-top: .35rem;
+	margin-top: .2rem;
 }
 
 .btn{
@@ -148,8 +159,8 @@
 	margin-left: .6rem;
 }
 .btn a{
-	font-size: .22rem;
-	color: #9d9d9d;
+	font-size: .26rem;
+	color: #2d2d2d;
 	
 }
 .module3{

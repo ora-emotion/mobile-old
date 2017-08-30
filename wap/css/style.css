@@ -1,0 +1,114 @@
+@import "../components/module-title/module-title.css";
+
+/** Start stylesheet reset */
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+ol, ul, dl {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:active {
+    text-underline: none;
+}
+
+p {
+    font-size: .26rem;
+    line-height: .27rem;
+}
+/** End stylesheet reset */
+
+
+/** Start header area */
+header {
+    width: 100%;
+    height: .77rem;
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header .logo {
+    background: url("../images/logo.png") no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 2.04rem;
+    height: .56rem;
+
+    margin-left: .37rem;
+}
+
+header .contact-us {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-right: .37rem;
+}
+header .contact-us .icon {
+    background: url("../images/header-icon.png") no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: .43rem;
+    height: .43rem;
+}
+header .contact-us .txt {
+    padding-left: .08rem;
+}
+/** End header area */
+
+
+/** Start modal-header area */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+
+    background: rgba(0, 0, 0, .3);
+    width: 100%;
+    height: .56rem;
+
+    position: fixed;
+    top: .77rem;
+    left: 0;
+}
+.modal-header a {
+    font-size: .26rem;
+    color: #475bf1;
+    padding: 0 .21rem;
+    line-height: .56rem;
+    height: .56rem;
+}
+.modal-header p {
+    color: #475bf1;
+    padding: 0 .21rem;
+    line-height: .56rem;
+    height: .56rem;
+}
+/** End modal-header area */
+
+
+/** Start preface area */
+.preface .banner-img {
+    width: 100%;
+    height: 3.46rem;
+    margin-top: .77rem;
+}
+
+.preface .banner-img img {
+    width: 100%;
+    height: 100%;
+}
+/** End preface area */
