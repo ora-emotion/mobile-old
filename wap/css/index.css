@@ -1,7 +1,4 @@
 /** Start nav list */
-.nav-list {
-    padding-bottom: .68rem;
-}
 .nav-list .icon-txt-group {
     display: flex;
     justify-content: space-around;
@@ -58,6 +55,10 @@
 
 
 /** Start module 01 area: introduction*/
+.module-01 .title {
+    padding-top: .68rem;
+}
+
 .module-01 .main {
     background: url("../images/index/module01-bg.png") no-repeat center center;
     -webkit-background-size: cover;
@@ -75,6 +76,25 @@
     padding-bottom: .39rem;
 }
 /** End module 01 area: introduction */
+
+
+/** Start module 02 area */
+.module-02 .title {
+    padding-top: .56rem;
+    padding-bottom: .09rem;
+}
+
+.module-02 .main .row {
+    display: flex;
+    justify-content: center;
+    padding: 0 .15rem;
+}
+.module-02 .main .row img {
+    padding: .07rem;
+    width: 3.47rem;
+    height: 2.13rem;
+}
+/** End module 02 area */
 
 
 /** Start footer area */
