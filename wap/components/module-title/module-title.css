@@ -4,6 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding-top: .68rem;
 }
 .module .title>p {
     font-size: .3rem;
