@@ -1,3 +1,5 @@
+@import "style.css";
+
 /** title line */
 .inner>.title {
     width: 100%;
@@ -74,11 +76,24 @@
 
 
 /** preface icons and texts*/
+.preface {
+    background-color: #fefdf8;
+}
+
+.preface .split-line {
+    margin-top: .56rem;
+    margin-bottom: .4rem;
+}
+
+.preface .para {
+    text-indent: .55rem;
+    padding: 0 .15rem;
+}
+
 .preface .preface-icons {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #fefdf8;
 
     padding: 0 .2rem;
 }
@@ -175,6 +190,7 @@
 /** module 01 area */
 .module-01 .txt {
     padding: 0 .31rem;
+    /*text-align: justify;*/
     letter-spacing: .02rem;
 }
 .module-01 .txt .indent:last-child {
@@ -230,6 +246,7 @@
 
 
 /** module 02 area */
+
 /* para area */
 .module-02 .para p {
     padding: 0 .44rem;
