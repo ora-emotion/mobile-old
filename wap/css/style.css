@@ -1,4 +1,5 @@
 @import "../components/module-title/module-title.css";
+@import "../components/home/home.css";
 
 /** Start stylesheet reset */
 * {

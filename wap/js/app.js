@@ -33,16 +33,17 @@ function loadJs(module){
     });
 }
 
-// 加载外部 css 文件
+// 动态加载外部 css 文件
 function loadCss(module) {
     $.ajax({
         type: "get",
         url: "css/" + module + ".css",
         success: function (data) {
-            var link = document.createElement("link");
-            $(link).attr("rel", "stylesheet");
-            $(link).attr("href", "css/" + module + ".css");
-            $(module).append(link);
+            var cssLink = $(".dynamic");
+            cssLink.attr("href", "css/" + module + ".css");
+        },
+        error: function (error) {
+            console.log("请求外部 css 样式表失败！");
         }
     });
 }
@@ -165,6 +166,30 @@ $(document).ready(function () {
             $("html, body").animate({ "scrollTop" : 0 }, 300);
         });
     }());
+
+    // 返回首页按钮 HTML 模板
+    $(function () {
+
+        $.ajax({
+            type: "get",
+            url: "components/home/home.html",
+            success: function (data) {
+                insetBackHomeBtn(data);
+            },
+            error: function (error) {
+                alert("request error");
+            }
+        });
+
+    }());
+
+    // 将返回首页按钮插入页面
+    function insetBackHomeBtn(data) {
+
+        $("body").append(data);
+
+    }
+
 
 });
 
