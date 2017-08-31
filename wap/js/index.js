@@ -191,8 +191,10 @@ $(document).ready(function () {
     var initBanner = $(function () {
 
         var mySwiper = new Swiper('.swiper-container',{
-            initialSlide :2,
+            autoplay : 10000,
+            initialSlide : 0,
             pagination : '.swiper-pagination',
+            loop : true,
         })
 
     }());
