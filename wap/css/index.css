@@ -97,6 +97,83 @@
 /** End module 02 area */
 
 
+/** Start module 03 area */
+.module-03 .main {
+    display: flex;
+    justify-content: flex-start;
+
+    background: url("../images/index/module03-bg.png") no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+
+    width: 100%;
+    height: 3.74rem;
+}
+
+.module-03 .main .column:first-child {
+    width: 3.4rem;
+    padding-left: .3rem;
+}
+.module-03 .main .column:last-child {
+    padding-left: .64rem;
+}
+.module-03 .main .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: .37rem 0;
+}
+
+.module-03 .main .column .row {
+    display: flex;
+    justify-content: flex-start;
+
+    height: .64rem;
+    line-height: .64rem;
+}
+.module-03 .main .column .row .icon {
+    display: inline-block;
+    width: .64rem;
+    height: .64rem;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.module-03 .main .column .row:first-child .icon {
+    background: url("../images/index/module03-icon01.png") no-repeat center center;
+}
+.module-03 .main .column .row:nth-child(2) .icon {
+    background: url("../images/index/module03-icon02.png") no-repeat center center;
+}
+.module-03 .main .column .row:nth-child(3) .icon {
+    background: url("../images/index/module03-icon03.png") no-repeat center center;
+}
+.module-03 .main .column .row:nth-child(4) .icon {
+    background: url("../images/index/module03-icon04.png") no-repeat center center;
+}
+.module-03 .main .column .row:nth-child(5) .icon {
+    background: url("../images/index/module03-icon05.png") no-repeat center center;
+}
+.module-03 .main .column .row:last-child .icon {
+    background: url("../images/index/module03-icon06.png") no-repeat center center;
+}
+
+.module-03 .main .column .row .txt-group {
+    position: relative;
+    top: .1rem;
+}
+.module-03 .main .column .row .txt-group p.ch {
+    color: #fff;
+}
+.module-03 .main .column .row .txt-group p.en {
+    color: #fa7c7c;
+    font-size: .126rem;
+    text-transform: uppercase;
+}
+/** End module 03 area */
+
+
 /** Start footer area */
 /*footer .txt-group .item span {*/
     /*display: inline-block;*/
