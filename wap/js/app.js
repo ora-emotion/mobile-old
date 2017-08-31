@@ -79,6 +79,8 @@ $(document).ready(function () {
                 // 调用加载 footer 区域的函数
                 loadFooter(data);
 
+                console.log(data);
+
             },
             error: function (error) {
                 alert("footer.json requests false!");
@@ -126,23 +128,23 @@ $(document).ready(function () {
         console.log(data);
 
         // 公司名称
-        $("footer .txt-group .item .ora-name").html(data["ora-name"]);
+        $("footer .ora-name .ora-name-txt").html(data["ora-name"]);
 
         // 公司电话
-        $("footer .txt-group .item .ora-phone-txt").html(data["ora-phone"][0]);
-        $("footer .txt-group .item .ora-phone-num").html(data["ora-phone"][1]);
+        $("footer .ora-phone .ora-phone-txt").html(data["ora-phone"][0]);
+        $("footer .ora-phone .ora-phone-num").html(data["ora-phone"][1]);
 
         // 公司微信公众平台
-        $("footer .txt-group .item .ora-wechat-txt").html(data["ora-wechat"][0]);
-        $("footer .txt-group .item .ora-wechat-num").html(data["ora-wechat"][1]);
+        $("footer .ora-wechat .ora-wechat-txt").html(data["ora-wechat"][0]);
+        $("footer .ora-wechat .ora-wechat-num").html(data["ora-wechat"][1]);
 
         // 公司地址
-        $("footer .txt-group .item .ora-address-txt").html(data["ora-address"][0]);
-        $("footer .txt-group .item .ora-address-detail").html(data["ora-address"][1]);
+        $("footer .ora-address .ora-address-txt").html(data["ora-address"][0]);
+        $("footer .ora-address .ora-address-num").html(data["ora-address"][1]);
 
         // 公司备案号
-        $("footer .txt-group .item .ora-record-txt").html(data["ora-record"][0]);
-        $("footer .txt-group .item .ora-record-num").html(data["ora-record"][1]);
+        $("footer .ora-record .ora-record-txt").html(data["ora-record"][0]);
+        $("footer .ora-record .ora-record-num").html(data["ora-record"][1]);
 
     }
 
@@ -152,7 +154,6 @@ $(document).ready(function () {
         // 动态渲染模板标题
         console.log(data);
         var moduleTitle = $(".module .title .module-title");
-        console.log(moduleTitle);
         var i = 0;
         for (var title in data.page["index"]) {
             $($(".module")[i]).find(".title .module-title").html(data.page["index"][title]);
