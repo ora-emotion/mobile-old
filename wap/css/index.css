@@ -1,4 +1,7 @@
 /** Start nav list */
+.nav-list {
+    padding-bottom: .68rem;
+}
 .nav-list .icon-txt-group {
     display: flex;
     justify-content: space-around;
@@ -55,7 +58,22 @@
 
 
 /** Start module 01 area: introduction*/
-
+.module-01 .main {
+    background: url("../images/index/module01-bg.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 4.86rem;
+}
+.module-01 .main p {
+    line-height: .4rem;
+    padding: 0 .22rem;
+    margin: 0 auto;
+}
+.module-01 .main p:first-child {
+    padding-top: .23rem;
+    padding-bottom: .39rem;
+}
 /** End module 01 area: introduction */
 
 
