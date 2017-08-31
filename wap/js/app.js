@@ -211,4 +211,23 @@ $(function(){
         router("about",$("#container"));
     });
 
+
+    // index - 首页中的链接
+    //--> 挽回爱情页面
+    $(".module-02 .main .row:first-child img:first-child").click(function () {
+        router("save-love", $("#container"));
+    });
+    //--> 挽救婚姻页面
+    $(".module-02 .main .row:first-child img:last-child").click(function () {
+        router("save-marriage", $("#container"));
+    });
+    //--> 分离小三页面
+    $(".module-02 .main .row:last-child img:first-child").click(function () {
+        router("separate-mistress", $("#container"));
+    });
+    //--> 定制爱情页面
+    $(".module-02 .main .row:last-child img:last-child").click(function () {
+        router("custom-love", $("#container"));
+    });
+
 });
