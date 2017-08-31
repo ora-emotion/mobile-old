@@ -23,6 +23,10 @@ p {
     font-size: .26rem;
     line-height: .27rem;
 }
+
+p.indent {
+    text-indent: .5rem;
+}
 /** End stylesheet reset */
 
 
