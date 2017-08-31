@@ -39,7 +39,7 @@ function loadCss(module) {
         type: "get",
         url: "css/" + module + ".css",
         success: function (data) {
-            var cssLink = $(".dynamic");
+            var cssLink = $("link.dynamic");
             cssLink.attr("href", "css/" + module + ".css");
         },
         error: function (error) {

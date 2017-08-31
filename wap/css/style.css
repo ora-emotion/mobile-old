@@ -94,10 +94,11 @@ header .contact-us .txt {
 /** Start footer area */
 footer {
     width: 100%;
+    margin-top: .68rem;
     height: 1.66rem;
-    background: #2d2d2d;
-    border-top: 1px solid #b9b9b9;
-
+    background: url(../images/footer_bgimg.png) center center no-repeat;
+    background-size: contain;
+    /*border-top: 1px solid #b9b9b9;*/
     display: flex;
     justify-content: flex-start;
 
@@ -159,16 +160,5 @@ footer .column:first-child {
 footer .column:first-child img {
     width: 2.02rem;
     height: 1.25rem;
-}
-
-footer .triangle {
-    position: absolute;
-    top: 0;
-    left: .33rem;
-    width: 1.07rem;
-    height: .35rem;
-    background: url("../images/triangle.png") no-repeat center center;
-    -webkit-background-size: 1.07rem .35rem;
-    background-size: 1.07rem .35rem;
 }
 /** End footer area */
