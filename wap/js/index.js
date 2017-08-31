@@ -1,3 +1,7 @@
+
+/*
+ * module 03 js
+ */
 $(function (){
 
     var scriptDynamic = $("script.dynamic");
