@@ -209,7 +209,6 @@ $(document).ready(function () {
             url:"views/three-level-page/" + module + ".html",
             success: function(data){
                 container.html(data);
-                console.log(data);
             }
         });
 
