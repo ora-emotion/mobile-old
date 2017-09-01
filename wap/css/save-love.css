@@ -125,3 +125,50 @@
     background: #cbcccf;
 }
 /** End module 02 area */
+
+
+/** Start module 03 area */
+.module-03 .main .item {
+    display: flex;
+}
+.module-03 .main .item .pic {
+    width: 1.42rem;
+    height: 1.89rem;
+}
+.module-03 .main .item .pic img {
+    width: 100%;
+    height: 100%;
+}
+.module-03 .main .item .txt-group {
+    width: 5.15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.module-03 .main .item .txt-group p {
+    color: #333333;
+    width: 100%;
+    height: 100%;
+}
+.module-03 .main .item .txt-group p.topic {
+    font-weight: bold;
+}
+.module-03 .main .item .txt-group p.des {
+    line-height: .36rem;
+}
+/** End module 03 area */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
