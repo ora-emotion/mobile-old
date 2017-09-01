@@ -13,7 +13,6 @@ function router(module,container){
         url:"views/" + module + ".html",
         success: function(data){
             container.html(data);
-            console.log(data);
         }
     });
 
@@ -29,7 +28,14 @@ function router(module,container){
 function loadJs(module){
     $.ajax({
         type: "get",
-        url:"js/" + module + ".js"
+        url:"js/" + module + ".js",
+        success: function (data) {
+            var dynamicJs = $("script.dynamic");
+            dynamicJs.attr("src", "js/" + module + ".js");
+        },
+        error: function (error) {
+            console.log("request failed");
+        }
     });
 }
 
@@ -79,8 +85,6 @@ $(document).ready(function () {
                 // 调用加载 footer 区域的函数
                 loadFooter(data);
 
-                console.log(data);
-
             },
             error: function (error) {
                 alert("footer.json requests false!");
@@ -122,10 +126,20 @@ $(document).ready(function () {
 
     }());
 
+    // 插入模块标题
+    function insertModuleTitle(data) {
+
+        // 动态渲染模板标题
+        var moduleTitle = $(".module .title .module-title");
+        var i = 0;
+        for (var title in data.page["index"]) {
+            $($(".module")[i]).find(".title .module-title").html(data.page["index"][title]);
+            i++;
+        }
+    }
+
     // 加载 footer 区域
     function loadFooter(data) {
-
-        console.log(data);
 
         // 公司名称
         $("footer .ora-name .ora-name-txt").html(data["ora-name"]);
@@ -147,26 +161,6 @@ $(document).ready(function () {
         $("footer .ora-record .ora-record-num").html(data["ora-record"][1]);
 
     }
-
-    // 插入模块标题
-    function insertModuleTitle(data) {
-
-        // 动态渲染模板标题
-        console.log(data);
-        var moduleTitle = $(".module .title .module-title");
-        var i = 0;
-        for (var title in data.page["index"]) {
-            $($(".module")[i]).find(".title .module-title").html(data.page["index"][title]);
-            i++;
-        }
-    }
-
-    // 返回顶部功能
-    $(function (){
-        $(".modal-header p").click(function () {
-            $("html, body").animate({ "scrollTop" : 0 }, 300);
-        });
-    }());
 
     // 返回首页按钮 HTML 模板
     $(function () {

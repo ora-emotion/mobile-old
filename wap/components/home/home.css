@@ -4,6 +4,7 @@
     bottom: .4rem;
     right: .5rem;
     width: 138px;
+    z-index: 10;
     height: 138px;
 
     opacity: .4;
