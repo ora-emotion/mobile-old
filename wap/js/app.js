@@ -161,13 +161,6 @@ $(document).ready(function () {
         }
     }
 
-    // 返回顶部功能
-    $(function (){
-        $(".modal-header p").click(function () {
-            $("html, body").animate({ "scrollTop" : 0 }, 300);
-        });
-    }());
-
     // 返回首页按钮 HTML 模板
     $(function () {
 
