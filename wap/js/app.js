@@ -30,9 +30,7 @@ function loadJs(module){
         type: "get",
         url:"js/" + module + ".js",
         success: function (data) {
-            console.log(module);
             var dynamicJs = $("script.dynamic");
-            console.log(dynamicJs);
             dynamicJs.attr("src", "js/" + module + ".js");
         },
         error: function (error) {
@@ -87,8 +85,6 @@ $(document).ready(function () {
                 // 调用加载 footer 区域的函数
                 loadFooter(data);
 
-                console.log(data);
-
             },
             error: function (error) {
                 alert("footer.json requests false!");
@@ -134,7 +130,6 @@ $(document).ready(function () {
     function insertModuleTitle(data) {
 
         // 动态渲染模板标题
-        console.log(data);
         var moduleTitle = $(".module .title .module-title");
         var i = 0;
         for (var title in data.page["index"]) {
@@ -145,8 +140,6 @@ $(document).ready(function () {
 
     // 加载 footer 区域
     function loadFooter(data) {
-
-        console.log(data);
 
         // 公司名称
         $("footer .ora-name .ora-name-txt").html(data["ora-name"]);
