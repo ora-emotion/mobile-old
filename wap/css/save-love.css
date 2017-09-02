@@ -177,6 +177,33 @@
 /** End module 03 area */
 
 
+/** Start module 04 area */
+.module-04 .main .row {
+    padding: .24rem 0;
+}
+.module-04 .main .row p {
+    padding-left: .3rem;
+    height: 100%;
+    line-height: .36rem;
+}
+.module-04 .main .row p span:first-child {
+    font-weight: bold;
+    padding-bottom: .06rem;
+}
+.module-04 .main .row p span:last-child {
+    text-indent: .5rem;
+}
+.module-04 .main .row p img {
+    float: right;
+
+    padding-right: .22rem;
+    padding-left: .1rem;
+}
+.module-04 .main .row:last-child {
+    background: #ececec;
+}
+/** End module 04 area */
+
 
 
 
