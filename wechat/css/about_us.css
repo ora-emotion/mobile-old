@@ -106,7 +106,7 @@
 	background: url(../images/about_us/development_left.png) no-repeat .3rem 0.01rem;
 
 	-webkit-background-size: .36rem 25.9rem;
-    background-size: .36rem 25.9rem;
+    background-size: .38rem 25.9rem;
     /*background-size: .4rem 26rem;*/
     width: 100%;
     height: 9.5rem;
@@ -134,22 +134,28 @@
 	margin-top: -.01rem;
 }
 .module-02-bg .p2{
-	margin-top: 0.4rem;
+	margin-top: 0.35rem;
 }
 .module-02-bg .p3{
-	margin-top: 0.45rem;
+	margin-top: 0.38rem;
 }
 .module-02-bg .p4{
-	margin-top: 0.45rem;
+	margin-top: 0.35rem;
 }
 .module-02-bg .p5{
-	margin-top: 0.5rem;
+	margin-top: 0.4rem;
 }
-.img5{
+.img4 {
+    margin-top: 0;
+}
+.img6 {
 	margin-top: .3rem;
 }
+.module-02-bg img:last-child {
+
+}
 .module-02-bg .year.last{
-	margin-top: .2rem;
+	margin-top: .14rem;
 }
 
 .btn{
