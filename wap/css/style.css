@@ -16,8 +16,19 @@ ol, ul, dl {
 a {
     text-decoration: none;
 }
+a:link{
+	text-underline: none;
+}
+a:visited{
+	text-underline: none;
+}
+a:hover{
+	text-underline: none;
+	color: #FF3232;
+}
 a:active {
     text-underline: none;
+    color: #FF3232;
 }
 
 p {
