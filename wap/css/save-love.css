@@ -178,7 +178,6 @@
 }
 /** End module 03 area */
 
-
 /** Start module 04 area */
 .module-04 .main .row {
     padding: .24rem 0;
@@ -207,15 +206,95 @@
 /** End module 04 area */
 
 
+/*
+ * 能够提供的挽回爱情服务 module-06
+ */
+.module-06{
+	width: 100%;
+}
+.module-06 .main{
+	background: url(../images/save-love/service-bgimg.png) center center no-repeat;
+	background-size: contain;
+	height: 5.1rem;
+}
+/*/////////////////*/
+
+/*
+ * 成功案例 module-07
+ */
+.module-07{
+	width: 100%;
+	height: 4.3rem;
+}
+.module-07 .main{
+	padding-left: .2rem;
+}
+.module-07 .main img{
+	width: 100%;
+	height: 100%;
+}
+.module-07 .main .tu1,.tu2{
+	float:left;
+	width: 2.5rem;
+	height: 1.8rem;
+	padding-right: .2rem;
+}
+.module-07 .main .wen1,.wen2{
+	/*width: 4.45rem;*/
+	height: 2rem;
+	padding-left: .2rem;
+}
+.module-07 .main h3{
+	font-size: .28rem;
+}
+.module-07 .main p{
+	line-height: .35rem;
+}
+.module-07 .main a{
+	color: #2d2d2d;
+	font-size: .26rem;
+}
+.module-07 .main a:hover{
+	color: #FF3232;
+}
+.module-07 .main a:active{
+	color: #FF3232;
+}
+/*////////////////*/
 
 
+/*
+ * 导师团队 module-08
+ */
+.module-08 {
+	width: 100%;
+	height: 10rem;
+}
+.module-08 img{
+	width: 2.65rem;
+	height: 3.72rem;
+}
+.module-08 .main{
+	width: 5.6rem;
+	height: 7.8rem;
+	margin: 0 auto;
+}
+.module-08 .main .tu2{
+	width: 100%;
+}
+/*//////////////*/
 
 
+/*
+ * 服务步骤 module-09
+ */
 
-
-
-
-
-
-
-
+.module-09-bg{
+	background: url(../images/save-love/servicewen_bg.png) no-repeat center center;
+	-webkit-background-size: cover;
+    background-size: 7.04rem 100%;
+    width: 100%;
+    height: 7.67rem;
+    margin-top: .3rem;
+}
+/*////////////////*/
