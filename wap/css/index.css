@@ -6,6 +6,9 @@
 .home {
 	display: none;
 }
+#bar {
+	display: none;
+}
 
 
 /** End back to home */
