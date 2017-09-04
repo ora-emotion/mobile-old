@@ -3,6 +3,85 @@
  */
 
 
+// 导航滑块
+var bar = (function () {
+
+    // 声明常量、变量
+    var configMap = {
+            // position: fixed; left: 0;
+            extended_left : 0,
+            // position: fixed; left: -435px;
+            retracted_left : -455
+        },
+        $sliderBar, $sliderBarBtnExtended, $sliderBarBtnRetracted,
+        listItem, sliderExtended, sliderRetracted, onClickSlider, initModule;
+
+    // 展开导航滑块
+    sliderExtended = function () {
+        var bar_left = $('#bar').position().left;
+        if ( bar_left === configMap.extended_left ) {
+            $sliderBar.animate({ left : configMap.retracted_left });
+            $sliderBarBtnExtended.animate({
+                right : 0,
+                width : 59
+            });
+        }
+        else if ( bar_left === configMap.retracted_left ) {
+            $sliderBar.animate({ left : configMap.extended_left });
+            $sliderBarBtnExtended.animate({
+                right : 59,
+                width : 0
+            });
+        }
+        return false;
+    };
+
+    // 收缩导航滑块
+    sliderRetracted = function () {
+        var bar_left = $('#bar').position().left;
+        if ( bar_left === configMap.extended_left ) {
+            $sliderBar.animate({ left : configMap.retracted_left });
+            $sliderBarBtnExtended.animate({
+                right : 0,
+                width : 59
+            });
+        }
+        else if ( bar_left === configMap.retracted_left ) {
+            $sliderBar.animate({ left : configMap.extended_left });
+            $sliderBarBtnExtended.animate({
+                right : 59,
+                width : 0
+            });
+        }
+        return false;
+    };
+
+    onClickListItem = function () {
+        var listItem = $('#bar').find('.list-item');
+        listItem.click(function (event) {
+            $(this)
+                .addClass('active')
+                .siblings().removeClass('active');
+
+            return false;
+        });
+    };
+
+    // initialize module
+    initModule = function ( $container ) {
+        $sliderBar = $('#bar');
+        $sliderBarBtnExtended = $container.find('.btn-wrap');           // extended button
+        $sliderBarBtnRetracted = $container.find('.btn-retracted');     // retracted button
+        $sliderBarBtnExtended.click( sliderExtended );
+        $sliderBarBtnRetracted.click( sliderRetracted );
+        onClickListItem();
+
+        return true;
+    };
+
+    return { initModule : initModule };
+}());
+
 // 加载模块函数
 function router(module,container){
 
@@ -73,6 +152,9 @@ $(document).ready(function () {
             rootEle.style.fontSize = deviceWidth / 7.5 + "px";
         };
     }());
+
+    // 加载左侧导航滑块
+    bar.initModule( $('#bar') );
 
     // 请求 footer 数据
     $(function () {
@@ -194,6 +276,9 @@ $(function(){
     // 挽回爱情
     $(".icon-txt-group:first-child .item:nth-child(1)").click(function(){
         router("save-love",$("#container"));
+    });
+    $('#bar .list .list-item')[0].click(function () {
+        router("index",$("#container"));
     });
 
     // 挽救婚姻
