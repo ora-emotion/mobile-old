@@ -3,6 +3,112 @@
  */
 
 
+// 获取路径参数
+function getUrlParams(){
+
+    var params={};											// 声明参数对象 - 空对象(params)
+
+    var url=window.location.href;							// 获取路径参数
+
+    var arr=url.split("?");
+
+    if(arr.length === 2){
+        var p=arr[1];
+    }else{
+        console.log(params);
+        return params;
+    }
+
+    // p="a=1&b=2&c=3"
+    var parr=p.split("&"); // index.html#detail?id=12345
+
+
+    // parr - a=1, b=2, c=3
+    for(var i=0;i<parr.length;i++){
+
+        var kv=parr[i].split("=");  // kv - a 1, b 2, c 3
+
+        params[kv[0]]=kv[1];  // params {a: 1, b: 2, c: 3}
+
+    }
+
+    return params;
+
+    // {a:1,b:2,c:3}
+
+}
+
+// getUrlParams();
+
+// 获取模块名;
+function getModule(){
+
+    var url=window.location.href;
+
+    var arr=url.split("#");
+
+    if(arr.length !== 2){
+        return false;
+    }
+
+    var p=arr[1];
+
+    p=p.split("?");
+
+    return p[0];
+
+}
+
+// 加载模块函数
+function router(module,container){
+
+    container=container||$("#container");
+
+    // 请求模块结构
+    $.ajax({
+        url:"views/" + module + ".html",
+        success: function(data){
+            container.html(data);
+
+        }
+    });
+
+    // 请求外部 js 文件
+    loadJs(module);
+
+    // 请求外部 css 文件
+    loadCss(module);
+
+}
+
+// 加载外部 js 文件
+function loadJs(module){
+    $.ajax({
+        url:"js/" + module + ".js",
+        // success: function (data) {
+        //     var dynamicJs = $("script.dynamic");
+        //     dynamicJs.attr("src", "js/" + module + ".js");
+        // },
+        // error: function (error) {
+        //     console.log("request failed");
+        // }
+    });
+}
+
+// 动态加载外部 css 文件
+function loadCss(module) {
+    $.ajax({
+        url: "css/" + module + ".css",
+        success: function (data) {
+            var cssLink = $("link.dynamic");
+            cssLink.attr("href", "css/" + module + ".css");
+        },
+        error: function (error) {
+            console.log("请求外部 css 样式表失败！");
+        }
+    });
+}
+
 // 导航滑块
 var bar = (function () {
 
@@ -82,57 +188,124 @@ var bar = (function () {
     return { initModule : initModule };
 }());
 
-// 加载模块函数
-function router(module,container){
+// 左侧导航滑块
+$(function () {
+    var sliderItem = $('#bar').find('.list-item');
+    console.log( sliderItem );
 
-    container=container||$("#container");
-
-    // 请求模块结构
-    $.ajax({
-        url:"views/" + module + ".html",
-        success: function(data){
-            container.html(data);
-        }
+    // 返回首页
+    $(sliderItem[0]).click(function () {
+        window.open("./");
     });
 
-    // 请求外部 js 文件
-    loadJs(module);
-
-    // 请求外部 css 文件
-    loadCss(module);
-
-}
-
-// 加载外部 js 文件
-function loadJs(module){
-    $.ajax({
-        type: "get",
-        url:"js/" + module + ".js",
-        success: function (data) {
-            var dynamicJs = $("script.dynamic");
-            dynamicJs.attr("src", "js/" + module + ".js");
-        },
-        error: function (error) {
-            console.log("request failed");
-        }
+    // 挽回爱情
+    $(sliderItem[1]).click(function () {
+        router('save-love', $('#container'));
     });
-}
 
-// 动态加载外部 css 文件
-function loadCss(module) {
-    $.ajax({
-        type: "get",
-        url: "css/" + module + ".css",
-        success: function (data) {
-            var cssLink = $("link.dynamic");
-            cssLink.attr("href", "css/" + module + ".css");
-        },
-        error: function (error) {
-            console.log("请求外部 css 样式表失败！");
-        }
+    // 挽救婚姻
+    $(sliderItem[2]).click(function () {
+        router('save-marriage', $('#container'));
     });
-}
 
+    // 分离小三
+    $(sliderItem[3]).click(function () {
+        router('separate-mistress', $('#container'));
+    });
+
+    // 定制爱情
+    $(sliderItem[4]).click(function () {
+        router('custom-love', $('#container'));
+    });
+
+    // 情感论坛
+    $(sliderItem[5]).click(function () {
+        router('emotion-forum', $('#container'));
+    });
+
+    // 权威专家
+    $(sliderItem[6]).click(function () {
+        router('team', $('#container'));
+    });
+
+    // 服务介绍
+    $(sliderItem[7]).click(function () {
+        router('service', $('#container'));
+    });
+
+    // 关于我们
+    $(sliderItem[8]).click(function () {
+        router('about-us', $('#container'));
+    });
+
+});
+
+
+// 加载二级页面
+$(function(){
+
+    // 挽回爱情
+    $(".icon-txt-group:first-child .item:nth-child(1)").click(function(){
+        router("save-love",$("#container"));
+    });
+
+
+
+    // 挽救婚姻
+    $(".icon-txt-group:first-child .item:nth-child(2)").click(function(){
+        router("save-marriage",$("#container"));
+    });
+
+    // 分离小三
+    $(".icon-txt-group:first-child .item:nth-child(3)").click(function(){
+        router("separate-mistress",$("#container"));
+    });
+
+    // 定制爱情
+    $(".icon-txt-group:first-child .item:nth-child(4)").click(function(){
+        router("custom-love",$("#container"));
+    });
+
+    // 情感课堂
+    $(".icon-txt-group:last-child .item:nth-child(1)").click(function(){
+        router("emotion-forum",$("#container"));
+    });
+
+    // 权威专家
+    $(".icon-txt-group:last-child .item:nth-child(2)").click(function(){
+        router("team",$("#container"));
+    });
+
+    // 服务介绍
+    $(".icon-txt-group:last-child .item:nth-child(3)").click(function(){
+        router("service",$("#container"));
+    });
+
+    // 关于我们
+    $(".icon-txt-group:last-child .item:nth-child(4)").click(function(){
+        router("about",$("#container"));
+    });
+
+
+    // index - 首页中的链接
+    //--> 挽回爱情页面
+    $(".module-02 .main .row:first-child img:first-child").click(function () {
+        router("save-love", $("#container"));
+    });
+    //--> 挽救婚姻页面
+    $(".module-02 .main .row:first-child img:last-child").click(function () {
+        router("save-marriage", $("#container"));
+    });
+    //--> 分离小三页面
+    $(".module-02 .main .row:last-child img:first-child").click(function () {
+        router("separate-mistress", $("#container"));
+    });
+    //--> 定制爱情页面
+    $(".module-02 .main .row:last-child img:last-child").click(function () {
+        router("custom-love", $("#container"));
+    });
+
+});
 
 // 加载页面公共部分
 $(document).ready(function () {
@@ -267,72 +440,7 @@ $(document).ready(function () {
 
     }
 
-
 });
 
-// 加载二级页面
-$(function(){
-
-    // 挽回爱情
-    $(".icon-txt-group:first-child .item:nth-child(1)").click(function(){
-        router("save-love",$("#container"));
-    });
-    $('#bar .list .list-item')[0].click(function () {
-        router("index",$("#container"));
-    });
-
-    // 挽救婚姻
-    $(".icon-txt-group:first-child .item:nth-child(2)").click(function(){
-        router("save-marriage",$("#container"));
-    });
-
-    // 分离小三
-    $(".icon-txt-group:first-child .item:nth-child(3)").click(function(){
-        router("separate-mistress",$("#container"));
-    });
-
-    // 定制爱情
-    $(".icon-txt-group:first-child .item:nth-child(4)").click(function(){
-        router("custom-love",$("#container"));
-    });
-
-    // 情感课堂
-    $(".icon-txt-group:last-child .item:nth-child(1)").click(function(){
-        router("emotion-forum",$("#container"));
-    });
-
-    // 权威专家
-    $(".icon-txt-group:last-child .item:nth-child(2)").click(function(){
-        router("team",$("#container"));
-    });
-
-    // 服务介绍
-    $(".icon-txt-group:last-child .item:nth-child(3)").click(function(){
-        router("service",$("#container"));
-    });
-
-    // 关于我们
-    $(".icon-txt-group:last-child .item:nth-child(4)").click(function(){
-        router("about",$("#container"));
-    });
 
 
-    // index - 首页中的链接
-    //--> 挽回爱情页面
-    $(".module-02 .main .row:first-child img:first-child").click(function () {
-        router("save-love", $("#container"));
-    });
-    //--> 挽救婚姻页面
-    $(".module-02 .main .row:first-child img:last-child").click(function () {
-        router("save-marriage", $("#container"));
-    });
-    //--> 分离小三页面
-    $(".module-02 .main .row:last-child img:first-child").click(function () {
-        router("separate-mistress", $("#container"));
-    });
-    //--> 定制爱情页面
-    $(".module-02 .main .row:last-child img:last-child").click(function () {
-        router("custom-love", $("#container"));
-    });
-
-});
