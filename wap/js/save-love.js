@@ -18,7 +18,7 @@ var insertModuleTitle = $(function (){
 
     }());
 
-// 请求模块模块标题数据
+    // 请求模块模块标题数据
     $(function () {
 
         $.ajax({
@@ -34,7 +34,7 @@ var insertModuleTitle = $(function (){
 
     }());
 
-// 插入模块标题
+    // 插入模块标题
     function insertModuleTitle(data) {
 
         // 动态渲染模板标题
@@ -56,43 +56,45 @@ var changePrefaceImg = $(function (){
 
 }());
 
+// module 01 area - banner
+var moduleOneBanner = $(function (){
+
+    var tabContentItem = $(".module-01 .main .swiper-container .swiper-wrapper .swiper-slide");
+
+    var moduleOneSwiper = new Swiper('.module-01 .main #tabs-container',{
+        onSlideChangeStart: function(){
+            $(".tabs .active").removeClass('active');
+            $(".tabs p").eq(moduleOneSwiper.activeIndex).addClass('active');
+        }
+    });
+
+    $(".tabs p").on('touchstart mousedown',function(e){
+        e.preventDefault();
+        $(".tabs .active").removeClass('active');
+        $(this).addClass('active');
+        moduleOneSwiper.slideTo( $(this).index() );
+    });
+
+    $(".tabs p").click(function(e){
+        e.preventDefault();
+    });
+
+}());
+
+// module 02 area - banner
+var moduleTwoBanner = $(function (){
+
+    var moduleTwoSwiper = new Swiper('.module-02 .main .swiper-container', {
+        autoplay: 10000,                     // 禁止自动播放
+        pagination : '.swiper-pagination',   // 显示分页器
+        paginationClickable :true,           // 分页器可点击
+    });
+
+});
+
 // banner
 $(document).ready(function () {
 
-    // module 01 area - banner
-    var moduleOneBanner = $(function (){
 
-        var tabContentItem = $(".module-01 .main .swiper-container .swiper-wrapper .swiper-slide");
-
-        var moduleOneSwiper = new Swiper('.module-01 .main #tabs-container',{
-            onSlideChangeStart: function(){
-                $(".tabs .active").removeClass('active');
-                $(".tabs p").eq(moduleOneSwiper.activeIndex).addClass('active');
-            }
-        });
-
-        $(".tabs p").on('touchstart mousedown',function(e){
-            e.preventDefault();
-            $(".tabs .active").removeClass('active');
-            $(this).addClass('active');
-            moduleOneSwiper.slideTo( $(this).index() );
-        });
-
-        $(".tabs p").click(function(e){
-            e.preventDefault();
-        });
-
-    }());
-
-// module 02 area - banner
-    var moduleTwoBanner = $(function (){
-
-        var moduleTwoSwiper = new Swiper('.module-02 .main .swiper-container', {
-            autoplay: 10000,                     // 禁止自动播放
-            pagination : '.swiper-pagination',   // 显示分页器
-            paginationClickable :true,           // 分页器可点击
-        });
-
-    });
 
 });
