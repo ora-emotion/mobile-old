@@ -1,0 +1,20 @@
+.module-01{
+	width: 100%;
+	height: 3rem;
+}
+.module-01 .main{
+	display: flex;
+	justify-content: space-around;
+}
+.module-01 .main .icon-txt-group{
+	width: 1.6rem;
+}
+.module-01 .main .icon-txt-group img{
+	width: 1.22rem;
+	height: 1.22rem;
+	padding-left: .17rem;
+}
+.module-01 .main .icon-txt-group p{
+	width: 100%;
+	text-align: center;
+}
