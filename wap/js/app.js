@@ -436,7 +436,7 @@ $(document).ready(function () {
     // 将返回首页按钮插入页面
     function insetBackHomeBtn(data) {
 
-        $("body").append(data);
+        $(" ").append(data);
 
     }
 

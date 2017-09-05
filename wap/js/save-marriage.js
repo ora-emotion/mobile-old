@@ -55,3 +55,8 @@ var changePrefaceImg = $(function (){
     prefaceImg.attr("src", "images/save-marriage/banner.png");
 
 }());
+
+
+
+//列表收缩
+

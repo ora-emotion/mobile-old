@@ -1,20 +1,217 @@
-.module-01{
+.module-01 {
 	width: 100%;
 	height: 3rem;
 }
-.module-01 .main{
+
+.module-01 .main {
 	display: flex;
 	justify-content: space-around;
 }
-.module-01 .main .icon-txt-group{
+
+.module-01 .main .icon-txt-group {
 	width: 1.6rem;
 }
-.module-01 .main .icon-txt-group img{
+
+.module-01 .main .icon-txt-group img {
 	width: 1.22rem;
 	height: 1.22rem;
 	padding-left: .17rem;
 }
-.module-01 .main .icon-txt-group p{
+
+.module-01 .main .icon-txt-group p {
 	width: 100%;
 	text-align: center;
+}
+
+.module-02 .main {
+	background-color: #F4F4F4;
+	width: 100%;
+	height: 7rem;
+}
+
+.module-02 .main .clear {
+	width: 100%;
+	height: .2rem;
+}
+
+.module-02 .main .bg {
+	background: url(../images/save-marriage/crisis-bgimg.png) center center no-repeat;
+	background-size: 100% 100%;
+	width: 6.78rem;
+	height: 6.5rem;
+	margin: 0 auto;
+	/*padding-top: .5rem;*/
+}
+
+.module-03 .main {
+	width: 100%;
+	height: 4.25rem;
+	background-color: #FFEDED;
+}
+
+.module-03 .main p {
+	width: 4.25rem;
+	height: 1.7rem;
+	line-height: .35rem;
+}
+
+.module-03 .main .top p {
+	float: right;
+	padding-right: .2rem;
+}
+
+.module-03 .main .bottom p {
+	float: left;
+	padding-left: .2rem;
+}
+
+.module-03 .main .top {
+	width: 100%;
+	height: 1.8rem;
+	padding-top: .15rem;
+}
+
+.module-03 .main .top img {
+	width: 2.71rem;
+	height: 1.7rem;
+	padding-left: .1rem;
+}
+
+
+/*.module-03 .main .top p{
+	padding-right: .2rem;
+}*/
+
+.module-03 .main .zhong {
+	width: 100%;
+	height: .2rem;
+	border-bottom: 2px solid #FFCACA;
+}
+
+.module-03 .main .bottom {
+	width: 100%;
+	height: 1.8rem;
+	padding-top: .2rem;
+}
+
+.module-03 .main .bottom img {
+	width: 2.71rem;
+	height: 1.7rem;
+	padding-left: .2rem;
+}
+
+.module-04 .main .ul1 {
+	width: 5.25rem;
+	background-color: #BECCE7;
+	margin: 0 auto;
+	transform: translateZ(0);
+}
+
+.module-04 .main .ul1 input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+}
+
+.module-04 .main .ul1 label {
+	position: relative;
+	display: block;
+	height: .8rem;
+	line-height: .8rem;
+	padding-left: .8rem;
+	font-size: .26rem;
+	font-weight: 600;
+	cursor: pointer;
+	border-top: 1px #919FBA solid;
+}
+
+.module-04 .main .ul1 label[for*='1'] {
+	border: 0;
+}
+
+.module-04 .main .ul1 section {
+	height: 0;
+	transition: .3s all;
+	overflow: hidden;
+}
+
+#toggle1:checked~label[for*='1']:after,
+#toggle2:checked~label[for*='2']:after,
+#toggle3:checked~label[for*='3']:after,
+#toggle4:checked~label[for*='4']:after,
+#toggle5:checked~label[for*='5']:after,
+#toggle6:checked~label[for*='6']:after {
+	transform: rotate(0deg);
+}
+
+#toggle1:checked~#content1,
+#toggle2:checked~#content2,
+#toggle3:checked~#content3,
+#toggle4:checked~#content4,
+#toggle5:checked~#content5,
+#toggle6:checked~#content6 {
+	background: url(../images/save-marriage/erro-bgimg.png) center center no-repeat;
+	background-size: 5.26rem 100%;
+	width: 100%;
+	height: 1.6rem;
+}
+.p1{
+	line-height: .35rem;
+	padding: .3rem .1rem .2rem .3rem;
+}
+
+
+.module-05 .main{
+	background: url(../images/save-marriage/marriage-type-bgimg.png) center center no-repeat;
+	background-size: 7.5rem 100%;
+	width: 100%;
+	height: 4.96rem;
+}
+.module-05 .main div div p{
+	padding-top: 1.2rem;
+	padding-left: .18rem;
+	width: 1.3rem;
+	text-align: center;
+}
+.module-05 .main .top{
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding-top: .2rem;
+}
+.module-05 .main .bottom{
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+	margin: .2rem auto;
+}
+.module-05 .main .top .m51{
+	background: url(../images/save-marriage/marriage-type-bgimg1.png) center center no-repeat;
+	background-size: 100% 100%;
+	width: 1.64rem;
+	height: 2.17rem;
+}
+.module-05 .main .top .m52{
+	background: url(../images/save-marriage/marriage-type-bgimg2.png) center center no-repeat;
+	background-size: 100% 100%;
+	width: 1.64rem;
+	height: 2.17rem;
+}
+.module-05 .main .top .m53{
+	background: url(../images/save-marriage/marriage-type-bgimg3.png) center center no-repeat;
+	background-size: 100% 100%;
+	width: 1.64rem;
+	height: 2.17rem;
+}
+.module-05 .main .bottom .m54{
+	background: url(../images/save-marriage/marriage-type-bgimg4.png) center center no-repeat;
+	background-size: 100% 100%;
+	width: 1.64rem;
+	height: 2.17rem;
+}
+.module-05 .main .bottom .m55{
+	background: url(../images/save-marriage/marriage-type-bgimg5.png) center center no-repeat;
+	background-size: 100% 100%;
+	width: 1.64rem;
+	height: 2.17rem;
 }
