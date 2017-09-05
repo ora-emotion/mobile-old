@@ -56,47 +56,43 @@ var changePrefaceImg = $(function (){
 
 }());
 
-// 左侧导航
-var sliderBar = (function () {
-    var sliderItem = $('#bar .content .list .list-item');
-    console.log(sliderItem);
-    sliderItem.click(function () {
-        alert('ok');
-    });
-}());
+// banner
+$(document).ready(function () {
 
-// module 01 area - banner
-var moduleOneBanner = $(function (){
+    // module 01 area - banner
+    var moduleOneBanner = $(function (){
 
-    var tabContentItem = $(".module-01 .main .swiper-container .swiper-wrapper .swiper-slide");
+        var tabContentItem = $(".module-01 .main .swiper-container .swiper-wrapper .swiper-slide");
 
-    var moduleOneSwiper = new Swiper('.module-01 .main #tabs-container',{
-        onSlideChangeStart: function(){
+        var moduleOneSwiper = new Swiper('.module-01 .main #tabs-container',{
+            onSlideChangeStart: function(){
+                $(".tabs .active").removeClass('active');
+                $(".tabs p").eq(moduleOneSwiper.activeIndex).addClass('active');
+            }
+        });
+
+        $(".tabs p").on('touchstart mousedown',function(e){
+            e.preventDefault();
             $(".tabs .active").removeClass('active');
-            $(".tabs p").eq(moduleOneSwiper.activeIndex).addClass('active');
-        }
-    });
+            $(this).addClass('active');
+            moduleOneSwiper.slideTo( $(this).index() );
+        });
 
-    $(".tabs p").on('touchstart mousedown',function(e){
-        e.preventDefault();
-        $(".tabs .active").removeClass('active');
-        $(this).addClass('active');
-        moduleOneSwiper.slideTo( $(this).index() );
-    });
+        $(".tabs p").click(function(e){
+            e.preventDefault();
+        });
 
-    $(".tabs p").click(function(e){
-        e.preventDefault();
-    });
-
-}());
+    }());
 
 // module 02 area - banner
-var moduleTwoBanner = $(function (){
+    var moduleTwoBanner = $(function (){
 
-    var moduleTwoSwiper = new Swiper('.module-02 .main .swiper-container', {
-        autoplay: 10000,                     // 禁止自动播放
-        pagination : '.swiper-pagination',   // 显示分页器
-        paginationClickable :true,           // 分页器可点击
+        var moduleTwoSwiper = new Swiper('.module-02 .main .swiper-container', {
+            autoplay: 10000,                     // 禁止自动播放
+            pagination : '.swiper-pagination',   // 显示分页器
+            paginationClickable :true,           // 分页器可点击
+        });
+
     });
 
 });

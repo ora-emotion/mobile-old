@@ -191,11 +191,10 @@ var bar = (function () {
 // 左侧导航滑块
 $(function () {
     var sliderItem = $('#bar').find('.list-item');
-    console.log( sliderItem );
 
     // 返回首页
     $(sliderItem[0]).click(function () {
-        window.open("./");
+        router('index');
     });
 
     // 挽回爱情
