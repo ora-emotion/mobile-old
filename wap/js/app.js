@@ -191,11 +191,10 @@ var bar = (function () {
 // 左侧导航滑块
 $(function () {
     var sliderItem = $('#bar').find('.list-item');
-    console.log( sliderItem );
 
     // 返回首页
     $(sliderItem[0]).click(function () {
-        window.open("./");
+        router( 'index', $('#container') );
     });
 
     // 挽回爱情
@@ -348,50 +347,50 @@ $(document).ready(function () {
 
     }());
 
-    // 请求模块标题模板
-    $(function () {
-
-        $.ajax({
-            type: "get",
-            url: "components/module-title/module-title.html",
-            success: function (dataHTML) {
-                // 插入模板到页面
-                $(".module").prepend(dataHTML);
-            },
-            error: function (error) {
-                alert("request error");
-            }
-        });
-
-    }());
-
-    // 请求模块模块标题数据
-    $(function () {
-
-        $.ajax({
-            type: "get",
-            url: "data/module-title.json",
-            success: function (data) {
-                insertModuleTitle(data);
-            },
-            error: function (error) {
-                alert("requests error");
-            }
-        });
-
-    }());
-
-    // 插入模块标题
-    function insertModuleTitle(data) {
-
-        // 动态渲染模板标题
-        var moduleTitle = $(".module .title .module-title");
-        var i = 0;
-        for (var title in data.page["index"]) {
-            $($(".module")[i]).find(".title .module-title").html(data.page["index"][title]);
-            i++;
-        }
-    }
+    // // 请求模块标题模板
+    // $(function () {
+    //
+    //     $.ajax({
+    //         type: "get",
+    //         url: "components/module-title/module-title.html",
+    //         success: function (dataHTML) {
+    //             // 插入模板到页面
+    //             $(".module").prepend(dataHTML);
+    //         },
+    //         error: function (error) {
+    //             alert("request error");
+    //         }
+    //     });
+    //
+    // }());
+    //
+    // // 请求模块模块标题数据
+    // $(function () {
+    //
+    //     $.ajax({
+    //         type: "get",
+    //         url: "data/module-title.json",
+    //         success: function (data) {
+    //             insertModuleTitle(data);
+    //         },
+    //         error: function (error) {
+    //             alert("requests error");
+    //         }
+    //     });
+    //
+    // }());
+    //
+    // // 插入模块标题
+    // function insertModuleTitle(data) {
+    //
+    //     // 动态渲染模板标题
+    //     var moduleTitle = $(".module .title .module-title");
+    //     var i = 0;
+    //     for (var title in data.page["index"]) {
+    //         $($(".module")[i]).find(".title .module-title").html(data.page["index"][title]);
+    //         i++;
+    //     }
+    // }
 
     // 加载 footer 区域
     function loadFooter(data) {

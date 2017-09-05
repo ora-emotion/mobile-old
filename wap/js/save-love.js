@@ -18,7 +18,7 @@ var insertModuleTitle = $(function (){
 
     }());
 
-// 请求模块模块标题数据
+    // 请求模块模块标题数据
     $(function () {
 
         $.ajax({
@@ -34,7 +34,7 @@ var insertModuleTitle = $(function (){
 
     }());
 
-// 插入模块标题
+    // 插入模块标题
     function insertModuleTitle(data) {
 
         // 动态渲染模板标题
@@ -54,15 +54,6 @@ var changePrefaceImg = $(function (){
     var prefaceImg = $(".preface .banner-img img");
     prefaceImg.attr("src", "images/save-love/preface.png");
 
-}());
-
-// 左侧导航
-var sliderBar = (function () {
-    var sliderItem = $('#bar .content .list .list-item');
-    console.log(sliderItem);
-    sliderItem.click(function () {
-        alert('ok');
-    });
 }());
 
 // module 01 area - banner
@@ -98,5 +89,12 @@ var moduleTwoBanner = $(function (){
         pagination : '.swiper-pagination',   // 显示分页器
         paginationClickable :true,           // 分页器可点击
     });
+
+});
+
+// banner
+$(document).ready(function () {
+
+
 
 });
