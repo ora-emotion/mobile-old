@@ -416,29 +416,6 @@ $(document).ready(function () {
 
     }
 
-    // 返回首页按钮 HTML 模板
-    $(function () {
-
-        $.ajax({
-            type: "get",
-            url: "components/home/home.html",
-            success: function (data) {
-                insetBackHomeBtn(data);
-            },
-            error: function (error) {
-                alert("request error");
-            }
-        });
-
-    }());
-
-    // 将返回首页按钮插入页面
-    function insetBackHomeBtn(data) {
-
-        $(" ").append(data);
-
-    }
-
 });
 
 
