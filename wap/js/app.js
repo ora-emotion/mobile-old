@@ -117,7 +117,9 @@ var bar = (function () {
             // position: fixed; left: 0;
             extended_left : 0,
             // position: fixed; left: -435px;
-            retracted_left : -455
+            retracted_left : -455,
+            hidden_retracted_btn_position : -25,
+            show_retracted_btn_position : 52
         },
         $sliderBar, $sliderBarBtnExtended, $sliderBarBtnRetracted,
         listItem, sliderExtended, sliderRetracted, onClickSlider, initModule;
@@ -125,11 +127,16 @@ var bar = (function () {
     // 展开导航滑块
     sliderExtended = function () {
         var bar_left = $('#bar').position().left;
+        // 收缩状态时
         if ( bar_left === configMap.extended_left ) {
             $sliderBar.animate({ left : configMap.retracted_left });
             $sliderBarBtnExtended.animate({
                 right : 0,
                 width : 59
+            });
+            $sliderBarBtnRetracted.find('.icon').animate({
+                right : configMap.hidden_retracted_btn_position,
+                opacity : 0
             });
         }
         else if ( bar_left === configMap.retracted_left ) {
@@ -137,6 +144,10 @@ var bar = (function () {
             $sliderBarBtnExtended.animate({
                 right : 59,
                 width : 0
+            });
+            $sliderBarBtnRetracted.find('.icon').animate({
+                right : configMap.show_retracted_btn_position,
+                opacity : 1
             });
         }
         return false;
@@ -145,11 +156,16 @@ var bar = (function () {
     // 收缩导航滑块
     sliderRetracted = function () {
         var bar_left = $('#bar').position().left;
+        // 展开状态时
         if ( bar_left === configMap.extended_left ) {
             $sliderBar.animate({ left : configMap.retracted_left });
             $sliderBarBtnExtended.animate({
                 right : 0,
                 width : 59
+            });
+            $sliderBarBtnRetracted.find('.icon').animate({
+                right : configMap.hidden_retracted_btn_position,
+                opacity : 0
             });
         }
         else if ( bar_left === configMap.retracted_left ) {
@@ -158,16 +174,40 @@ var bar = (function () {
                 right : 59,
                 width : 0
             });
+            $sliderBarBtnRetracted.find('.icon').animate({
+                right : configMap.show_retracted_btn_position,
+                opacity : 0
+            });
         }
         return false;
     };
 
-    onClickListItem = function () {
+    // initialize slider bar - 初始化滑块
+    var initSlider = function () {
+        $sliderBar.animate({
+            'left' : configMap.retracted_left
+        });
+        $sliderBarBtnExtended.animate({
+            right : 0,
+            width : 59
+        });
+        $sliderBarBtnRetracted.find('.icon').animate({
+            right : configMap.hidden_retracted_btn_position,
+            opacity : 0
+        });
+
+        return false;
+    };
+
+    onClickListItem = function ( event ) {
         var listItem = $('#bar').find('.list-item');
         listItem.click(function (event) {
+
             $(this)
                 .addClass('active')
                 .siblings().removeClass('active');
+
+            initSlider();
 
             return false;
         });
@@ -180,6 +220,11 @@ var bar = (function () {
         $sliderBarBtnRetracted = $container.find('.btn-retracted');     // retracted button
         $sliderBarBtnExtended.click( sliderExtended );
         $sliderBarBtnRetracted.click( sliderRetracted );
+        $('body').click( function ( event ) {
+            initSlider();
+            event.stopPropagation();
+            return false;
+        });
         onClickListItem();
 
         return true;
@@ -188,57 +233,65 @@ var bar = (function () {
     return { initModule : initModule };
 }());
 
-// 左侧导航滑块
+// 左侧导航滑块 - slider bar
 $(function () {
     var sliderItem = $('#bar').find('.list-item');
 
     // 返回首页
     $(sliderItem[0]).click(function () {
-        router( 'index', $('#container') );
+        window.location.href = './';
+        $('head title').text('橘子情感 - 首页');
     });
 
     // 挽回爱情
     $(sliderItem[1]).click(function () {
         router('save-love', $('#container'));
+        $('head title').text('橘子情感 - 挽回爱情');
     });
 
     // 挽救婚姻
     $(sliderItem[2]).click(function () {
         router('save-marriage', $('#container'));
+        $('head title').text('橘子情感 - 挽救婚姻');
     });
 
     // 分离小三
     $(sliderItem[3]).click(function () {
         router('separate-mistress', $('#container'));
+        $('head title').text('橘子情感 - 分离小三');
     });
 
     // 定制爱情
     $(sliderItem[4]).click(function () {
         router('custom-love', $('#container'));
+        $('head title').text('橘子情感 - 定制爱情');
     });
 
     // 情感论坛
     $(sliderItem[5]).click(function () {
         router('emotion-forum', $('#container'));
+        $('head title').text('橘子情感 - 情感论坛');
     });
 
     // 权威专家
     $(sliderItem[6]).click(function () {
         router('team', $('#container'));
+        $('head title').text('橘子情感 - 权威专家');
     });
 
     // 服务介绍
     $(sliderItem[7]).click(function () {
         router('service', $('#container'));
+        $('head title').text('橘子情感 - 服务介绍');
     });
 
     // 关于我们
     $(sliderItem[8]).click(function () {
-        router('about-us', $('#container'));
+        router('about', $('#container'));
+        $('head title').text('橘子情感 - 关于我们');
     });
 
 });
-
 
 // 加载二级页面
 $(function(){
@@ -246,43 +299,49 @@ $(function(){
     // 挽回爱情
     $(".icon-txt-group:first-child .item:nth-child(1)").click(function(){
         router("save-love",$("#container"));
+        $('head title').text('橘子情感 - 挽回爱情');
     });
-
-
 
     // 挽救婚姻
     $(".icon-txt-group:first-child .item:nth-child(2)").click(function(){
         router("save-marriage",$("#container"));
+        $('head title').text('橘子情感 - 挽救婚姻');
     });
 
     // 分离小三
     $(".icon-txt-group:first-child .item:nth-child(3)").click(function(){
         router("separate-mistress",$("#container"));
+        $('head title').text('橘子情感 - 分离小三');
     });
 
     // 定制爱情
     $(".icon-txt-group:first-child .item:nth-child(4)").click(function(){
         router("custom-love",$("#container"));
+        $('head title').text('橘子情感 - 定制爱情');
     });
 
     // 情感课堂
     $(".icon-txt-group:last-child .item:nth-child(1)").click(function(){
         router("emotion-forum",$("#container"));
+        $('head title').text('橘子情感 - 情感课堂');
     });
 
     // 权威专家
     $(".icon-txt-group:last-child .item:nth-child(2)").click(function(){
         router("team",$("#container"));
+        $('head title').text('橘子情感 - 权威专家');
     });
 
     // 服务介绍
     $(".icon-txt-group:last-child .item:nth-child(3)").click(function(){
         router("service",$("#container"));
+        $('head title').text('橘子情感 - 服务介绍');
     });
 
     // 关于我们
     $(".icon-txt-group:last-child .item:nth-child(4)").click(function(){
         router("about",$("#container"));
+        $('head title').text('橘子情感 - 关于我们');
     });
 
 
@@ -290,18 +349,22 @@ $(function(){
     //--> 挽回爱情页面
     $(".module-02 .main .row:first-child img:first-child").click(function () {
         router("save-love", $("#container"));
+        $('head title').text('橘子情感 - 挽回爱情');
     });
     //--> 挽救婚姻页面
     $(".module-02 .main .row:first-child img:last-child").click(function () {
         router("save-marriage", $("#container"));
+        $('head title').text('橘子情感 - 挽救婚姻');
     });
     //--> 分离小三页面
     $(".module-02 .main .row:last-child img:first-child").click(function () {
         router("separate-mistress", $("#container"));
+        $('head title').text('橘子情感 - 分离小三')
     });
     //--> 定制爱情页面
     $(".module-02 .main .row:last-child img:last-child").click(function () {
         router("custom-love", $("#container"));
+        $('head title').text('橘子情感 - 定制爱情');
     });
 
 });
@@ -347,51 +410,6 @@ $(document).ready(function () {
 
     }());
 
-    // // 请求模块标题模板
-    // $(function () {
-    //
-    //     $.ajax({
-    //         type: "get",
-    //         url: "components/module-title/module-title.html",
-    //         success: function (dataHTML) {
-    //             // 插入模板到页面
-    //             $(".module").prepend(dataHTML);
-    //         },
-    //         error: function (error) {
-    //             alert("request error");
-    //         }
-    //     });
-    //
-    // }());
-    //
-    // // 请求模块模块标题数据
-    // $(function () {
-    //
-    //     $.ajax({
-    //         type: "get",
-    //         url: "data/module-title.json",
-    //         success: function (data) {
-    //             insertModuleTitle(data);
-    //         },
-    //         error: function (error) {
-    //             alert("requests error");
-    //         }
-    //     });
-    //
-    // }());
-    //
-    // // 插入模块标题
-    // function insertModuleTitle(data) {
-    //
-    //     // 动态渲染模板标题
-    //     var moduleTitle = $(".module .title .module-title");
-    //     var i = 0;
-    //     for (var title in data.page["index"]) {
-    //         $($(".module")[i]).find(".title .module-title").html(data.page["index"][title]);
-    //         i++;
-    //     }
-    // }
-
     // 加载 footer 区域
     function loadFooter(data) {
 
@@ -413,29 +431,6 @@ $(document).ready(function () {
         // 公司备案号
         $("footer .ora-record .ora-record-txt").html(data["ora-record"][0]);
         $("footer .ora-record .ora-record-num").html(data["ora-record"][1]);
-
-    }
-
-    // 返回首页按钮 HTML 模板
-    $(function () {
-
-        $.ajax({
-            type: "get",
-            url: "components/home/home.html",
-            success: function (data) {
-                insetBackHomeBtn(data);
-            },
-            error: function (error) {
-                alert("request error");
-            }
-        });
-
-    }());
-
-    // 将返回首页按钮插入页面
-    function insetBackHomeBtn(data) {
-
-        $(" ").append(data);
 
     }
 
