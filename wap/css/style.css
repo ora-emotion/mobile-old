@@ -13,6 +13,9 @@ html {
 ol, ul, dl {
     list-style: none;
 }
+a, img {
+    border: 0;
+}
 a {
     text-decoration: none;
 }
