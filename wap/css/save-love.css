@@ -182,6 +182,12 @@
 .module-04 .main .row {
     padding: .24rem 0;
 }
+.module-04 .main .row:first-child {
+    background: #f9f9f9;
+}
+.module-04 .main .row:last-child {
+    background: #ececec;
+}
 .module-04 .main .row p {
     padding-left: .3rem;
     height: 100%;
@@ -199,9 +205,6 @@
 
     padding-right: .22rem;
     padding-left: .1rem;
-}
-.module-04 .main .row:last-child {
-    background: #ececec;
 }
 /** End module 04 area */
 

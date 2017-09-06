@@ -194,7 +194,7 @@ $(function () {
 
     // 返回首页
     $(sliderItem[0]).click(function () {
-        router( 'index', $('#container') );
+        window.location.href = './';
     });
 
     // 挽回爱情
@@ -234,7 +234,7 @@ $(function () {
 
     // 关于我们
     $(sliderItem[8]).click(function () {
-        router('about-us', $('#container'));
+        router('about', $('#container'));
     });
 
 });
