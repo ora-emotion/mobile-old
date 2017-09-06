@@ -159,3 +159,40 @@ h3{
 .module-05 .main div .word p{
 	line-height: .35rem;
 }
+.module-06 .main{
+	width: 100%;
+}
+.module-06 .main .left{
+	float: left;
+	background: url(../images/separate-mistress/service-left.png) center center no-repeat;
+	background-size: 100% 100%;
+	width: .33rem;
+	height: 8.42rem;
+	
+}
+.module-06 .main .right{
+	width: 80%;
+}
+/*.p1 .h1{
+	font-size: .4rem;
+}
+.p1 .h3{
+	font-size: .28rem;
+	font-weight: 100;
+}*/
+
+
+
+
+
+
+
+
+.module-09 .main{
+	background: url(../images/separate-mistress/servicewen_bg.png) no-repeat center center;
+	-webkit-background-size: cover;
+    background-size: 7.04rem 100%;
+    width: 100%;
+    height: 7.67rem;
+    margin-top: .3rem;
+}
