@@ -199,6 +199,20 @@ var bar = (function () {
         return false;
     };
 
+    // add modal
+    // var sliderModal = function () {
+    //     var pageModal = document.createElement('div');
+    //     pageModal.addClass('page-modal');
+    //     pageModal.css({
+    //         width : 100%,
+    //         height : 2000,
+    //         backgroundColor : 'rgba(0, 0, 0, .3)',
+    //         position : 'absolute',
+    //         zIndex : 15
+    //     });
+    //     pageModal.append('body');
+    // };
+
     onClickListItem = function ( event ) {
         var listItem = $('#bar').find('.list-item');
         listItem.click(function (event) {
@@ -220,8 +234,9 @@ var bar = (function () {
         $sliderBarBtnRetracted = $container.find('.btn-retracted');     // retracted button
         $sliderBarBtnExtended.click( sliderExtended );
         $sliderBarBtnRetracted.click( sliderRetracted );
-        $('body').click( function ( event ) {
+        $('body, html').click( function ( event ) {
             initSlider();
+            sliderModal();
             event.stopPropagation();
             return false;
         });
