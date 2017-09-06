@@ -91,10 +91,3 @@ var moduleTwoBanner = $(function (){
     });
 
 });
-
-// banner
-$(document).ready(function () {
-
-
-
-});
