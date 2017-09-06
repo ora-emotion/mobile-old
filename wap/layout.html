@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slider bar</title>
+
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul, ol, li {
+            list-style: none;
+        }
+        #bar {
+            position: fixed;
+            top: 77px;
+            /*left: 0;*/
+             left: -453px;
+
+            width: 524px;
+            height: 956px;
+            background: transparent;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #bar .content {
+            width: 453px;
+            height: 100%;
+            background: #2f2f31;
+            position: relative;
+        }
+        #bar .content .slider-bar-title {
+            color: #fff;
+            font-size: 26px;
+            line-height: 76px;
+            width: 100%;
+            height: 76px;
+            text-align: center;
+            background: #212123;
+        }
+        #bar .content .list .list-item {
+            width: 445px;
+            height: 100%;
+            border-left: 8px solid transparent;
+        }
+        #bar .content .list .list-item.active {
+            border-left: 8px solid #fb2d2d;
+            background: #212123;
+            width: 445px;
+        }
+        #bar .content .list .list-item p {
+            color: #fff;
+            font-size: 26px;
+            line-height: 88px;
+            height: 88px;
+            width: 382px;
+            border-bottom: 1px solid #212123;
+            margin: 0 auto;
+        }
+        #bar .content .list .list-item p .icon {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            padding-left: 48px;
+            padding-right: 44px;
+            vertical-align: middle;
+        }
+        #bar .content .list .list-item:nth-child(1) p .icon {
+            background: url("images/slider-bar/btn-back-home.png") no-repeat center center;
+        }
+        #bar .content .list .list-item:nth-child(2) p .icon {
+            background: url("images/slider-bar/btn-save-love.png") no-repeat center center;
+        }
+        #bar .content .list .list-item:nth-child(3) p .icon {
+            background: url("images/slider-bar/btn-save-marriage.png") no-repeat center center;
+        }
+        #bar .content .list .list-item:nth-child(4) p .icon {
+            background: url("images/slider-bar/btn-separate-mistress.png") no-repeat center center;
+        }
+        #bar .content .list .list-item:nth-child(5) p .icon {
+            background: url("images/slider-bar/btn-custom-love.png") no-repeat center center;
+        }
+        #bar .content .list .list-item:nth-child(6) p .icon {
+            background: url("images/slider-bar/btn-emotion-forum.png") no-repeat center center;
+        }
+        #bar .content .list .list-item:nth-child(7) p .icon {
+            background: url("images/slider-bar/btn-team.png") no-repeat center center;
+        }
+        #bar .content .list .list-item:nth-child(8) p .icon {
+            background: url("images/slider-bar/btn-service.png") no-repeat center center;
+        }
+        #bar .content .list .list-item:nth-child(9) p .icon {
+            background: url("images/slider-bar/btn-about.png") no-repeat center center;
+        }
+        #bar .content .btn-retracted {
+            width: 100%;
+            height: 80px;
+        }
+        #bar .content .btn-retracted .icon {
+            width: 18px;
+            height: 32px;
+            position: absolute;
+            bottom: 25px;
+            right: 52px;
+
+            background: url("images/slider-bar/btn-retracted.png") no-repeat center center;
+        }
+        #bar .btn-wrap {
+            position: relative;
+            right: 0;
+            width: 59px;
+            height: 138px;
+            background: #979798;
+            border-radius: 0 10px 10px 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #bar .btn-wrap .btn {
+            background: url("images/slider-bar/btn.png") no-repeat -40px 0;
+            width: 40px;
+            height: 63px;
+            overflow: hidden;
+        }
+    </style>
+
+    <script type="text/javascript" src="js/jq/jquery-3.2.1.js"></script>
+
+    <script type="text/javascript">
+
+        // 导航滑块
+        var bar = (function () {
+
+            // 声明常量、变量
+            var configMap = {
+                    // position: fixed; left: 0;
+                    extended_left : 0,
+                    // position: fixed; left: -435px;
+                    retracted_left : -453
+                },
+                $sliderBar, $sliderBarBtnExtended, $sliderBarBtnRetracted,
+                listItem, sliderExtended, sliderRetracted, onClickSlider, initModule;
+
+            // 展开导航滑块
+            sliderExtended = function () {
+                var bar_left = $('#bar').position().left;
+                if ( bar_left === configMap.extended_left ) {
+                    $sliderBar.animate({ left : configMap.retracted_left });
+                    $sliderBarBtnExtended.animate({
+                        right : 0,
+                        width : 59
+                    });
+                }
+                else if ( bar_left === configMap.retracted_left ) {
+                    $sliderBar.animate({ left : configMap.extended_left });
+                    $sliderBarBtnExtended.animate({
+                        right : 59,
+                        width : 0
+                    });
+                }
+                return false;
+            };
+
+            // 收缩导航滑块
+            sliderRetracted = function () {
+                var bar_left = $('#bar').position().left;
+                if ( bar_left === configMap.extended_left ) {
+                    $sliderBar.animate({ left : configMap.retracted_left });
+                    $sliderBarBtnExtended.animate({
+                        right : 0,
+                        width : 59
+                    });
+                }
+                else if ( bar_left === configMap.retracted_left ) {
+                    $sliderBar.animate({ left : configMap.extended_left });
+                    $sliderBarBtnExtended.animate({
+                        right : 59,
+                        width : 0
+                    });
+                }
+                return false;
+            };
+
+            onClickListItem = function () {
+                var listItem = $('#bar').find('.list-item');
+                listItem.click(function (event) {
+                    $(this)
+                        .addClass('active')
+                        .siblings().removeClass('active');
+
+                    return false;
+                });
+            };
+
+            // initialize module
+            initModule = function ( $container ) {
+                $sliderBar = $('#bar');
+                $sliderBarBtnExtended = $container.find('.btn-wrap');           // extended button
+                $sliderBarBtnRetracted = $container.find('.btn-retracted');     // retracted button
+                $sliderBarBtnExtended.click( sliderExtended );
+                $sliderBarBtnRetracted.click( sliderRetracted );
+                onClickListItem();
+
+                return true;
+            };
+
+            return { initModule : initModule };
+        }());
+
+
+        $(document).ready(function () {
+            bar.initModule( $('#bar') );
+        });
+
+    </script>
+
+</head>
+<body>
+
+<div id="bar">
+    <div class="content">
+        <p class="slider-bar-title">欢迎登陆橘子情感手机官网</p>
+        <div class="list">
+            <div class="list-item">
+                <p><i class="icon"></i>返回首页</p>
+            </div>
+            <div class="list-item active">
+                <p><i class="icon active"></i>挽回爱情</p>
+            </div>
+            <div class="list-item">
+                <p><i class="icon"></i>挽救婚姻</p>
+            </div>
+            <div class="list-item">
+                <p><i class="icon"></i>分离小三</p>
+            </div>
+            <div class="list-item active">
+                <p><i class="icon"></i>定制爱情</p>
+            </div>
+            <div class="list-item">
+                <p><i class="icon"></i>情感论坛</p>
+            </div>
+            <div class="list-item">
+                <p><i class="icon"></i>权威专家</p>
+            </div>
+            <div class="list-item">
+                <p><i class="icon"></i>服务介绍</p>
+            </div>
+            <div class="list-item">
+                <p><i class="icon"></i>关于我们</p>
+            </div>
+        </div>
+        <div class="btn-retracted"><i class="icon"></i></div>
+    </div>
+    <div class="btn-wrap">
+        <div class="btn"></div>
+    </div>
+</div>
+
+</body>
+</html>

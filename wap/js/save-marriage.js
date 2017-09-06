@@ -58,5 +58,14 @@ var changePrefaceImg = $(function (){
 
 
 
-//列表收缩
+//列表切换
+var moduleTwoBanner = $(function (){
+
+    var moduleTwoSwiper = new Swiper('.module-06 .main .swiper-container', {
+        autoplay: 10000,                     // 禁止自动播放
+        pagination : '.swiper-pagination',   // 显示分页器
+        paginationClickable :true,           // 分页器可点击
+    });
+
+});
 
