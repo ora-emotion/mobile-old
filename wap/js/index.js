@@ -1,12 +1,17 @@
 // 插入第三方 js 库 - swiper.js
 var insertSwiper = $(function (){
 
-    var scriptDynamic = $("script.dynamic");
+    $.ajax({
+        type: 'get',
+        url: 'js/swiper/swiper.js'
+    });
 
-    var swiperScript = document.createElement("script");
-    $(swiperScript).attr({ "type" : "text/javascript", "src" : "js/swiper/swiper.js" });
-
-    $(swiperScript).insertAfter($(scriptDynamic));
+    // var scriptDynamic = $("script.dynamic");
+    //
+    // var swiperScript = document.createElement("script");
+    // $(swiperScript).attr({ "type" : "text/javascript", "src" : "js/swiper/swiper.js" });
+    //
+    // $(swiperScript).insertAfter($(scriptDynamic));
 
 }());
 
