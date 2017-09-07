@@ -59,7 +59,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 4;
+    z-index: 15;
 }
 
 header .logo {
@@ -272,7 +272,9 @@ footer .column:first-child img {
     height: 32px;
     position: absolute;
     bottom: 25px;
-    right: 52px;
+    /*right: 52px;*/
+    right: -25px;
+    opacity: 0;
 
     background: url("../images/slider-bar/btn-retracted.png") no-repeat center center;
 }
