@@ -194,6 +194,35 @@
 /* End module 05: 橘子优势 */
 
 /** Start module 06: 导师团队 */
+.module-06 .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.module-06 .main .item {
+    display: flex;
+    justify-content: flex-start;
+    padding: .18rem 0;
+}
+.module-06 .main .item img {
+    width: 2.07rem;
+    height: 2.74rem;
+}
+.module-06 .main .item .txt-group {
+    width: 4.2rem;
+    padding-left: .2rem;
+}
+.module-06 .main .item .txt-group p {
+    color: #202020;
+    line-height: .36rem;
+}
+.module-06 .main .item .txt-group .mentor-name {
+    font-weight: bold;
+    height: .36rem;
+    padding-top: .3rem;
+    padding-bottom: .05rem;
+}
 /** End module 06: 导师团队 */
 
 /** Start module 07: 用户须知 */
