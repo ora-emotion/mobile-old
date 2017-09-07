@@ -7,8 +7,26 @@
 @import "swiper/swiper.css";
 
 /** Start module 01: 单身原因 */
+.module-01 .main {
+    padding-top: .35rem;
+}
+.module-01 .main .swiper-container .swiper-slide {
+    width: 2.62rem;
+    padding: 0 .15rem;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.module-01 .main .swiper-container .swiper-slide .txt-title {
+    font-weight: bold;
+    line-height: .36rem;
+    height: .36rem;
 
+    padding-top: .15rem;
+    padding-bottom: .05rem;
+}
 /** End module 01: 单身原因 */
 
 /** Start module 02: 错误做法导致后果 */
