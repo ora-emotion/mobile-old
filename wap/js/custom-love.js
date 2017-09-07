@@ -4,6 +4,16 @@
  *
  **/
 
+// 请求外部依赖文件
+// var requestFile = $(function () {
+//     $.ajax({
+//         url: 'js/jq/jquery-3.2.1.js'
+//     });
+//     $.ajax({
+//         url: 'js/swiper/swiper.js'
+//     });
+// }());
+
 // 初始化模块标题
 var insertModuleTitle = $(function (){
 
@@ -61,3 +71,27 @@ var changePrefaceImg = $(function (){
     prefaceImg.attr("src", "images/custom-love/preface.png");
 
 }());
+
+// 轮播图：模块五 - 橘子优势
+var moduleFiveBanner = $(function () {
+    var tabContentItem = $(".module-05 .main .swiper-container .swiper-wrapper .swiper-slide");
+
+    var moduleOneSwiper = new Swiper('.module-05 .main #tabs-container',{
+        autoHeight: true,
+        onSlideChangeStart: function(){
+            $(".module-05 .tabs .active").removeClass('active');
+            $(".module-05 .tabs span").eq(moduleOneSwiper.activeIndex).addClass('active');
+        }
+    });
+
+    $(".module-05 .tabs span").on('touchstart mousedown',function(e){
+        e.preventDefault();
+        $(".module-05 .tabs .active").removeClass('active');
+        $(this).addClass('active');
+        moduleOneSwiper.slideTo( $(this).index() );
+    });
+
+    $(".module-05 .tabs span").click(function(e){
+        e.preventDefault();
+    });
+});
