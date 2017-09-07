@@ -4,15 +4,6 @@
  *
  **/
 
-// 请求外部依赖文件
-// var requestFile = $(function () {
-//     $.ajax({
-//         url: 'js/jq/jquery-3.2.1.js'
-//     });
-//     $.ajax({
-//         url: 'js/swiper/swiper.js'
-//     });
-// }());
 
 // 初始化模块标题
 var insertModuleTitle = $(function (){
@@ -72,15 +63,42 @@ var changePrefaceImg = $(function (){
 
 }());
 
+// 轮播图：模块二 - 错误做法导致后果
+var moduleTwoBanner = $(function () {
+    var tabContentItem = $(".module-02 .main .swiper-container .swiper-wrapper .swiper-slide");
+
+    var moduleTwoSwiper = new Swiper('.module-02 .main .tabs-container',{
+        // pagination: '.swiper-pagination',
+        // slidesPerView: 2,
+        // paginationClickable: true,
+        // spaceBetween: 30,
+        onSlideChangeStart: function(){
+            $(".module-02 .tabs .active").removeClass('active');
+            $(".module-02 .tabs span").eq(moduleTwoSwiper.activeIndex).addClass('active');
+        }
+    });
+
+    $(".module-02 .tabs span").on('touchstart mousedown',function(e){
+        e.preventDefault();
+        $(".module-02 .tabs .active").removeClass('active');
+        $(this).addClass('active');
+        moduleTwoSwiper.slideTo( $(this).index() );
+    });
+
+    $(".module-05 .tabs span").click(function(e){
+        e.preventDefault();
+    });
+}());
+
 // 轮播图：模块五 - 橘子优势
 var moduleFiveBanner = $(function () {
     var tabContentItem = $(".module-05 .main .swiper-container .swiper-wrapper .swiper-slide");
 
-    var moduleOneSwiper = new Swiper('.module-05 .main #tabs-container',{
+    var moduleFiveSwiper = new Swiper('.module-05 .main .tabs-container',{
         autoHeight: true,
         onSlideChangeStart: function(){
             $(".module-05 .tabs .active").removeClass('active');
-            $(".module-05 .tabs span").eq(moduleOneSwiper.activeIndex).addClass('active');
+            $(".module-05 .tabs span").eq(moduleFiveSwiper.activeIndex).addClass('active');
         }
     });
 
@@ -88,7 +106,7 @@ var moduleFiveBanner = $(function () {
         e.preventDefault();
         $(".module-05 .tabs .active").removeClass('active');
         $(this).addClass('active');
-        moduleOneSwiper.slideTo( $(this).index() );
+        moduleFiveSwiper.slideTo( $(this).index() );
     });
 
     $(".module-05 .tabs span").click(function(e){
