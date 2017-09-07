@@ -67,3 +67,10 @@ var moduleTwoBanner = $(function (){
 
 });
 
+//隐藏显示
+$(function(){
+	$(".chakan a").click(function(){
+		$(".module-06 .main").css({"height":"10.88rem","overflow":""});
+		$(".chakan").hide();
+	});
+});
