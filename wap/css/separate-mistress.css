@@ -3,6 +3,10 @@
 h3{
 	font-size: .28rem;
 }
+a:link {color: #2D2D2D}		/* 未访问的链接 */
+a:visited {color: #FF3232}	/* 已访问的链接 */
+a:hover {color: #2D2D2D}	/* 鼠标移动到链接上 */
+a:active {color: #2D2D2D}	/* 选定的链接 */
 .module-01 .main{
 	width: 100%;
 }
@@ -158,4 +162,130 @@ h3{
 }
 .module-05 .main div .word p{
 	line-height: .35rem;
+}
+
+/*.module-06 .main{
+	width: 100%;
+	height: 3rem;
+	overflow: hidden;
+}
+.module-06 .main .left{
+	float: left;
+	background: url(../images/separate-mistress/service-left.png) center center no-repeat;
+	background-size: 100% 100%;
+	width: .33rem;
+	height: 8.42rem;
+	margin-left: .5rem;
+	
+}
+.module-06 .main .right{
+	width: 90%;
+}
+.module-06 .main .right div{
+	margin-top: .2rem;
+	margin-left: .5rem;
+	color: #2D2D2D;
+}
+.module-06 .main .right .m62{
+	margin-top: .8rem;
+}
+.module-06 .main .right .m63{
+	margin-top: .5rem;
+}
+.module-06 .main .right .m64{
+	margin-top: .4rem;
+}
+.module-06 .main .right div .head p.p1 span.h1{
+	font-size: .8rem;
+	font-weight: bold;
+}
+.module-06 .main .right div .head p.p1 span.h3{
+	font-size: .15rem;
+}
+.module-06 .main .right div .head p.p2{
+	font-size: .15rem;
+	font-weight: bold;
+}*/
+
+.module-06 .main{
+	background: url(../images/separate-mistress/servicebgimg.png) center 0.3rem no-repeat;
+	background-size: 6.5rem 10.58rem;
+	width: 100%;
+	height: 5.58rem;
+	overflow: hidden;
+}
+.module-06 .chakan{
+	padding-top: .2rem;
+	padding-left: .6rem;	
+}
+.module-06 .chakan a{
+	
+}
+.module-07 .main{
+	background-color: #F1FFFA;
+}
+.module-07 .main a{
+	color: #DD1F1F;
+}
+.module-07 .main div{
+	width: 100%;
+	height: 2.6rem;
+}
+.module-07 .main div img{
+	width: 2.4rem;
+	height: 2.14rem;
+	padding-top: .2rem;
+}
+.module-07 .main div .wen1 h3{
+	font-size: .28rem;	
+	padding-top: .2rem;
+}
+.module-07 .main div .wen1 p{
+	
+	line-height: .35rem;
+}
+.module-07 .main .top{
+	border-bottom: 1px solid #B0E7D4;
+}
+.module-07 .main .top img{
+	float: left;
+	padding-left: .1rem;
+}
+.module-07 .main .top h3{
+	margin-left: 2.7rem;
+}
+.module-07 .main .top p{
+	margin-left: 2.7rem;
+	padding-right: .1rem;
+}
+.module-07 .main .bottom{
+	height: 2.8rem;
+}
+.module-07 .main .bottom img{
+	float: right;
+	padding-right: .1rem;
+	padding-top: .4rem;
+}
+.module-07 .main .bottom h3{
+	padding-left: .1rem;
+	padding-top: .4rem;
+}
+.module-07 .main .bottom p{
+	padding-left: .1rem;
+}
+
+.module-08 .main{
+	background: url(../images/separate-mistress/daoshi-bgimg.png) center center no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 4.22rem;
+}
+
+.module-09 .main{
+	background: url(../images/separate-mistress/servicewen_bg.png) no-repeat center center;
+	-webkit-background-size: cover;
+    background-size: 7.04rem 100%;
+    width: 100%;
+    height: 7.67rem;
+    margin-top: .3rem;
 }
