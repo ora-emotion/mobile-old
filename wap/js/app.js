@@ -73,11 +73,11 @@ function router(module,container){
         }
     });
 
-    // 请求外部 js 文件
-    loadJs(module);
-
     // 请求外部 css 文件
     loadCss(module);
+
+    // 请求外部 js 文件
+    loadJs(module);
 
 }
 
@@ -245,24 +245,28 @@ $(function () {
 
     // 挽回爱情
     $(sliderItem[1]).click(function () {
+        $('head script.dynamic').remove();
         router('save-love', $('#container'));
         $('head title').text('橘子情感 - 挽回爱情');
     });
 
     // 挽救婚姻
     $(sliderItem[2]).click(function () {
+        $('head script.dynamic').remove();
         router('save-marriage', $('#container'));
         $('head title').text('橘子情感 - 挽救婚姻');
     });
 
     // 分离小三
     $(sliderItem[3]).click(function () {
+        $('head script.dynamic').remove();
         router('separate-mistress', $('#container'));
         $('head title').text('橘子情感 - 分离小三');
     });
 
     // 定制爱情
     $(sliderItem[4]).click(function () {
+        $('head script.dynamic').remove();
         router('custom-love', $('#container'));
         $('head title').text('橘子情感 - 定制爱情');
     });
