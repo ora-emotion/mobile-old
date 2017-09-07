@@ -70,6 +70,16 @@ var changePrefaceImg = $(function (){
 
 }());
 
+// 轮播图：模块一 - 单身原因
+var moduleOneBanner = $(function (){
+    var mySwiper = new Swiper('.module-01 .swiper-container', {
+        // slidesPerView : 1,
+        // centeredSlides : false,
+        slidesPerView: 'auto',
+        freeMode: true,
+    });
+}());
+
 // 轮播图：模块二 - 错误做法导致后果
 var moduleTwoBanner = $(function () {
     var tabContentItem = $(".module-02 .main .swiper-container .swiper-wrapper .swiper-slide");
