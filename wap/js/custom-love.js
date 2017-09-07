@@ -4,6 +4,14 @@
  *
  **/
 
+// 请求外部依赖文件
+var requestFile = $(function (){
+    $.ajax({
+        url: 'js/swiper/swiper.js'
+    });
+}());
+
+
 // 初始化模块标题
 var insertModuleTitle = $(function (){
 
@@ -61,3 +69,50 @@ var changePrefaceImg = $(function (){
     prefaceImg.attr("src", "images/custom-love/preface.png");
 
 }());
+
+// 轮播图：模块二 - 错误做法导致后果
+var moduleTwoBanner = $(function () {
+    var tabContentItem = $(".module-02 .main .swiper-container .swiper-wrapper .swiper-slide");
+
+    var moduleTwoSwiper = new Swiper('.module-02 .main .tabs-container',{
+        onSlideChangeStart: function(){
+            $(".module-02 .tabs .active").removeClass('active');
+            $(".module-02 .tabs span").eq(moduleTwoSwiper.activeIndex).addClass('active');
+        }
+    });
+
+    $(".module-02 .tabs span").on('touchstart mousedown',function(e){
+        e.preventDefault();
+        $(".module-02 .tabs .active").removeClass('active');
+        $(this).addClass('active');
+        moduleTwoSwiper.slideTo( $(this).index() );
+    });
+
+    $(".module-05 .tabs span").click(function(e){
+        e.preventDefault();
+    });
+}());
+
+// 轮播图：模块五 - 橘子优势
+var moduleFiveBanner = $(function () {
+    var tabContentItem = $(".module-05 .main .swiper-container .swiper-wrapper .swiper-slide");
+
+    var moduleFiveSwiper = new Swiper('.module-05 .main .tabs-container',{
+        autoHeight: true,
+        onSlideChangeStart: function(){
+            $(".module-05 .tabs .active").removeClass('active');
+            $(".module-05 .tabs span").eq(moduleFiveSwiper.activeIndex).addClass('active');
+        }
+    });
+
+    $(".module-05 .tabs span").on('touchstart mousedown',function(e){
+        e.preventDefault();
+        $(".module-05 .tabs .active").removeClass('active');
+        $(this).addClass('active');
+        moduleFiveSwiper.slideTo( $(this).index() );
+    });
+
+    $(".module-05 .tabs span").click(function(e){
+        e.preventDefault();
+    });
+});
