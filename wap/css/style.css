@@ -1,5 +1,4 @@
 @import "../components/module-title/module-title.css";
-@import "../components/home/home.css";
 
 /** Start stylesheet reset */
 * {
@@ -9,6 +8,7 @@
 html {
     width: 100%;
     height: 100%;
+    font-family: "Microsoft YaHei";
 }
 ol, ul, dl {
     list-style: none;
