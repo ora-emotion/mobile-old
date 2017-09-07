@@ -4,6 +4,13 @@
  *
  **/
 
+// 请求外部依赖文件
+var requestFile = $(function (){
+    $.ajax({
+        url: 'js/swiper/swiper.js'
+    });
+}());
+
 
 // 初始化模块标题
 var insertModuleTitle = $(function (){
@@ -68,10 +75,6 @@ var moduleTwoBanner = $(function () {
     var tabContentItem = $(".module-02 .main .swiper-container .swiper-wrapper .swiper-slide");
 
     var moduleTwoSwiper = new Swiper('.module-02 .main .tabs-container',{
-        // pagination: '.swiper-pagination',
-        // slidesPerView: 2,
-        // paginationClickable: true,
-        // spaceBetween: 30,
         onSlideChangeStart: function(){
             $(".module-02 .tabs .active").removeClass('active');
             $(".module-02 .tabs span").eq(moduleTwoSwiper.activeIndex).addClass('active');
