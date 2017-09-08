@@ -1,1 +1,143 @@
-<p>关于我们页面</p>
+<!-- Start module 01 area: 橘子情感  -->
+<div class="module module-01">
+  <div class="main">
+    <p class="para">
+      橘子情感，自创办以来，一直引领着整个行业的进步和发展。为了让广大用户，学会更好的爱与被爱的能力，让用户再爱情中更加有尊严，更加从容，更加自由。橘子情感汇聚了国内知名两性情感咨询师、婚恋家庭咨询师、资深情感挽回师、心理学专家等，用最专业的师资团队，打造全国最专业的情感咨询培训机构。
+    </p>
+    <p class="para">
+      橘子情感的创办初衷，是针对解决广大民众的情感挽回、婚姻修复等社会问题，但逐渐发现，中国在情感教育方面是完全缺失的。现在，我们要解决的，不仅仅是简单的情感问题，更是整个时代的情感教育缺失。
+    </p>
+  </div>
+</div>
+<!-- Start module 01 area: 橘子情感  -->
+
+<!-- Start module 02 area: 橘子情感发展历程  -->
+<div class="module module-02">
+  <div class="main">
+
+  </div>
+</div>
+<!-- Start module 02 area: 橘子情感发展历程  -->
+
+<!-- Start module 03 area: 橘子情感  -->
+<div class="module module-03">
+  <div class="main">
+    <div class="bg"></div>
+  </div>
+</div>
+<!-- Start module 03 area: 橘子环境  -->
+
+<!-- Start module 04 area: 橘子动态  -->
+<div class="module module-04">
+  <div class="main">
+
+  </div>
+</div>
+<!-- Start module 04 area: 橘子动态  -->
+
+<!-- Start module 05 area: 服务步骤内容  -->
+<div class="module module-05">
+  <div class="main">
+    <div class="module-05-bg"></div>
+  </div>
+</div>
+<!-- Start module 05 area: 服务步骤内容  -->
+
+<!-- Start module 06 area: 四大保障  -->
+<div class="module module-06">
+  <div class="main">
+    <div class="txt-group">
+      <div class="item">
+        <p class="txt-title">无微不至</p>
+        <p class="para">
+          所有付费用户的情况，都会有专属的专业导师组，多对一进行指导，任何问题及时得到解答，用户情感状况的每一个转折点，都在导师掌握中
+        </p>
+      </div>
+      <div class="item">
+        <p class="txt-title">专业团队</p>
+        <p class="para">
+          橘子情感所有导师，均为业内资深导师，有着平均多年以上的实战指导经验，在两性情感学都这多年的研究经验
+        </p>
+      </div>
+      <div class="item">
+        <p class="txt-title">私人定制</p>
+        <p class="para">
+          每一位用户的情况，都会得到重视，无论是总体战略，还是每一步细节操作，均为结合具体情况的私人定制方案，确保成功率
+        </p>
+      </div>
+      <div class="item">
+        <p class="txt-title">用户保障</p>
+        <p class="para">
+          橘子情感作为行业的标杆，对行业的发展有着一份沉甸甸的责任。以身作则，将用户的权益放在首位，保障用户隐私以及情况解决
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Start module 06 area: 四大保障  -->
+
+<!-- Start module 07 area: 合作媒体  -->
+<div class="module module-07">
+  <div class="main">
+    <div class="bg"></div>
+  </div>
+</div>
+<!-- Start module 07 area: 合作媒体  -->
+
+<script type="text/javascript">
+
+// 动态更换头图图片
+var changePrefaceImg = $(function (){
+  var prefaceImg = $(".preface .banner-img img");
+  prefaceImg.attr("src", "images/about/preface.png");
+}());
+
+$(document).ready(function (){
+
+  // 初始化模块标题
+  var insertModuleTitle = $(function (){
+    // 请求模块标题模板
+    $(function () {
+      $.ajax({
+        type: "get",
+        url: "components/module-title/module-title.html",
+        success: function (dataHTML) {
+          // 插入模板到页面
+          $(".module").prepend(dataHTML);
+        },
+        error: function (error) {
+          alert("request error");
+        }
+      });
+    }());
+
+    // 请求模块模块标题数据
+    $(function () {
+      $.ajax({
+        type: "get",
+        url: "data/module-title.json",
+        success: function (data) {
+          insertModuleTitle(data);
+        },
+        error: function (error) {
+          alert("requests error");
+        }
+      });
+    }());
+
+    // 插入模块标题
+    function insertModuleTitle(data) {
+      // 动态渲染模板标题
+      var moduleTitle = $(".module .title .module-title");
+      var i = 0;
+      for (var title in data.page["custom-love"]) {
+        $($(".module")[i]).find(".title .module-title").html(data.page["custom-love"][title]);
+        i++;
+      }
+    }
+
+  }());
+
+});
+
+</script>

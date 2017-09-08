@@ -291,6 +291,7 @@ $(function () {
 
     // 关于我们
     $(sliderItem[8]).click(function () {
+        $('head script.dynamic').remove();
         router('about', $('#container'));
         $('head title').text('橘子情感 - 关于我们');
     });
