@@ -7,8 +7,31 @@
 @import "swiper/swiper.css";
 
 /** Start module 01: 单身原因 */
+.module-01 .main {
+    padding-top: .35rem;
+}
+.module-01 .main .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.module-01 .main .swiper-container .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.module-01 .main .swiper-container .swiper-slide .txt-title {
+    font-weight: bold;
+    line-height: .36rem;
+    height: .36rem;
 
+    padding-top: .15rem;
+    padding-bottom: .05rem;
+}
+.module-01 .main .swiper-container .swiper-slide .txt-des {
+    width: 2.62rem;
+}
 /** End module 01: 单身原因 */
 
 /** Start module 02: 错误做法导致后果 */
@@ -80,6 +103,56 @@
 /** End module 02: 错误做法导致后果 */
 
 /** Start module 03: 橘子情感定制服务*/
+
+.module-03 .main {
+    position: relative;
+    width: 100%;
+    height: 4.1rem;
+    overflow: hidden;
+}
+.module-03 .main .column-line {
+    width: .02rem;
+    height: 7.4rem;
+    background: #fa3232;
+    position: absolute;
+    top: .12rem;
+    left: .64rem;
+}
+.module-03 .main .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    position: relative;
+    z-index: 1;
+}
+.module-03 .main .content .item {
+    padding-left: .48rem;
+    padding-top: .05rem;
+    padding-bottom: .05rem;
+}
+.module-03 .main .content .item .txt-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-weight: bold;
+    line-height: .43rem;
+    height: .43rem;
+}
+.module-03 .main .content .item .txt-title p {
+    padding-left: .4rem;
+}
+.module-03 .main .content .item .txt-des {
+    width: 5.78rem;
+    padding-left: .73rem;
+    line-height: .36rem;
+}
+.module-03 .more {
+    padding-top: .3rem;
+    padding-left: 1.22rem;
+}
 /** End module 03: 橘子情感定制服务 */
 
 /** Start module 04: 成功案例 */
