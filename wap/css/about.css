@@ -15,6 +15,7 @@ p {
 }
 .module-01 .main .para {
   position: absolute;
+  text-indent: .52rem;
 }
 .module-01 .main .para:first-child {
   top: 0;
@@ -46,7 +47,7 @@ p {
 
 /* Start module 05 area: 服务步骤内容 */
 .module-05-bg{
-  background: url(../images/save-love/servicewen_bg.png) no-repeat center center;
+  background: url("../images/save-love/servicewen_bg.png") no-repeat center center;
   -webkit-background-size: cover;
   background-size: 7.04rem 100%;
   width: 100%;
@@ -56,6 +57,32 @@ p {
 /* End module 05 area: 服务步骤内容 */
 
 /* Start module 06 area: 四大保障 */
+.module-06 .main {
+  width: 100%;
+  height: 9.35rem;
+  background: url("../images/about/module06-bg.png") no-repeat center center;
+  background-size: cover;
+}
+.module-06 .main .txt-group {
+  width: 3.68rem;
+  height: 100%;
+  padding-left: .2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.module-06 .main .txt-group .item {
+  padding: .1rem;
+}
+.module-06 .main .txt-group .item:first-child {
+  padding-top: .24rem;
+}
+.module-06 .main .txt-group .item:last-child {
+  padding-bottom: .24rem;
+}
+.module-06 .main .txt-group .item .txt-title {
+  font-weight: bold;
+}
 /* End module 06 area: 四大保障 */
 
 /* Start module 07 area: 合作媒体 */
