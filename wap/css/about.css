@@ -43,6 +43,34 @@ p {
 /* End module 03 area: 橘子情感 */
 
 /* Start module 04 area: 橘子动态 */
+.module-04 .main .content .top {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #707070;
+  padding: 0 .16rem;
+}
+.module-04 .main .content .top .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.module-04 .main .content .top .item img {
+  width: 3.53rem;
+  height: 2.18rem;
+}
+.module-04 .main .content .top .item img:first-child {
+  padding-right: .075rem;
+}
+.module-04 .main .content .top .item img:last-child {
+  padding-left: .075rem;
+}
+.module-04 .main .content .top .item p {
+  padding: .18rem 0;
+}
+.module-04 .main .content .bottom {
+  padding: 0 .16rem; 
+}
 /* End module 04 area: 橘子动态 */
 
 /* Start module 05 area: 服务步骤内容 */
