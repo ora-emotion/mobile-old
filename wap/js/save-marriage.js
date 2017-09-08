@@ -69,3 +69,85 @@ var moduleTwoBanner = $(function (){
 
 });
 
+
+//下拉列表
+var xiala = $(function(){
+	$('.label1').click(function(){
+		$('.content1').css({
+			"height":"1.8rem",
+			"width":"5.26rem",
+			"background":"url(images/save-marriage/erro-bgimg.png) center center no-repeat",
+			"background-size":"100% 100%"
+		});
+		$('.content2').css("height","0");
+		$('.content3').css("height","0");
+		$('.content4').css("height","0");
+		$('.content5').css("height","0");
+		$('.content6').css("height","0");
+	});
+	$('.label2').click(function(){
+		$('.content2').css({
+			"height":"1.8rem",
+			"width":"5.26rem",
+			"background":"url(images/save-marriage/erro-bgimg.png) center center no-repeat",
+			"background-size":"100% 100%"
+		});
+		$('.content1').css("height","0");
+		$('.content3').css("height","0");
+		$('.content4').css("height","0");
+		$('.content5').css("height","0");
+		$('.content6').css("height","0");
+	});
+	$('.label3').click(function(){
+		$('.content3').css({
+			"height":"1.8rem",
+			"width":"5.26rem",
+			"background":"url(images/save-marriage/erro-bgimg.png) center center no-repeat",
+			"background-size":"100% 100%"
+		});
+		$('.content1').css("height","0");
+		$('.content2').css("height","0");
+		$('.content4').css("height","0");
+		$('.content5').css("height","0");
+		$('.content6').css("height","0");
+	});
+	$('.label4').click(function(){
+		$('.content4').css({
+			"height":"1.8rem",
+			"width":"5.26rem",
+			"background":"url(images/save-marriage/erro-bgimg.png) center center no-repeat",
+			"background-size":"100% 100%"
+		});
+		$('.content1').css("height","0");
+		$('.content2').css("height","0");
+		$('.content3').css("height","0");
+		$('.content5').css("height","0");
+		$('.content6').css("height","0");
+	});
+	$('.label5').click(function(){
+		$('.content5').css({
+			"height":"1.8rem",
+			"width":"5.26rem",
+			"background":"url(images/save-marriage/erro-bgimg.png) center center no-repeat",
+			"background-size":"100% 100%"
+		});
+		$('.content1').css("height","0");
+		$('.content2').css("height","0");
+		$('.content3').css("height","0");
+		$('.content4').css("height","0");
+		$('.content6').css("height","0");
+	});
+	$('.label6').click(function(){
+		$('.content6').css({
+			"height":"1.8rem",
+			"width":"5.26rem",
+			"background":"url(images/save-marriage/erro-bgimg.png) center center no-repeat",
+			"background-size":"100% 100%"
+		});
+		$('.content1').css("height","0");
+		$('.content2').css("height","0");
+		$('.content3').css("height","0");
+		$('.content4').css("height","0");
+		$('.content5').css("height","0");
+	});
+});
