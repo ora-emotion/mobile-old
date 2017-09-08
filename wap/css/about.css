@@ -1,0 +1,17 @@
+/*
+*
+* about.css - 关于我们
+*
+**/
+
+
+/* Start module 07 area: 合作媒体 */
+.module-07 .main {
+    width: 100%;
+}
+.module-07 .main .bg {
+    background: url("../images/about/module07-bg.png") no-repeat center center;
+    width: 6.85rem;
+    height: 2.1rem;
+}
+/* End module 07 area: 合作媒体 */
