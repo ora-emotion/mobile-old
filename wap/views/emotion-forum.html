@@ -52,7 +52,7 @@
 				</div>
 				<div class="right">
 					<h3>
-						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道	
+						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道
 					</h3>
 					<p>
 						如果有人问我，挽回成功的秘诀是什么？那我会毫不犹豫的说：心态。心态决定行为，行为养成习惯， 习惯形成性格，性格决定结局。
@@ -65,7 +65,7 @@
 				</div>
 				<div class="right">
 					<h3>
-						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道	
+						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道
 					</h3>
 					<p>
 						如果有人问我，挽回成功的秘诀是什么？那我会毫不犹豫的说：心态。心态决定行为，行为养成习惯， 习惯形成性格，性格决定结局。
@@ -78,7 +78,7 @@
 				</div>
 				<div class="right">
 					<h3>
-						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道	
+						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道
 					</h3>
 					<p>
 						如果有人问我，挽回成功的秘诀是什么？那我会毫不犹豫的说：心态。心态决定行为，行为养成习惯， 习惯形成性格，性格决定结局。
@@ -91,7 +91,7 @@
 				</div>
 				<div class="right">
 					<h3>
-						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道	
+						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道
 					</h3>
 					<p>
 						如果有人问我，挽回成功的秘诀是什么？那我会毫不犹豫的说：心态。心态决定行为，行为养成习惯， 习惯形成性格，性格决定结局。
@@ -104,7 +104,7 @@
 				</div>
 				<div class="right">
 					<h3>
-						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道	
+						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道
 					</h3>
 					<p>
 						如果有人问我，挽回成功的秘诀是什么？那我会毫不犹豫的说：心态。心态决定行为，行为养成习惯， 习惯形成性格，性格决定结局。
@@ -117,7 +117,7 @@
 				</div>
 				<div class="right">
 					<h3>
-						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道	
+						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道
 					</h3>
 					<p>
 						如果有人问我，挽回成功的秘诀是什么？那我会毫不犹豫的说：心态。心态决定行为，行为养成习惯， 习惯形成性格，性格决定结局。
@@ -130,7 +130,7 @@
 				</div>
 				<div class="right">
 					<h3>
-						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道	
+						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道
 					</h3>
 					<p>
 						如果有人问我，挽回成功的秘诀是什么？那我会毫不犹豫的说：心态。心态决定行为，行为养成习惯， 习惯形成性格，性格决定结局。
@@ -143,7 +143,7 @@
 				</div>
 				<div class="right">
 					<h3>
-						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道	
+						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道
 					</h3>
 					<p>
 						如果有人问我，挽回成功的秘诀是什么？那我会毫不犹豫的说：心态。心态决定行为，行为养成习惯， 习惯形成性格，性格决定结局。
@@ -156,7 +156,7 @@
 				</div>
 				<div class="right">
 					<h3>
-						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道	
+						「挽回女人」断联拉黑之后，好的心态才是拯救爱情的致胜之道
 					</h3>
 					<p>
 						如果有人问我，挽回成功的秘诀是什么？那我会毫不犹豫的说：心态。心态决定行为，行为养成习惯， 习惯形成性格，性格决定结局。
@@ -166,3 +166,44 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		// 加载 html 文件
+		var router = function ( module ) {
+			$.ajax({
+				url: 'views/three-level-page/ten-books/' + module + '.html',
+				success: function ( data ) {
+					$( '#container' ).html( data );
+					console.log( 'successed to load books.html!' );
+				},
+				error: function ( error ) {
+					console.log( 'failed to load books.html!' );
+				}
+			});
+		};
+		// 加载 css 文件
+		var loadCss = function ( module ) {
+			$.ajax({
+				type: 'GET',
+				url: 'css/' + module + '.css',
+				success: function ( data ) {
+					var cssLink = $( 'link.dynamic' );
+					cssLink.attr( 'href', 'css/' + module + '.css' );
+					console.log( 'successed to load stylesheet of books.css!' );
+				},
+				error: function ( error ) {
+					console.log( 'failed to load stylesheet of books.css!' );
+				}
+			});
+		}
+		// 打开三级页面：十本好书推荐 - module 01 area
+		var openThirdPartyPage = $(function () {
+			var imgLink = $('.module-01 .main .top .left .swiper-container .swiper-wrapper').find('.swiper-slide:first-child .item a');
+			imgLink.click(function () {
+				router( 'books' );
+				loadCss( 'books' );
+			});
+		});
+	});
+</script>
