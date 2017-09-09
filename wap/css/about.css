@@ -47,7 +47,7 @@ p {
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #707070;
-  padding: 0 .16rem;
+  padding: 0 .16rem .2rem;
 }
 .module-04 .main .content .top .item {
   display: flex;
@@ -69,7 +69,47 @@ p {
   padding: .18rem 0;
 }
 .module-04 .main .content .bottom {
-  padding: 0 .16rem; 
+  /*padding: 0 .16rem;*/
+  padding-top: .2rem;
+}
+.module-04 .main .content .bottom .item {
+  display: flex;
+  justify-content: flex-start;
+  padding: .1rem .16rem;
+  margin: .18rem 0;
+  background: #f6f6f6;
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+}
+.module-04 .main .content .bottom .item.hidden {
+  display: none;
+}
+.module-04 .main .content .bottom .item.more {
+  position: relative;
+}
+.module-04 .main .content .bottom .item.more svg {
+  position: absolute;
+  bottom: 0;
+  right: .2rem;
+  padding-bottom: .36rem;
+}
+.module-04 .main .content .bottom .item img {
+  width: 1.9rem;
+  height: 1.18rem;
+}
+.module-04 .main .content .bottom .item .txt-group {
+  padding-left: .12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 5rem;
+}
+.module-04 .main .content .bottom .item .txt-group a {
+  width: 80%;
+  font-size: .26rem;
+  color: #ed2929;
+  line-height: .36rem;
+  height: .36rem;
+  padding-top: .05rem;
 }
 /* End module 04 area: 橘子动态 */
 
