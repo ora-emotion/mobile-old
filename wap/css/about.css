@@ -1,0 +1,123 @@
+/* Start stylesheet reset */
+p {
+  font-size: .26rem;
+  line-height: .36rem;
+}
+ /* End stylesheet reset */
+
+/* Start module 01 area: 橘子情感 */
+.module-01 .main {
+  background: url("../images/about/module01-bg.png") no-repeat center center;
+  width: 100%;
+  height: 6.36rem;
+  background-size: cover;
+  position: relative;
+}
+.module-01 .main .para {
+  position: absolute;
+  text-indent: .52rem;
+}
+.module-01 .main .para:first-child {
+  top: 0;
+  right: 0;
+  width: 3.28rem;
+  padding-top: .26rem;
+  padding-right: .24rem;
+}
+.module-01 .main .para:last-child {
+  bottom: -.1rem;
+  padding: 0 .24rem .26rem;
+}
+/* Start module 01 area: 橘子情感 */
+
+/* Start module 02 area: 橘子情感发展历程 */
+/* End module 02 area: 橘子情感发展历程 */
+
+/* Start module 03 area: 橘子情感 */
+.module-03 .main .bg {
+  background: url("../images/about/module03-bg.png") no-repeat center center;
+  width: 100%;
+  height: 6.57rem;
+  background-size: cover;
+}
+/* End module 03 area: 橘子情感 */
+
+/* Start module 04 area: 橘子动态 */
+.module-04 .main .content .top {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #707070;
+  padding: 0 .16rem;
+}
+.module-04 .main .content .top .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.module-04 .main .content .top .item img {
+  width: 3.53rem;
+  height: 2.18rem;
+}
+.module-04 .main .content .top .item img:first-child {
+  padding-right: .075rem;
+}
+.module-04 .main .content .top .item img:last-child {
+  padding-left: .075rem;
+}
+.module-04 .main .content .top .item p {
+  padding: .18rem 0;
+}
+.module-04 .main .content .bottom {
+  padding: 0 .16rem; 
+}
+/* End module 04 area: 橘子动态 */
+
+/* Start module 05 area: 服务步骤内容 */
+.module-05-bg{
+  background: url("../images/save-love/servicewen_bg.png") no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: 7.04rem 100%;
+  width: 100%;
+  height: 7.67rem;
+  margin-top: .3rem;
+}
+/* End module 05 area: 服务步骤内容 */
+
+/* Start module 06 area: 四大保障 */
+.module-06 .main {
+  width: 100%;
+  height: 9.35rem;
+  background: url("../images/about/module06-bg.png") no-repeat center center;
+  background-size: cover;
+}
+.module-06 .main .txt-group {
+  width: 3.68rem;
+  height: 100%;
+  padding-left: .2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.module-06 .main .txt-group .item {
+  padding: .1rem;
+}
+.module-06 .main .txt-group .item:first-child {
+  padding-top: .24rem;
+}
+.module-06 .main .txt-group .item:last-child {
+  padding-bottom: .24rem;
+}
+.module-06 .main .txt-group .item .txt-title {
+  font-weight: bold;
+}
+/* End module 06 area: 四大保障 */
+
+/* Start module 07 area: 合作媒体 */
+.module-07 .main .bg {
+  background: url("../images/about/module07-bg.png") no-repeat center center;
+  width: 6.85rem;
+  height: 2.1rem;
+  margin: 0 auto;
+}
+/* Start module 07 area: 合作媒体 */
