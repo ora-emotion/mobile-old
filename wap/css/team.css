@@ -122,3 +122,84 @@ p{
 .module-02 .main .wen .p2{
 	margin-top: .3rem;
 }
+
+
+
+.module-03 .main{
+	width: 100%;
+	height: 5.2rem;
+}
+.demo__card-cont {
+  position: relative;
+  width: 100%;
+  height: 4.77rem;
+  margin: 0 auto;
+}
+.demo__card {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: 50% 100%;
+      -ms-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+}
+.demo__card img{
+	width: 7.32rem;
+	height: 4.77rem;
+	padding-left: .09rem;
+}
+.demo__card.reset {
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+  -webkit-transform: translateX(0) !important;
+      -ms-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+.demo__card.reset .demo__card__choice {
+  -webkit-transition: opacity 0.3s;
+          transition: opacity 0.3s;
+  opacity: 0 !important;
+}
+.demo__card.inactive {
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+.demo__card.to-left {
+  -webkit-transform: translateX(-30rem) rotate(-30deg) !important;
+      -ms-transform: translateX(-30rem) rotate(-30deg) !important;
+          transform: translateX(-30rem) rotate(-30deg) !important;
+}
+.demo__card.to-right {
+  -webkit-transform: translate(30rem) rotate(30deg) !important;
+      -ms-transform: translate(30rem) rotate(30deg) !important;
+          transform: translate(30rem) rotate(30deg) !important;
+}
+.demo__card.below {
+  z-index: 1;
+}
+
+.module-03 .main .bottom{
+	width: 100%;
+	height: 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+.module-03 .main .bottom .left{
+	padding-left: .2rem;
+	width: 2rem;
+	padding-top: .3rem;
+}
+.module-03 .main .bottom .right{
+	padding-right: .2rem;
+	/*background-color: #FF3232;
+	border-radius: 50%;*/
+	
+}
+.module-03 .main .bottom .right img{
+	width: .46rem;
+	height: .46rem;
+	padding-bottom: .3rem;
+}
