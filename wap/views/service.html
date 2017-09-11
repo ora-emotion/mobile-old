@@ -50,7 +50,7 @@
     <!-- End module main area -->
 </div>
 <!-- End module 01 area -->
-	
+
 
 <!-- Start module 02 area -->
 <div class="module module-02">
@@ -325,7 +325,7 @@
 
     <!-- Start module main area -->
     <div class="main">
-    	
+
     </div>
     <!-- End module main area -->
 </div>
@@ -356,3 +356,52 @@
     <!-- End module main area -->
 </div>
 <!-- End module 08 area -->
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    // 加载模块
+    function router( module, container ) {
+      container = container || $('#container');
+      // 请求模块结构
+      $.ajax({
+        url: 'views/' + module + '.html',
+        success: function ( data ) {
+          container.html( data );
+        },
+        error  : function ( error ) {
+          console.log( ' 写入 HTML 失败！' );
+        }
+      });
+
+      loadCss( module );
+    }
+    // 动态加载 css 文件
+    function loadCss( module ) {
+      $.ajax({
+        url: 'css/' + module + '.css',
+        success: function ( data ) {
+          var cssLink = $('link.dynamic');
+          cssLink.attr( 'href', 'css/' + module + '.css' );
+        },
+        error  : function ( error ) {
+          console.log( '请求外部 css 样式表失败！' );
+        }
+      });
+    }
+    // module 04 area
+    var freeVideo = (function (){
+      var videoImg = $('.module .main .curriculum .zu:first-child').find('.left img');
+      var videoTxt = $('.module .main .curriculum .zu:first-child').find('.zhong h3');
+      var videoPageTitle = $('head title');
+      videoImg.click(function () {
+        router( 'video' );
+        videoPageTitle.text( '橘子情感 - 视频预览' );
+      });
+      videoTxt.click(function () {
+        router( 'video' );
+        videoPageTitle.text( '橘子情感 - 视频预览' );
+      });
+    }());
+
+  });
+</script>
