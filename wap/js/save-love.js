@@ -53,7 +53,6 @@ var changePrefaceImg = $(function (){
 
     var prefaceImg = $(".preface .banner-img img");
     prefaceImg.attr("src", "images/save-love/preface.png");
-
 }());
 
 // module 01 area - banner
@@ -78,7 +77,6 @@ var moduleOneBanner = $(function (){
     $(".tabs p").click(function(e){
         e.preventDefault();
     });
-
 }());
 
 // module 02 area - banner

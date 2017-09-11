@@ -198,10 +198,10 @@ p {
 .module-04 .main .content .bottom .item.hidden {
   display: none;
 }
-.module-04 .main .content .bottom .item.more {
+.module-04 .main .content .bottom .more {
   position: relative;
 }
-.module-04 .main .content .bottom .item.more svg {
+.module-04 .main .content .bottom .more svg {
   position: absolute;
   bottom: 0;
   right: .2rem;

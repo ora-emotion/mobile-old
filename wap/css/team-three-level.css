@@ -1,0 +1,7 @@
+.module {
+	width: 100%;
+}
+.module .main{
+	width: 90%;
+	margin: 0 auto;
+}
