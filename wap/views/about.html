@@ -118,10 +118,12 @@
             <p class="txt-title">“暖爱计划”婚恋知识公益讲座</p>
             <a href="#">点击查看>>></a>
           </div>
-          <svg
+        </div>
+        <div class="more">
+        	<svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="14px" height="38px">
+            width="14px" height="38px"> 
             <text font-family="Microsoft YaHei" fill="rgb(82, 82, 82)" transform="matrix( 0, 1.00490942805824, -1.00232895669491, 0,-1.51979613190667, 0.43027867891215)" font-size="26px">&#62;&#62;&#62;</text>
           </svg>
         </div>
@@ -257,15 +259,89 @@ $(document).ready(function (){
 
   // 模块四查看更多
   var moduleFourViewMore = (function () {
-    $('.module-04 .main .content .bottom').find('.item.more svg')
+		// 加载模块
+		function router(module, container) {
+			container = container || $('#container');
+			// 请求模块结构
+			$.ajax({
+				url: 'views/news/' + module + '.html',
+				success: function(data) {
+					container.html(data);
+				},
+				error: function(error) {
+					console.log(' 写入 HTML 失败！');
+				}
+			});
+	
+		}
+		// 动态加载 css 文件
+		function loadCss(module) {
+			$.ajax({
+				url: 'css/' + module + '.css',
+				success: function(data) {
+					var cssLink = $('link.dynamic');
+					cssLink.attr('href', 'css/' + module + '.css');
+				},
+				error: function(error) {
+					console.log('请求外部 css 样式表失败！');
+				}
+			});
+		}
+
+  	
+    $('.module-04 .main .content .bottom').find('.more svg')
       .click(function () {
         $(this).css( 'display', 'none' );
         $('.module-04 .main .content .bottom').find('.item.hidden')
           .removeClass('hidden');
           return true;
       })
+      
+    $('.module-04 .main .content .top').find('.item:first-child')
+    	.click(function () {
+    		router( 'news2' );
+    		loadCss('news');
+    	});
+    $('.module-04 .main .content .top').find('.item:nth-child(2)')
+    	.click(function () {
+    		router( 'news3' );
+    		loadCss('news');
+    	});
+   	$('.module-04 .main .content .bottom').find('.item:nth-child(1)')
+    	.click(function () {
+    		router( 'news1' );
+    		loadCss('news');
+    	});
+   	$('.module-04 .main .content .bottom').find('.item:nth-child(2)')
+    	.click(function () {
+    		router( 'news4' );
+    		loadCss('news');
+    	});
+    $('.module-04 .main .content .bottom').find('.item:nth-child(3)')
+    	.click(function () {
+    		router( 'news5' );
+    		loadCss('news');
+    	});
+    $('.module-04 .main .content .bottom').find('.item:nth-child(4)')
+    	.click(function () {
+    		router( 'news6' );
+    		loadCss('news');
+    	});
+    $('.module-04 .main .content .bottom').find('.item:nth-child(6)')
+    	.click(function () {
+    		router( 'news7' );
+    		loadCss('news');
+    	});
+    $('.module-04 .main .content .bottom').find('.item:nth-child(7)')
+    	.click(function () {
+    		router( 'news8' );
+    		loadCss('news');
+    	});
+    $('.module-04 .main .content .bottom').find('.item:nth-child(8)')
+    	.click(function () {
+    		router( 'news9' );
+    		loadCss('news');
+    	});
   }());
-
 });
-
 </script>
