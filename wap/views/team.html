@@ -112,3 +112,65 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	//-------------------------------- 模块三 -------------------------------------
+
+	// 声明语块
+	var
+		cardItem = $( '.module-03 .main .demo__card-cont' ).find( '.demo__card' ),
+		img_src,
+		loadCss, onClickCard
+	;
+
+	// 点击事件
+	// 功能：请求卡片对应的三级页面
+	onClickCard = function ( module ) {
+		$.ajax({
+			type    : 'GET',
+			url     : 'views/team/' + 'daoshi-' + module + '.html',
+			success : function ( data ) {
+				console.log( '请求 HTML 成功!' );
+				$( '#container' ).html( data );
+			},
+			error   : function ( error ) {
+				console.log( '请求 HTML 失败!' );
+			}
+		});
+
+		loadCss();
+
+		return false;
+	};
+
+	// 加载外部 CSS 演示表
+	// 功能：请求对应三级页面的 CSS 样式表
+	loadCss = function () {
+		$.ajax({
+			type : 'GET',
+			url  : 'css/team-three-level.css',
+			success : function ( data ) {
+				console.log( '请求 CSS 成功!' );
+				console.log( data );
+			},
+			error   : function ( error ) {
+				console.log( '请求 CSS 失败!' );
+			}
+		});
+
+		return false;
+	};
+
+	// 加载请求的 HTML 文件
+	var i;
+	for ( i = 0; i < cardItem.length; i++ ) {
+		$( cardItem[i] ).click(function () {
+			img_src = $(this).find( 'img' ).attr( 'src' );
+			img_src =  img_src.split( '-' )[1].split( '.' )[0];
+			onClickCard( img_src );
+
+			return false;
+		});
+	}
+
+</script>
