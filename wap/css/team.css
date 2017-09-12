@@ -134,6 +134,7 @@ p{
   width: 100%;
   height: 4.77rem;
   margin: 0 auto;
+  overflow: hidden;
 }
 .demo__card {
   z-index: 2;
