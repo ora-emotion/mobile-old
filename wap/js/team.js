@@ -59,7 +59,7 @@ var changePrefaceImg = $(function() {
 $(document).ready(function() {
 	var animating = false;
 	var cardsCounter = 0;
-	var numOfCards = 6;
+	var numOfCards = 8;
 	var decisionVal = 80;
 	var pullDeltaX = 0;
 	var deg = 0;
@@ -123,9 +123,9 @@ $(document).ready(function() {
 			release();
 		});
 	});
-	
-	
-	
+
+
+
 	//获取导师模块并跳转页面
 	var moduleFourViewMore = (function () {
 		// 加载模块
@@ -141,7 +141,7 @@ $(document).ready(function() {
 					console.log(' 写入 HTML 失败！');
 				}
 			});
-	
+
 		}
 		// 动态加载 css 文件
 		function loadCss(module) {
@@ -163,8 +163,5 @@ $(document).ready(function() {
 			alert("ok");
     	});
   }());
-	
+
 });
-
-
-
