@@ -139,6 +139,23 @@
 		});
 
 		loadCss();
+		loadJs();
+
+		return false;
+	};
+
+	// 加载 JS 文件
+	loadJs = function () {
+		$.ajax({
+			type    : 'GET',
+			url     : 'js/team-three-level.js',
+			success : function ( data ) {
+				console.log( '请求 JS 成功!' );
+			},
+			error   : function ( error ) {
+				console.log( '请求 JS 失败!' );
+			}
+		});
 
 		return false;
 	};
@@ -147,11 +164,11 @@
 	// 功能：请求对应三级页面的 CSS 样式表
 	loadCss = function () {
 		$.ajax({
-			type : 'GET',
-			url  : 'css/team-three-level.css',
+			type    : 'GET',
+			url     : 'css/team-three-level.css',
 			success : function ( data ) {
 				console.log( '请求 CSS 成功!' );
-				$( 'head link.dynamic' ).attr( 'href', 'team-three-level.css' );
+				$( 'head link.dynamic' ).attr( 'href', 'css/team-three-level.css' );
 			},
 			error   : function ( error ) {
 				console.log( '请求 CSS 失败!' );
