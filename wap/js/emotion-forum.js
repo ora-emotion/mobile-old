@@ -18,7 +18,7 @@ var insertModuleTitle = $(function (){
 
     }());
 
-// 请求模块模块标题数据
+    // 请求模块模块标题数据
     $(function () {
 
         $.ajax({
@@ -34,7 +34,7 @@ var insertModuleTitle = $(function (){
 
     }());
 
-// 插入模块标题
+    // 插入模块标题
     function insertModuleTitle(data) {
 
         // 动态渲染模板标题

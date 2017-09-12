@@ -42,6 +42,9 @@ p {
 /* Start module 01 area: 橘子情感 */
 
 /* Start module 02 area: 橘子情感发展历程 */
+.module-02 .main {
+  padding-top: .2rem;
+}
 .module-02 .main .content {
   display: flex;
   justify-content: center;

@@ -249,8 +249,8 @@ $(document).ready(function (){
       // 动态渲染模板标题
       var moduleTitle = $(".module .title .module-title");
       var i = 0;
-      for (var title in data.page["custom-love"]) {
-        $($(".module")[i]).find(".title .module-title").html(data.page["custom-love"][title]);
+      for (var title in data.page["about"]) {
+        $($(".module")[i]).find(".title .module-title").html(data.page["about"][title]);
         i++;
       }
     }
