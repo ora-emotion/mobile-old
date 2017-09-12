@@ -151,7 +151,7 @@
 			url  : 'css/team-three-level.css',
 			success : function ( data ) {
 				console.log( '请求 CSS 成功!' );
-				console.log( data );
+				$( 'head link.dynamic' ).attr( 'href', 'team-three-level.css' );
 			},
 			error   : function ( error ) {
 				console.log( '请求 CSS 失败!' );
