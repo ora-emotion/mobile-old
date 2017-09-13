@@ -1,3 +1,7 @@
+<script type="text/javascript">
+  localStorage.vip = true;
+</script>
+
 <!-- Start module 01 area -->
 <div class="module module-01">
 
@@ -354,6 +358,7 @@
 
 <script type="text/javascript">
   $(document).ready(function () {
+
     // 加载模块
     function router( module, container ) {
       container = container || $('#container');
@@ -383,7 +388,8 @@
         }
       });
     }
-    // module 04 area
+
+    // 加载视频预览页面
     var freeVideo = (function (){
       var
         videoImg = $('.module .main .curriculum .zu:first-child').find('.left img'),
@@ -403,7 +409,7 @@
       });
       return false;
     }());
-
+    // 加载付费视频页面
     var vipVideo = (function () {
       var
         videoVipImg = $('.module .main .curriculum .zu:last-child').find('.left img'),
