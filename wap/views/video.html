@@ -224,26 +224,14 @@
   // 选择列表中指定的视频显示
   videoListItem.click(function () {
 
-
     var
       _index = $(this).parent().index(),
       video_group = $( '.play .play-group' ),
-      txt_group = $( '.play .txt_group' )
+      txt_group = $( '.play .txt-group' ),
+      video_list = $( '.video-list .swiper-wrapper' )
       ;
-    // // console.log( _index );
-    // var videoItem = document.getElementsByTagName( 'video' )[_index];
 
-    // for ( var i = 0; i < document.getElementsByTagName( 'video' ).length; i++ ) {
-    //   // document.getElementsByTagName( 'video' )[i].pause();
-    //   if ( document.getElementsByTagName( 'video' )[i].played ) {
-    //     document.getElementsByTagName( 'video' )[i].pause();
-    //   } else {
-    //     document.getElementsByTagName( 'video' )[_index].play();
-    //   }
-    //
-    // }
-    // document.getElementsByTagName( 'video' )[_index].play();
-
+    // 切换当前播放的视频
     video_group.find( 'video' ).removeClass( 'active' );
     $( video_group.find( 'video' )[_index] ).addClass( 'active' );
 
