@@ -2,7 +2,7 @@
 
 .module-01 .main {
     position: relative;
-    height: 23rem;
+    /*height: 23rem;*/
 }
 .module-01 .main .top{
 	height: 2.6rem;
@@ -75,7 +75,6 @@
 }
 .module-01>.main>.bottom{
 	width: 100%;
-	height: auto;
 }
 .biaoti span{
 	font-size: .26rem;
@@ -104,4 +103,10 @@
 }
 .anli .right h3{
 	font-size: .28rem;
+}
+
+
+.module .main .bottom .more {
+  color: #fd3232;
+  padding-left: .2rem;
 }
