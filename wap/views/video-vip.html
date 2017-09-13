@@ -489,7 +489,8 @@
 
     var
       _index = $(this).parent().index(),
-      video_group = $( '.play .play-group' );
+      video_group = $( '.play .play-group' ),
+      txt_group = $( '.play .play-group' )
       ;
 
     // console.log( _index );
@@ -509,6 +510,8 @@
     video_group.find( 'video' ).removeClass( 'active' );
     $( video_group.find( 'video' )[_index] ).addClass( 'active' );
 
+    txt_group.find( '.item' ).removeClass( 'active' );
+    $( txt_group.find( 'item' )[_index] ).addClass( 'active' );
 
   });
 
