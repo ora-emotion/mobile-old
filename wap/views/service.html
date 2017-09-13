@@ -51,7 +51,6 @@
 </div>
 <!-- End module 01 area -->
 
-
 <!-- Start module 02 area -->
 <div class="module module-02">
 
@@ -74,8 +73,6 @@
     <!-- End module main area -->
 </div>
 <!-- End module 02 area -->
-
-
 
 <!-- Start module 03 area -->
 <div class="module module-03">
@@ -192,7 +189,6 @@
 </div>
 <!-- End module 03 area -->
 
-
 <!-- Start module 04 area -->
 <div class="module module-04">
 
@@ -257,7 +253,6 @@
 </div>
 <!-- End module 04 area -->
 
-
 <!-- Start module 05 area -->
 <div class="module module-05">
 
@@ -282,7 +277,6 @@
     <!-- End module main area -->
 </div>
 <!-- End module 05 area -->
-
 
 <!-- Start module 06 area -->
 <div class="module module-06">
@@ -322,7 +316,6 @@
 </div>
 <!-- End module 06 area -->
 
-
 <!-- Start module 07 area -->
 <div class="module module-07">
 
@@ -333,7 +326,6 @@
     <!-- End module main area -->
 </div>
 <!-- End module 07 area -->
-
 
 <!-- Start module 08 area -->
 <div class="module module-08">
@@ -396,24 +388,12 @@
       var
         videoImg = $('.module .main .curriculum .zu:first-child').find('.left img'),
         videoTxt = $('.module .main .curriculum .zu:first-child').find('.zhong h3'),
-        videoPageTitle = $('head title'),
-        pwd = '请输入密码',
-        user_input
+        videoPageTitle = $('head title')
       ;
 
+
+
       videoImg.click(function () {
-
-        // 用户输入密码调用 router() 方法，密码错误 return false
-        user_input = prompt( pwd, '' );
-
-        // if ( user_input != null && user_input != '' && user_input == 'juzi911' ) {
-        //   router( 'video' );
-        // }
-        // else {
-        //   alert( '密码错误！' );
-        //   return false;
-        // }
-
         router( 'video' );
         videoPageTitle.text( '橘子情感 - 视频预览' );
       });
@@ -421,7 +401,6 @@
         router( 'video' );
         videoPageTitle.text( '橘子情感 - 视频预览' );
       });
-
       return false;
     }());
 
@@ -429,17 +408,32 @@
       var
         videoVipImg = $('.module .main .curriculum .zu:last-child').find('.left img'),
         videoVipTxt = $('.module .main .curriculum .zu:last-child').find('.zhong h3'),
-        vipVideoPageTitle = $('head title')
+        vipVideoPageTitle = $('head title'),
+        pwd = '请输入密码',
+        user_input, check_pwd
       ;
 
+      check_pwd = function () {
+        if ( user_input != null
+          && user_input != ''
+          && user_input == 'juzi911' ) {
+            router( 'video-vip' );
+        }
+        else {
+          alert( '密码错误！' );
+        }
+      };
+
       videoVipImg.click(function () {
-        console.log( 'img clicked' );
-        router( 'video-vip' );
+        user_input = prompt( pwd, '' );
+        check_pwd();
+        // router( 'video-vip' );
         vipVideoPageTitle.text( '橘子情感 - 付费视频' );
       });
       videoVipTxt.click(function () {
-        console.log( 'txt clicked' );
-        router( 'video-vip' );
+        user_input = prompt( pwd, '' );
+        check_pwd();
+        // router( 'video-vip' );
         vipVideoPageTitle.text( '橘子情感 - 付费视频' );
       });
 

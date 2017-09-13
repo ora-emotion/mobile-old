@@ -11,11 +11,11 @@
 .module .play .play-group {
   padding-top: .77rem;
 }
-.module .play .play-group iframe {
+.module .play .play-group video {
   margin: 0 auto;
   display: none;
 }
-.module .play .play-group iframe.active {
+.module .play .play-group video.active {
   display: block;
 }
 

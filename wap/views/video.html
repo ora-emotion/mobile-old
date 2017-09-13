@@ -1,38 +1,33 @@
-<!-- import third-party javascript - html5media.js -->
-<!-- <script src="js/html5media/html5media.js" type="text/javascript" charset="utf-8"></script> -->
-
 <div class="module">
 
   <div class="play">
     <div class="play-group">
       <video class="active" poster="images/video/m04-video-poster.jpg" controls width="100%" height="550">
-        <!-- <source src="media/third-party-intervention.mp4" type="video/mp4"> -->
-        <source src="media/test.m4v" type="video/mp4">
+        <source src="../../media/third-party-intervention.mp4" type="video/mp4">
       </video>
       <video poster="images/video/m04-video-poster.jpg" controls width="100%" height="550">
-        <!-- <source src="media/about-blind.mp4" type="video/mp4"> -->
-        <source src="media/vip/relationship-width-girl.mp4" type="video/mp4">
+        <source src="../../media/about-blind.mp4" type="video/mp4">
       </video>
       <video poster="images/video/m04-video-poster.jpg" controls width="100%" height="550">
-        <source src="media/normal-question.mp4" type="video/mp4">
+        <source src="../../media/normal-question.mp4" type="video/mp4">
       </video>
       <video poster="images/video/m04-video-poster.jpg" controls width="100%" height="550">
-        <source src="media/skills.mp4" type="video/mp4">
+        <source src="../../media/skills.mp4" type="video/mp4">
       </video>
       <video poster="images/video/m04-video-poster.jpg" controls width="100%" height="550">
-        <source src="media/methods.mp4" type="video/mp4">
+        <source src="../../media/methods.mp4" type="video/mp4">
       </video>
       <video poster="images/video/m04-video-poster.jpg" controls width="100%" height="550">
-        <source src="media/face.mp4" type="video/mp4">
+        <source src="../../media/face.mp4" type="video/mp4">
       </video>
       <video poster="images/video/m04-video-poster.jpg" controls width="100%" height="550">
-        <source src="media/long-distance-love.mp4" type="video/mp4">
+        <source src="../../media/long-distance-love.mp4" type="video/mp4">
       </video>
       <video poster="images/video/m04-video-poster.jpg" controls width="100%" height="550">
-        <source src="media/example.mp4" type="video/mp4">
+        <source src="../../media/example.mp4" type="video/mp4">
       </video>
       <video poster="images/video/m04-video-poster.jpg" controls width="100%" height="550">
-        <source src="media/fresh.mp4" type="video/mp4">
+        <source src="../../media/fresh.mp4" type="video/mp4">
       </video>
     </div>
     <div class="txt-group">
@@ -207,7 +202,7 @@
 
 <script type="text/javascript">
 
-  var videoListItem = $( '.video-list .swiper-container .swiper-wrapper .swiper-slide' ).find( '.item' );
+  var videoListItem = $( '.video-list .swiper-slide' ).find( '.item' );
 
   // 选集轮播图
   var mySwiper = new Swiper('.swiper-container', {
@@ -218,23 +213,26 @@
   videoListItem.click(function () {
 
 
-    var _index = $(this).parent().index();
-    // console.log( _index );
-    var videoItem = document.getElementsByTagName( 'video' )[_index];
+    var
+      _index = $(this).parent().index(),
+      video_group = $( '.play .play-group' );
+      ;
+    // // console.log( _index );
+    // var videoItem = document.getElementsByTagName( 'video' )[_index];
 
-    for ( var i = 0; i < document.getElementsByTagName( 'video' ).length; i++ ) {
-      // document.getElementsByTagName( 'video' )[i].pause();
-      if ( document.getElementsByTagName( 'video' )[i].played ) {
-        document.getElementsByTagName( 'video' )[i].pause();
-      } else {
-        document.getElementsByTagName( 'video' )[_index].play();
-      }
-
-    }
+    // for ( var i = 0; i < document.getElementsByTagName( 'video' ).length; i++ ) {
+    //   // document.getElementsByTagName( 'video' )[i].pause();
+    //   if ( document.getElementsByTagName( 'video' )[i].played ) {
+    //     document.getElementsByTagName( 'video' )[i].pause();
+    //   } else {
+    //     document.getElementsByTagName( 'video' )[_index].play();
+    //   }
+    //
+    // }
     // document.getElementsByTagName( 'video' )[_index].play();
 
-    $( '.module .play .play-group' ).find( 'video' ).removeClass( 'active' );
-    $( $( '.module .play .play-group' ).find( 'video' )[_index] ).addClass( 'active' );
+    video_group.find( 'video' ).removeClass( 'active' );
+    $( video_group.find( 'video' )[_index] ).addClass( 'active' );
 
 
   });
