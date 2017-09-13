@@ -251,13 +251,16 @@
 </div>
 
 <script type="text/javascript">
+
 	$(document).ready(function() {
 
 		var
 		  imgLink,            router,             loadCss,
 			openThirdPartyPage, moduleFourViewMore,
-			i    = 0,
-			anli = $( '.module .main .bottom' ).find( '.anli-group .anli' )
+			i          = 0,
+			anli_group = $( '.module .main .bottom' ).find( '.anli-group' ),
+			anli       = $( '.module .main .bottom' ).find( '.anli-group .anli' ),
+			viewMore   = $( '.module .main .bottom' ).find( '.more' );
 			;
 
 		// 加载 html 文件
@@ -335,6 +338,14 @@
 			});
 
 		}());
-		
+
+		// 查看更多案例
+		viewMore.click(function () {
+			console.log( 'ok' );
+			anli_group.animate({
+				height : '100%'
+			}, 300);
+		});
+
 	});
 </script>
