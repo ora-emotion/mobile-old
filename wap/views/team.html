@@ -174,10 +174,25 @@
 				console.log( '请求 CSS 失败!' );
 			}
 		});
+		return false;
+	};
+	
+	// 加载 JS 文件
+	loadJs = function () {
+		$.ajax({
+			type    : 'GET',
+			url     : 'js/team-three-level.js',
+			success : function ( data ) {
+				console.log( '请求 JS 成功!' );
+			},
+			error   : function ( error ) {
+				console.log( '请求 JS 失败!' );
+			}
+		});
 
 		return false;
 	};
-
+	
 	// 加载请求的 HTML 文件
 	var i;
 	for ( i = 0; i < cardItem.length; i++ ) {
