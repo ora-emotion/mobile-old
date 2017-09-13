@@ -60,7 +60,7 @@ var changePrefaceImg = $(function (){
 var moduleTwoBanner = $(function (){
 
     var moduleTwoSwiper = new Swiper('.module-01 .main .top .left .swiper-container', {
-        autoplay: 100000,                     // 禁止自动播放
+        autoplay: 5000,                      // 禁止自动播放
         pagination : '.swiper-pagination',   // 显示分页器
         paginationClickable :true,           // 分页器可点击
     });
