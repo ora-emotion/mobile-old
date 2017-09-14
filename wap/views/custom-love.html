@@ -435,9 +435,14 @@
 <script type="text/javascript">
 
   var
-    prefaceImg,       moduleTitle, changePrefaceImg,
-    insertModuleTitle
+    prefaceImg,        moduleTitle, changePrefaceImg,
+    insertModuleTitle, exampleLink, router,
+    loadCss,
+    $container, $cssLink
     ;
+
+  $container = $( '#container' );
+  $cssLink   = $( 'link.dynamic' );
 
   // 动态更换头图图片
   changePrefaceImg = $(function (){
@@ -446,6 +451,14 @@
   }());
 
   $(document).ready(function () {
+
+    var
+      loadCss,
+      $container, $cssLink
+      ;
+
+    $container = $( '#container' );
+    $cssLink   = $( 'link.dynamic' );
 
     // 初始化模块标题
     insertModuleTitle = $(function (){
@@ -535,6 +548,51 @@
       });
     }());
 
+    // 模块四：跳转链接
+    $(function () {
+      exampleLink = $( '.module-04 .main .item' );
+      // 请求案例 HTML
+      router = function ( module ) {
+        $.ajax({
+          type    : 'GET',
+          url     : 'views/dry-case/' + module + '.html',
+          success : function ( data ) {
+            $container.html( data );
+            console.log( '模块四案例 HTML 请求成功！' );
+          },
+          error   : function ( error ) {
+            console.log( '模块四案例 HTML 请求失败！' );
+          }
+        });
+      };
+      // 请求案例 CSS
+      loadCss = function () {
+        $.ajax({
+          type    : 'GET',
+          url     : 'css/dry-case.css',
+          success : function ( data ) {
+            $cssLink.attr( 'href', 'css/dry-case.css' );
+            console.log( '模块四案例 CSS 样式表请求成功！' );
+          },
+          error   : function ( error ) {
+            console.log( '模块四案例 CSS 样式表请求失败！' );
+          }
+        });
+      };
+      $( exampleLink[0] ).click(function () {
+        router( 'cis38' );
+        loadCss();
+      });
+      $( exampleLink[1] ).click(function () {
+        router( 'cis19' );
+        loadCss();
+      });
+      $( exampleLink[2] ).click(function () {
+        router( 'cis9' );
+        loadCss();
+      });
+    }());
+
     // 轮播图：模块五 - 橘子优势
     $(function () {
       var tabContentItem = $(".module-05 .main .swiper-container .swiper-wrapper .swiper-slide");
@@ -558,7 +616,7 @@
         e.preventDefault();
       });
     });
-    
+
   });
 
 </script>
