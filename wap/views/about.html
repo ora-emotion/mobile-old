@@ -120,12 +120,7 @@
           </div>
         </div>
         <div class="more">
-        	<svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="14px" height="38px"> 
-            <text font-family="Microsoft YaHei" fill="rgb(82, 82, 82)" transform="matrix( 0, 1.00490942805824, -1.00232895669491, 0,-1.51979613190667, 0.43027867891215)" font-size="26px">&#62;&#62;&#62;</text>
-          </svg>
+        	<p>查看更多>>></p>
         </div>
         <div class="item hidden">
           <img src="images/about/module04-bottom-pic05.png" alt="">
@@ -205,143 +200,156 @@
 
 <script type="text/javascript">
 
-// 动态更换头图图片
-var changePrefaceImg = $(function (){
-  var prefaceImg = $(".preface .banner-img img");
-  prefaceImg.attr("src", "images/about/preface.png");
-}());
+  var
+    i,          viewMore,          newsItem,
+    prefaceImg, insertModuleTitle, moduleFourViewMore
+    ;
 
-$(document).ready(function (){
-
-  // 初始化模块标题
-  var insertModuleTitle = $(function (){
-    // 请求模块标题模板
-    $(function () {
-      $.ajax({
-        type: "get",
-        url: "components/module-title/module-title.html",
-        success: function (dataHTML) {
-          // 插入模板到页面
-          $(".module").prepend(dataHTML);
-        },
-        error: function (error) {
-          alert("request error");
-        }
-      });
-    }());
-
-    // 请求模块模块标题数据
-    $(function () {
-      $.ajax({
-        type: "get",
-        url: "data/module-title.json",
-        success: function (data) {
-          insertModuleTitle(data);
-        },
-        error: function (error) {
-          alert("requests error");
-        }
-      });
-    }());
-
-    // 插入模块标题
-    function insertModuleTitle(data) {
-      // 动态渲染模板标题
-      var moduleTitle = $(".module .title .module-title");
-      var i = 0;
-      for (var title in data.page["about"]) {
-        $($(".module")[i]).find(".title .module-title").html(data.page["about"][title]);
-        i++;
-      }
-    }
-
+  // 动态更换头图图片
+  var changePrefaceImg = $(function (){
+    prefaceImg = $(".preface .banner-img img");
+    prefaceImg.attr("src", "images/about/preface.png");
   }());
 
-  // 模块四查看更多
-  var moduleFourViewMore = (function () {
-		// 加载模块
-		function router(module, container) {
-			container = container || $('#container');
-			// 请求模块结构
-			$.ajax({
-				url: 'views/news/' + module + '.html',
-				success: function(data) {
-					container.html(data);
-				},
-				error: function(error) {
-					console.log(' 写入 HTML 失败！');
-				}
-			});
-	
-		}
-		// 动态加载 css 文件
-		function loadCss(module) {
-			$.ajax({
-				url: 'css/' + module + '.css',
-				success: function(data) {
-					var cssLink = $('link.dynamic');
-					cssLink.attr('href', 'css/' + module + '.css');
-				},
-				error: function(error) {
-					console.log('请求外部 css 样式表失败！');
-				}
-			});
-		}
+  $(document).ready(function (){
 
-  	
-    $('.module-04 .main .content .bottom').find('.more svg')
-      .click(function () {
+    // 初始化模块标题
+    insertModuleTitle = $(function (){
+      // 请求模块标题模板
+      $(function () {
+        $.ajax({
+          type: "get",
+          url: "components/module-title/module-title.html",
+          success: function (dataHTML) {
+            // 插入模板到页面
+            $(".module").prepend(dataHTML);
+          },
+          error: function (error) {
+            alert("request error");
+          }
+        });
+      }());
+
+      // 请求模块模块标题数据
+      $(function () {
+        $.ajax({
+          type: "get",
+          url: "data/module-title.json",
+          success: function (data) {
+            insertModuleTitle(data);
+          },
+          error: function (error) {
+            alert("requests error");
+          }
+        });
+      }());
+
+      // 插入模块标题
+      function insertModuleTitle(data) {
+        // 动态渲染模板标题
+        var moduleTitle = $(".module .title .module-title");
+        var i = 0;
+        for (var title in data.page["about"]) {
+          $($(".module")[i]).find(".title .module-title").html(data.page["about"][title]);
+          i++;
+        }
+      }
+
+    }());
+
+    // 模块四查看更多
+    moduleFourViewMore = (function () {
+  		// 加载模块
+  		function router(module, container) {
+  			container = container || $('#container');
+  			// 请求模块结构
+  			$.ajax({
+  				url: 'views/news/' + module + '.html',
+  				success: function(data) {
+  					container.html(data);
+  				},
+  				error: function(error) {
+  					console.log(' 写入 HTML 失败！');
+  				}
+  			});
+
+  		}
+  		// 动态加载 css 文件
+  		function loadCss(module) {
+  			$.ajax({
+  				url: 'css/' + module + '.css',
+  				success: function(data) {
+  					var cssLink = $('link.dynamic');
+  					cssLink.attr('href', 'css/' + module + '.css');
+  				},
+  				error: function(error) {
+  					console.log('请求外部 css 样式表失败！');
+  				}
+  			});
+  		}
+
+      viewMore = $('.module-04 .main .content .bottom').find('.more p');
+      viewMore.click(function () {
         $(this).css( 'display', 'none' );
         $('.module-04 .main .content .bottom').find('.item.hidden')
           .removeClass('hidden');
-          return true;
-      })
-      
-    $('.module-04 .main .content .top').find('.item:first-child')
-    	.click(function () {
-    		router( 'news2' );
-    		loadCss('news');
-    	});
-    $('.module-04 .main .content .top').find('.item:nth-child(2)')
-    	.click(function () {
-    		router( 'news3' );
-    		loadCss('news');
-    	});
-   	$('.module-04 .main .content .bottom').find('.item:nth-child(1)')
-    	.click(function () {
-    		router( 'news1' );
-    		loadCss('news');
-    	});
-   	$('.module-04 .main .content .bottom').find('.item:nth-child(2)')
-    	.click(function () {
-    		router( 'news4' );
-    		loadCss('news');
-    	});
-    $('.module-04 .main .content .bottom').find('.item:nth-child(3)')
-    	.click(function () {
-    		router( 'news5' );
-    		loadCss('news');
-    	});
-    $('.module-04 .main .content .bottom').find('.item:nth-child(4)')
-    	.click(function () {
-    		router( 'news6' );
-    		loadCss('news');
-    	});
-    $('.module-04 .main .content .bottom').find('.item:nth-child(6)')
-    	.click(function () {
-    		router( 'news7' );
-    		loadCss('news');
-    	});
-    $('.module-04 .main .content .bottom').find('.item:nth-child(7)')
-    	.click(function () {
-    		router( 'news8' );
-    		loadCss('news');
-    	});
-    $('.module-04 .main .content .bottom').find('.item:nth-child(8)')
-    	.click(function () {
-    		router( 'news9' );
-    		loadCss('news');
-    	});
-  }());
-});
+        return true;
+      });
+
+      // newsItem = $('.module-04 .main .content .top').find('.item');
+      // for ( i = 0; i < newsItem.length; i++ ) {
+      //   $( newsItem[i] ).click(function () {
+      //     router( 'news' + ( i+1 ) );
+      //     loadCss( 'news' );
+      //   });
+      // }
+
+      $('.module-04 .main .content .top').find('.item:first-child')
+      	.click(function () {
+      		router( 'news2' );
+      		loadCss('news');
+      	});
+      $('.module-04 .main .content .top').find('.item:last-child')
+      	.click(function () {
+      		router( 'news3' );
+      		loadCss('news');
+      	});
+     	$('.module-04 .main .content .bottom').find('.item:nth-child(1)')
+      	.click(function () {
+      		router( 'news1' );
+      		loadCss('news');
+      	});
+     	$('.module-04 .main .content .bottom').find('.item:nth-child(2)')
+      	.click(function () {
+      		router( 'news4' );
+      		loadCss('news');
+      	});
+      $('.module-04 .main .content .bottom').find('.item:nth-child(3)')
+      	.click(function () {
+      		router( 'news5' );
+      		loadCss('news');
+      	});
+      $('.module-04 .main .content .bottom').find('.item:nth-child(4)')
+      	.click(function () {
+      		router( 'news6' );
+      		loadCss('news');
+      	});
+      $('.module-04 .main .content .bottom').find('.item:nth-child(6)')
+      	.click(function () {
+      		router( 'news7' );
+      		loadCss('news');
+      	});
+      $('.module-04 .main .content .bottom').find('.item:nth-child(7)')
+      	.click(function () {
+      		router( 'news8' );
+      		loadCss('news');
+      	});
+      $('.module-04 .main .content .bottom').find('.item:nth-child(8)')
+      	.click(function () {
+      		router( 'news9' );
+      		loadCss('news');
+      	});
+
+    }());
+  });
 </script>

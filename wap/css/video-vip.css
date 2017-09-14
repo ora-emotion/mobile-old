@@ -77,5 +77,8 @@
   height: 1.72rem;
 }
 .module .video-list .swiper-container .swiper-wrapper .swiper-slide .item p {
+  width: 2.63rem;
   padding-top: .2rem;
+  line-height: .46rem;
+  text-align: center;
 }
