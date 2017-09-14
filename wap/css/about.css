@@ -198,14 +198,9 @@ p {
 .module-04 .main .content .bottom .item.hidden {
   display: none;
 }
-.module-04 .main .content .bottom .more {
-  position: relative;
-}
-.module-04 .main .content .bottom .more svg {
-  position: absolute;
-  bottom: 0;
-  right: .2rem;
-  padding-bottom: .36rem;
+.module-04 .main .content .bottom .more p {
+  padding-left: .16rem;
+  color: #fd3232;
 }
 .module-04 .main .content .bottom .item img {
   width: 1.9rem;
