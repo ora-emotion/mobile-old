@@ -235,31 +235,43 @@
 <!-- Start module 04: 成功案例 -->
 <div class="module module-04">
     <div class="main">
+        <!-- cis38.html -->
         <div class="item">
             <div class="pic">
                 <img src="images/custom-love/module04-pic01.png" alt="">
             </div>
             <div class="txt-group">
-                <p class="topic">三个步骤直接从备胎升级男友逆袭成功</p>
-                <p class="des">你其实也不差，凭什么只能做备胎。深陷友谊区的你难道就不想知道升级男友逆袭的秘诀吗？<a href="#">了解详情>>></a></p>
+                <p class="topic">表白无果，只用了三十天逆袭</p>
+                <p class="des">
+                  小月是我前任的闺蜜，我认识她最起初是因为我想挽回我的
+                  前任，在我俩分手后……<a href="#">了解详情>>></a>
+                </p>
             </div>
         </div>
+        <!-- cis19.html -->
         <div class="item">
             <div class="pic">
                 <img src="images/custom-love/module04-pic02.png" alt="">
             </div>
             <div class="txt-group">
-                <p class="topic">没有追不到的女人，只有不会说话的老实人</p>
-                <p class="des">等我再玩几年，找个老实人就嫁了。老实人招谁惹谁了，一堆的好人卡却没有一个真心的女人。<a href="#">了解详情>>></a></p>
+                <p class="topic">没有追不到的女生，只有不会聊天的愣头青</p>
+                <p class="des">
+                  很多时候我们在和女生聊天的时候，不是每个人都是可以聊
+                  的风生……<a href="#">了解详情>>></a>
+                </p>
             </div>
         </div>
+        <!-- cis9.html -->
         <div class="item">
             <div class="pic">
                 <img src="images/custom-love/module04-pic03.png" alt="">
             </div>
             <div class="txt-group">
-                <p class="topic">破解女神的废物测试，分分钟抱女神回家</p>
-                <p class="des">你以为女人只会口是心非吗？太天真了，女人在爱情中有的是小心机和圈套，你都不能看透女人还怎么抱到女神？<a href="#">了解详情>>></a></p>
+                <p class="topic">读懂女生这四种行为，教你分分钟挽回他！</p>
+                <p class="des">
+                  分手后两人的相处与关系有无数种，有的两人形同陌路从此
+                  江湖不再见，有的人……<a href="#">了解详情>>></a>
+                </p>
             </div>
         </div>
     </div>
@@ -422,136 +434,189 @@
 
 <script type="text/javascript">
 
-    // 动态更换头图图片
-    var changePrefaceImg = $(function (){
+  var
+    prefaceImg,        moduleTitle, changePrefaceImg,
+    insertModuleTitle, exampleLink, router,
+    loadCss,
+    $container, $cssLink
+    ;
 
-        var prefaceImg = $(".preface .banner-img img");
-        prefaceImg.attr("src", "images/custom-love/preface.png");
+  $container = $( '#container' );
+  $cssLink   = $( 'link.dynamic' );
+
+  // 动态更换头图图片
+  changePrefaceImg = $(function (){
+    prefaceImg = $(".preface .banner-img img");
+    prefaceImg.attr("src", "images/custom-love/preface.png");
+  }());
+
+  $(document).ready(function () {
+
+    var
+      loadCss,
+      $container, $cssLink
+      ;
+
+    $container = $( '#container' );
+    $cssLink   = $( 'link.dynamic' );
+
+    // 初始化模块标题
+    insertModuleTitle = $(function (){
+      // 请求模块标题模板
+      $(function () {
+        $.ajax({
+          type: "get",
+          url: "components/module-title/module-title.html",
+          success: function (dataHTML) {
+            // 插入模板到页面
+            $(".module").prepend(dataHTML);
+          },
+          error: function (error) {
+            alert("request error");
+          }
+        });
+      }());
+      // 请求模块模块标题数据
+      $(function () {
+        $.ajax({
+          type: "get",
+          url: "data/module-title.json",
+          success: function (data) {
+            insertModuleTitle(data);
+          },
+          error: function (error) {
+            alert("requests error");
+          }
+        });
+      }());
+      // 插入模块标题
+      function insertModuleTitle(data) {
+          // 动态渲染模板标题
+          moduleTitle = $(".module .title .module-title");
+          var i = 0;
+          for (var title in data.page["custom-love"]) {
+            $($(".module")[i]).find(".title .module-title").html(data.page["custom-love"][title]);
+            i++;
+          }
+        }
 
     }());
 
-    $(document).ready(function () {
+    // 轮播图：模块一 - 单身原因
+    $(function (){
+      var mySwiper = new Swiper('.module-01 .swiper-container', {
+         slidesPerView : 2.4
+      });
+    }());
 
-        // 初始化模块标题
-        var insertModuleTitle = $(function (){
+    // 轮播图：模块二 - 错误做法导致后果
+    $(function () {
+        var tabContentItem = $(".module-02 .main .swiper-container .swiper-wrapper .swiper-slide");
 
-            // 请求模块标题模板
-            $(function () {
-
-                $.ajax({
-                    type: "get",
-                    url: "components/module-title/module-title.html",
-                    success: function (dataHTML) {
-                        // 插入模板到页面
-                        $(".module").prepend(dataHTML);
-                    },
-                    error: function (error) {
-                        alert("request error");
-                    }
-                });
-
-            }());
-
-            // 请求模块模块标题数据
-            $(function () {
-
-                $.ajax({
-                    type: "get",
-                    url: "data/module-title.json",
-                    success: function (data) {
-                        insertModuleTitle(data);
-                    },
-                    error: function (error) {
-                        alert("requests error");
-                    }
-                });
-
-            }());
-
-            // 插入模块标题
-            function insertModuleTitle(data) {
-
-                // 动态渲染模板标题
-                var moduleTitle = $(".module .title .module-title");
-                var i = 0;
-                for (var title in data.page["custom-love"]) {
-                    $($(".module")[i]).find(".title .module-title").html(data.page["custom-love"][title]);
-                    i++;
-                }
-            }
-
-        }());
-
-        // 轮播图：模块一 - 单身原因
-        $(function (){
-            var mySwiper = new Swiper('.module-01 .swiper-container', {
-                 slidesPerView : 2.4
-            });
-        }());
-
-        // 轮播图：模块二 - 错误做法导致后果
-        $(function () {
-            var tabContentItem = $(".module-02 .main .swiper-container .swiper-wrapper .swiper-slide");
-
-            var moduleTwoSwiper = new Swiper('.module-02 .main .tabs-container',{
-                onSlideChangeStart: function(){
-                    $(".module-02 .tabs .active").removeClass('active');
-                    $(".module-02 .tabs span").eq(moduleTwoSwiper.activeIndex).addClass('active');
-                }
-            });
-
-            $(".module-02 .tabs span").on('touchstart mousedown',function(e){
-                e.preventDefault();
-                $(".module-02 .tabs .active").removeClass('active');
-                $(this).addClass('active');
-                moduleTwoSwiper.slideTo( $(this).index() );
-            });
-
-            $(".module-05 .tabs span").click(function(e){
-                e.preventDefault();
-            });
-        }());
-
-        // 查看更多：模块三
-        $(function () {
-
-            var configMap = {
-                    content_extend_height : 1120,
-                    content_retract_height : 410,
-                    content_extend_time : 300
-                },
-                btn = $('.module-03 .more');
-
-            btn.click(function () {
-                $('.module-03 .main').animate({ height : configMap.content_extend_height }, configMap.content_extend_time);
-                btn.css( 'display', 'none' );
-            });
-
-        }());
-
-        // 轮播图：模块五 - 橘子优势
-        $(function () {
-            var tabContentItem = $(".module-05 .main .swiper-container .swiper-wrapper .swiper-slide");
-
-            var moduleFiveSwiper = new Swiper('.module-05 .main .tabs-container',{
-                autoHeight: true,
-                onSlideChangeStart: function(){
-                    $(".module-05 .tabs .active").removeClass('active');
-                    $(".module-05 .tabs span").eq(moduleFiveSwiper.activeIndex).addClass('active');
-                }
-            });
-
-            $(".module-05 .tabs span").on('touchstart mousedown',function(e){
-                e.preventDefault();
-                $(".module-05 .tabs .active").removeClass('active');
-                $(this).addClass('active');
-                moduleFiveSwiper.slideTo( $(this).index() );
-            });
-
-            $(".module-05 .tabs span").click(function(e){
-                e.preventDefault();
-            });
+        var moduleTwoSwiper = new Swiper('.module-02 .main .tabs-container',{
+          onSlideChangeStart: function(){
+            $(".module-02 .tabs .active").removeClass('active');
+            $(".module-02 .tabs span").eq(moduleTwoSwiper.activeIndex).addClass('active');
+          }
         });
+
+        $(".module-02 .tabs span").on('touchstart mousedown',function(e){
+          e.preventDefault();
+          $(".module-02 .tabs .active").removeClass('active');
+          $(this).addClass('active');
+          moduleTwoSwiper.slideTo( $(this).index() );
+        });
+
+        $(".module-05 .tabs span").click(function(e){
+          e.preventDefault();
+        });
+      }());
+
+    // 查看更多：模块三
+    $(function () {
+      var
+        configMap = {
+          content_extend_height : 1120,
+          content_retract_height : 410,
+          content_extend_time : 300
+        },
+        btn = $('.module-03 .more');
+
+      btn.click(function () {
+        $('.module-03 .main').animate({ height : configMap.content_extend_height }, configMap.content_extend_time);
+        btn.css( 'display', 'none' );
+      });
+    }());
+
+    // 模块四：跳转链接
+    $(function () {
+      exampleLink = $( '.module-04 .main .item' );
+      // 请求案例 HTML
+      router = function ( module ) {
+        $.ajax({
+          type    : 'GET',
+          url     : 'views/dry-case/' + module + '.html',
+          success : function ( data ) {
+            $container.html( data );
+            console.log( '模块四案例 HTML 请求成功！' );
+          },
+          error   : function ( error ) {
+            console.log( '模块四案例 HTML 请求失败！' );
+          }
+        });
+      };
+      // 请求案例 CSS
+      loadCss = function () {
+        $.ajax({
+          type    : 'GET',
+          url     : 'css/dry-case.css',
+          success : function ( data ) {
+            $cssLink.attr( 'href', 'css/dry-case.css' );
+            console.log( '模块四案例 CSS 样式表请求成功！' );
+          },
+          error   : function ( error ) {
+            console.log( '模块四案例 CSS 样式表请求失败！' );
+          }
+        });
+      };
+      $( exampleLink[0] ).click(function () {
+        router( 'cis38' );
+        loadCss();
+      });
+      $( exampleLink[1] ).click(function () {
+        router( 'cis19' );
+        loadCss();
+      });
+      $( exampleLink[2] ).click(function () {
+        router( 'cis9' );
+        loadCss();
+      });
+    }());
+
+    // 轮播图：模块五 - 橘子优势
+    $(function () {
+      var tabContentItem = $(".module-05 .main .swiper-container .swiper-wrapper .swiper-slide");
+
+      var moduleFiveSwiper = new Swiper('.module-05 .main .tabs-container',{
+        autoHeight: true,
+        onSlideChangeStart: function(){
+          $(".module-05 .tabs .active").removeClass('active');
+          $(".module-05 .tabs span").eq(moduleFiveSwiper.activeIndex).addClass('active');
+        }
+      });
+
+      $(".module-05 .tabs span").on('touchstart mousedown',function(e){
+        e.preventDefault();
+        $(".module-05 .tabs .active").removeClass('active');
+        $(this).addClass('active');
+        moduleFiveSwiper.slideTo( $(this).index() );
+      });
+
+      $(".module-05 .tabs span").click(function(e){
+        e.preventDefault();
+      });
     });
+
+  });
 
 </script>

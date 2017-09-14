@@ -14,14 +14,13 @@
 	line-height: .4rem;
 	padding-left: .2rem;
 	padding-right: .2rem;
-	padding-top: .2rem;
-}
-.module .main .tu{
-	width: 100%;
-}
-.module .main .tu img{
-	padding-left: 15%;
 	margin-top: .2rem;
+	margin-bottom: .2rem;
+}
+.module .main .center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .module .main span{
 	font-size: .2rem;
