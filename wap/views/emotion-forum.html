@@ -259,9 +259,10 @@
 	$(document).ready(function() {
 
 		var
-		  imgLink,            router,             loadCss,
+		  router,             loadCss,
 			openThirdPartyPage, moduleFourViewMore,
 			i          = 0,
+			imgLink    = $(' .module .main .top' ).find( '.left .swiper-slide' ),
 			anli_group = $( '.module .main .bottom' ).find( '.anli-group' ),
 			anli       = $( '.module .main .bottom' ).find( '.anli-group .anli' ),
 			viewMore   = $( '.module .main .bottom' ).find( '.more' );
@@ -273,10 +274,10 @@
 				url: 'views/three-level-page/ten-books/' + module + '.html',
 				success: function(data) {
 					$('#container').html(data);
-					console.log('successed to load books.html!');
+					console.log('successed to load html file!');
 				},
 				error: function(error) {
-					console.log('failed to load books.html!');
+					console.log('failed to load html file!');
 				}
 			});
 		};
@@ -288,20 +289,36 @@
 				success: function(data) {
 					var cssLink = $('link.dynamic');
 					cssLink.attr('href', 'css/' + module + '.css');
-					console.log('successed to load stylesheet of books.css!');
+					console.log('successed to load stylesheet!');
 				},
 				error: function(error) {
-					console.log('failed to load stylesheet of books.css!');
+					console.log('failed to load stylesheet!');
 				}
 			});
 		}
 
 		// 打开三级页面：十本好书推荐 - module 01 area
 		openThirdPartyPage = $(function() {
-			imgLink = $('.module-01 .main .top .left .swiper-container .swiper-wrapper').find('.swiper-slide:first-child .item a');
-			imgLink.click(function() {
-				router('books');
-				loadCss('books');
+			$( imgLink[0] ).find( '.item a img' ).click(function() {
+				router( 'books' );
+				loadCss( 'books' );
+			});
+
+			// 急着上线，忘记这里要干嘛了……
+			// var cisRouter = function () {
+			// 	$.ajax({
+			// 		type  : 'GET',
+			// 		url   : ''
+			// 	});
+			// }
+
+			$( imgLink[1] ).find( '.item a img' ).click(function () {
+				router( 'cis31' );
+				loadCss( 'dry-case' );
+			});
+			$( imgLink[2] ).find( '.item a img' ).click(function () {
+				router( 'cis32' );
+				loadCss( 'dry-case' );
 			});
 		});
 		// 干货案例跳转
