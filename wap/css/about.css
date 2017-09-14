@@ -198,7 +198,7 @@ p {
 .module-04 .main .content .bottom .item.hidden {
   display: none;
 }
-.module-04 .main .content .bottom .more p {
+.module-04 .main .content .bottom .more>p {
   padding-left: .16rem;
   color: #fd3232;
 }

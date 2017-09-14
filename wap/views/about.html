@@ -201,8 +201,8 @@
 <script type="text/javascript">
 
   var
-    prefaceImg,        viewMore,
-    insertModuleTitle, moduleFourViewMore
+    i,          viewMore,          newsItem,
+    prefaceImg, insertModuleTitle, moduleFourViewMore
     ;
 
   // 动态更换头图图片
@@ -290,18 +290,26 @@
 
       viewMore = $('.module-04 .main .content .bottom').find('.more p');
       viewMore.click(function () {
-          $(this).css( 'display', 'none' );
-          $('.module-04 .main .content .bottom').find('.item.hidden')
-            .removeClass('hidden');
-          return true;
-        });
+        $(this).css( 'display', 'none' );
+        $('.module-04 .main .content .bottom').find('.item.hidden')
+          .removeClass('hidden');
+        return true;
+      });
+
+      // newsItem = $('.module-04 .main .content .top').find('.item');
+      // for ( i = 0; i < newsItem.length; i++ ) {
+      //   $( newsItem[i] ).click(function () {
+      //     router( 'news' + ( i+1 ) );
+      //     loadCss( 'news' );
+      //   });
+      // }
 
       $('.module-04 .main .content .top').find('.item:first-child')
       	.click(function () {
       		router( 'news2' );
       		loadCss('news');
       	});
-      $('.module-04 .main .content .top').find('.item:nth-child(2)')
+      $('.module-04 .main .content .top').find('.item:last-child')
       	.click(function () {
       		router( 'news3' );
       		loadCss('news');
@@ -341,6 +349,7 @@
       		router( 'news9' );
       		loadCss('news');
       	});
+
     }());
   });
 </script>
