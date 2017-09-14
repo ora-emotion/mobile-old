@@ -106,6 +106,7 @@
 	height: 100%;
 	float: left;
 	margin-left: .2rem;
+  overflow: hidden;
 }
 .anli .right h3{
 	font-size: .28rem;
