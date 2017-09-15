@@ -13,6 +13,7 @@ var
       type    : 'GET',
       url     : 'views/' + module + '.html',
       success : function ( data ) {
+         $(document).scrollTop(0);
         $container.html( data );
       },
       error   : function ( error ) {

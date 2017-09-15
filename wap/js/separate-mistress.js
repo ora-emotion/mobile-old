@@ -2,10 +2,11 @@ var
   routerHtml,        loadJs,           loadCss,
   insertModuleTitle, changePrefaceImg, moduleTwoBanner,
   moduleSevenLink,
-  cisLink    = $( '.module-07 .main' ),
-  cssLink    = $( 'head link.dynamic' ),
-  jsLink     = $( 'head script.dynamic' ),
-  $container = $( '#container' )
+  cisLink     = $( '.module-07 .main' ),
+  cssLink     = $( 'head link.dynamic' ),
+  jsLink      = $( 'head script.dynamic' ),
+  $container  = $( '#container' ),
+  $prefaceImg = $( '.preface' )
   ;
 
 // 加载 HTML 文件
@@ -14,6 +15,7 @@ routerHtml = function ( module ) {
     type    : 'GET',
     url     : 'views/' + module + '.html',
     success : function ( data ) {
+      $(document).scrollTop(0);
       $container.html( data );
     },
     error   : function ( data ) {

@@ -68,8 +68,8 @@ function router(module,container){
     $.ajax({
         url:"views/" + module + ".html",
         success: function(data){
-            container.html(data);
-
+          $(document).scrollTop(0);
+          container.html(data);
         }
     });
 
@@ -440,6 +440,3 @@ $(document).ready(function () {
     }
 
 });
-
-
-
