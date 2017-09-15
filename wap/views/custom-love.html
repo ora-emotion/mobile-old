@@ -92,7 +92,8 @@
                 <div class="swiper-slide">
                     <div class="item">
                         <div class="img">
-                            <img src="images/custom-love/module02-pic01.png" alt="">
+                            <img src="images/custom-love/module02-pic01.png"
+                            alt="">
                         </div>
                         <div class="txt">
                             <p class="title">盲目付出</p>
@@ -104,7 +105,8 @@
                     </div>
                     <div class="item">
                         <div class="img">
-                            <img src="images/custom-love/module02-pic02.png" alt="">
+                            <img src="images/custom-love/module02-pic02.png"
+                            alt="">
                         </div>
                         <div class="txt">
                             <p class="title">贸然表白</p>
@@ -118,7 +120,8 @@
                 <div class="swiper-slide">
                     <div class="item">
                         <div class="img">
-                            <img src="images/custom-love/module02-pic03.png" alt="">
+                            <img src="images/custom-love/module02-pic03.png"
+                            alt="">
                         </div>
                         <div class="txt">
                             <p class="title">盲目付出</p>
@@ -129,7 +132,8 @@
                     </div>
                     <div class="item">
                         <div class="img">
-                            <img src="images/custom-love/module02-pic04.png" alt="">
+                            <img src="images/custom-love/module02-pic04.png"
+                            alt="">
                         </div>
                         <div class="txt">
                             <p class="title">贸然表白</p>
@@ -535,7 +539,9 @@
           moduleTitle = $(".module .title .module-title");
           var i = 0;
           for (var title in data.page["custom-love"]) {
-            $($(".module")[i]).find(".title .module-title").html(data.page["custom-love"][title]);
+            $($(".module")[i])
+              .find(".title .module-title")
+              .html(data.page["custom-love"][title]);
             i++;
           }
         }
@@ -551,12 +557,15 @@
 
     // 轮播图：模块二 - 错误做法导致后果
     $(function () {
-        var tabContentItem = $(".module-02 .main .swiper-container .swiper-wrapper .swiper-slide");
+        var tabContentItem = $(".module-02 .main .swiper-wrapper .swiper-slide");
 
         var moduleTwoSwiper = new Swiper('.module-02 .main .tabs-container',{
           onSlideChangeStart: function(){
-            $(".module-02 .tabs .active").removeClass('active');
-            $(".module-02 .tabs span").eq(moduleTwoSwiper.activeIndex).addClass('active');
+            $(".module-02 .tabs .active")
+              .removeClass('active');
+            $(".module-02 .tabs span")
+              .eq(moduleTwoSwiper.activeIndex)
+              .addClass('active');
           }
         });
 
@@ -583,7 +592,10 @@
         btn = $('.module-03 .more');
 
       btn.click(function () {
-        $('.module-03 .main').animate({ height : configMap.content_extend_height }, configMap.content_extend_time);
+        $('.module-03 .main').animate(
+          { height : configMap.content_extend_height },
+          configMap.content_extend_time
+        );
         btn.css( 'display', 'none' );
       });
     }());
@@ -635,13 +647,14 @@
 
     // 轮播图：模块五 - 橘子优势
     $(function () {
-      var tabContentItem = $(".module-05 .main .swiper-container .swiper-wrapper .swiper-slide");
+      var tabContentItem = $(".module-05 .main .swiper-wrapper .swiper-slide");
 
       var moduleFiveSwiper = new Swiper('.module-05 .main .tabs-container',{
         autoHeight: true,
         onSlideChangeStart: function(){
           $(".module-05 .tabs .active").removeClass('active');
-          $(".module-05 .tabs span").eq(moduleFiveSwiper.activeIndex).addClass('active');
+          $(".module-05 .tabs span").eq(moduleFiveSwiper.activeIndex)
+            .addClass('active');
         }
       });
 
