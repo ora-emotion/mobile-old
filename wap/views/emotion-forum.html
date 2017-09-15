@@ -267,6 +267,7 @@
 			anli_group = $( '.module .main .bottom' ).find( '.anli-group' ),
 			anli       = $( '.module .main .bottom' ).find( '.anli-group .anli' ),
 			viewMore   = $( '.module .main .bottom' ).find( '.more' ),
+			rightLink  = $( '.module .main .top' ).find( '.right .bottom p a' ),
 			$container = $( '#container' )
 			;
 
@@ -312,6 +313,16 @@
 
 			$( imgLink[2] ).find( '.item a img' ).click(function () {
 				router( 'dry-case/cis32' );
+				loadCss( 'dry-case' );
+			});
+
+			$( rightLink[0] ).click(function () {
+				router( 'dry-case/cis30' );
+				loadCss( 'dry-case' );
+			});
+
+			$( rightLink[1] ).click(function () {
+				router( 'dry-case/cis26' );
 				loadCss( 'dry-case' );
 			});
 		});
