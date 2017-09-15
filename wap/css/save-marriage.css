@@ -137,6 +137,11 @@
 	transition: .3s all;
 	overflow: hidden;
 }
+.module-04 .main .ul1 section.active {
+	height: 1.8rem;
+	width: 5.26rem;
+	background: url("../images/save-marriage/erro-bgimg.png") center center / 100% 100% no-repeat;
+}
 .p1{
 	line-height: .35rem;
 	padding: .3rem .1rem .2rem .3rem;
@@ -311,7 +316,7 @@
 	width: 100%;
 }
 .module-08 .main .top p{
-	text-align: center;	
+	text-align: center;
 	font-weight: 600;
 }
 
@@ -323,7 +328,7 @@
 }
 .module-08 .main .bottom p{
 	font-weight: 600;
-	text-align: center;	
+	text-align: center;
 }
 
 .module-09 .main{

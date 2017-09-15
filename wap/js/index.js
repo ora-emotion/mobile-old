@@ -6,6 +6,7 @@ var insertModuleTitle = (function () {
       type: "get",
       url: "components/module-title/module-title.html",
       success: function (dataHTML) {
+         $(document).scrollTop(0);
         // 插入模板到页面
         $(".module").prepend(dataHTML);
       },
