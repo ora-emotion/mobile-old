@@ -1,3 +1,8 @@
+/*
+ * save-marriage.js
+ *
+*/
+
 // 初始化模块标题
 var insertModuleTitle = $(function (){
 
@@ -50,22 +55,19 @@ var insertModuleTitle = $(function (){
 }());
 
 // 动态更换头图图片
-var changePrefaceImg = $(function (){
+var changePrefaceImg = (function (){
   var prefaceImg = $(".preface .banner-img img");
   prefaceImg.attr("src", "images/save-marriage/banner.png");
 }());
 
-
-
 //列表切换
-var moduleTwoBanner = $(function (){
+var moduleTwoBanner = (function (){
     var moduleTwoSwiper = new Swiper('.module-06 .main .swiper-container', {
         autoplay: 10000,                     // 禁止自动播放
         pagination : '.swiper-pagination',   // 显示分页器
         paginationClickable :true,           // 分页器可点击
     });
-});
-
+}());
 
 //下拉列表
 var xiala = $(function(){
@@ -150,4 +152,17 @@ var xiala = $(function(){
 		$('.content4').css("height","0");
 		$('.content5').css("height","0");
 	});
+});
+
+$(document).ready(function () {
+  var cis = $( '.module-07 .main' );
+
+  cis.find( '.top' ).click(function () {
+    app.router.loadHtml( 'views/dry-case/cis45' );
+    app.router.loadCss( 'css/dry-case' );
+  });
+  cis.find( '.bottom' ).click(function () {
+    app.router.loadHtml( 'views/dry-case/cis44' );
+    app.router.loadCss( 'css/dry-case' );
+  });
 });
