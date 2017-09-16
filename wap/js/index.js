@@ -53,7 +53,8 @@ var changePrefaceImg = $(function (){
 $(document).ready(function () {
 
   var
-    viewMore
+    viewMore,
+    page_title = $( 'head title' )
     ;
 
   var initModuleThreeBanner = $(function (){
@@ -259,14 +260,6 @@ $(document).ready(function () {
     // loadCss(module);
   }
 
-  // 加载外部 js 文件
-  // function loadJs(module){
-  //   $.ajax({
-  //     type: "get",
-  //     url:"js/three-level-page/" + module + ".js"
-  //   });
-  // }
-
   // 动态加载外部 css 文件
   function loadCss(module) {
     $.ajax({
@@ -309,5 +302,67 @@ $(document).ready(function () {
       loadCss( 'news' );
     });
   }());
+
+  // Start method /loadPage()/
+  var loadPage = (function () {
+    // 挽回爱情
+    $( '.icon-txt-group:first-child .item:nth-child(1)' ).click(function () {
+      app.router.loadHtml( 'views/save-love' );
+      app.router.loadCss( 'css/save-love' );
+      app.router.loadJs( 'js/save-love' );
+      page_title.text( '橘子情感 - 挽回爱情' );
+    });
+    // 挽救婚姻
+    $( '.icon-txt-group:first-child .item:nth-child(2)' ).click(function () {
+      app.router.loadHtml( 'views/save-marriage' );
+      app.router.loadCss( 'css/save-marriage' );
+      app.router.loadJs( 'js/save-marriage' );
+      page_title.text( '橘子情感 - 挽救婚姻' );
+    });
+    // 分离小三
+    $( '.icon-txt-group:first-child .item:nth-child(3)' ).click(function () {
+      app.router.loadHtml( 'views/separate-mistress' );
+      app.router.loadCss( 'css/separate-mistress' );
+      app.router.loadJs( 'js/separate-mistress' );
+      page_title.text( '橘子情感 - 分离小三' );
+    });
+    // 定制爱情
+    $( '.icon-txt-group:first-child .item:nth-child(4)' ).click(function () {
+      app.router.loadHtml( 'views/custom-love' );
+      app.router.loadCss( 'css/custom-love' );
+      app.router.loadJs( 'js/custom-love' );
+      page_title.text( '橘子情感 - 定制爱情' );
+    });
+    // 情感论坛
+    $( '.icon-txt-group:last-child .item:nth-child(1)' ).click(function () {
+      app.router.loadHtml( 'views/emotion-forum' );
+      app.router.loadCss( 'css/emotion-forum' );
+      app.router.loadJs( 'js/emotion-forum' );
+      page_title.text( '橘子情感 - 情感论坛' );
+    });
+    // 权威专家
+    $( '.icon-txt-group:last-child .item:nth-child(2)' ).click(function () {
+      app.router.loadHtml( 'views/team' );
+      app.router.loadCss( 'css/team' );
+      app.router.loadJs( 'js/team' );
+      page_title.text( '橘子情感 - 权威专家' );
+    });
+    // 服务介绍
+    $( '.icon-txt-group:last-child .item:nth-child(3)' ).click(function () {
+      app.router.loadHtml( 'views/service' );
+      app.router.loadCss( 'css/service' );
+      app.router.loadJs( 'js/service' );
+      page_title.text( '橘子情感 - 服务介绍' );
+    });
+    // 关于我们
+    $( '.icon-txt-group:last-child .item:nth-child(4)' ).click(function () {
+      app.router.loadHtml( 'views/about' );
+      app.router.loadCss( 'css/about' );
+      app.router.loadJs( 'js/about' );
+      page_title.text( '橘子情感 - 关于我们' );
+    });
+
+  }());
+  // End method /loadPage()/
 
 });

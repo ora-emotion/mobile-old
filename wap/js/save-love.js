@@ -7,48 +7,6 @@ var
   $cssLink   = $( 'head link.dynamic' )
   ;
 
-  // 加载 HTML 文件
-  routerHtml = function ( module ) {
-    $.ajax({
-      type    : 'GET',
-      url     : 'views/' + module + '.html',
-      success : function ( data ) {
-         $(document).scrollTop(0);
-        $container.html( data );
-      },
-      error   : function ( error ) {
-        console.log( '加载 HTML 文件失败!' );
-      }
-    });
-  };
-
-  // 加载 JAvaScript 文件
-  loadJs = function ( module ) {
-    $.ajax({
-      type    : 'GET',
-      url     : 'js/' + module + '.js',
-      success : function ( data ) {
-      },
-      error   : function ( error ) {
-        console.log( '加载 JavaScript 文件失败!' );
-      }
-    });
-  };
-
-  // 加载 CSS 文件
-  loadCss = function ( module ) {
-    $.ajax({
-      type    : 'GET',
-      url     : 'css/' + module + '.css',
-      success : function ( data ) {
-        $cssLink.attr( 'href', 'css/' + module + '.css' );
-      },
-      error   : function ( error ) {
-        console.log( '加载 CSS 文件失败!' );
-      }
-    });
-  };
-
 // 初始化模块标题
 insertModuleTitle = $(function (){
 
@@ -132,15 +90,16 @@ moduleTwoBanner = $(function (){
 });
 
 // module 07 area - 成功案例
-moduleSevenLink = $(function () {
-  $( $cisLink[0] ).click(function () {
-    console.log( 'cis link one clicked!' );
-    routerHtml( 'dry-case/cis43' );
-    loadCss( 'dry-case' );
-  });
+$(document).ready(function (){
+  moduleSevenLink = $(function () {
+    $( $cisLink[0] ).click(function () {
+      app.router.loadHtml( 'views/dry-case/cis43' );
+      app.router.loadCss( 'css/dry-case' );
+    });
 
-  $( $cisLink[1] ).click(function () {
-    routerHtml( 'dry-case/cis42' );
-    loadCss( 'dry-case' );
+    $( $cisLink[1] ).click(function () {
+      app.router.loadHtml( 'views/dry-case/cis42' );
+      app.router.loadCss( 'css/dry-case' );
+    });
   });
 });
