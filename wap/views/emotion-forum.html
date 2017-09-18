@@ -64,7 +64,7 @@
 						</h3>
 						<p>
 							如果有人问我，挽回成功的秘诀是什么？那我会毫不犹豫的说：心态。心态决定行
-							为，行为养成习惯， 习惯形成性格，性格决定结局。
+							为，行为……
 						</p>
 					</div>
 				</div>
@@ -78,7 +78,7 @@
 						</h3>
 						<p>
 							“我挽回不了她，是不是就是因为我没钱、没势、而且不帅？”<br />
-							难道所有的女人喜欢的都是又有钱、又有势还帅的男人吗？
+							难道所有的女人……
 						</p>
 					</div>
 				</div>
@@ -92,14 +92,13 @@
 						</h3>
 						<p>
 							我知道现在在看这篇帖子的你，可能遇到了一些情感上的挫折，不知道怎么解决，
-							在和心爱的人分手之后，不知道怎么挽回她，今天这篇干货就会给大家一一揭开如
-							何做到快速有效的挽回TA。
+							在和心爱的人……
 						</p>
 					</div>
 				</div>
-				<div class="anli">
+				<!-- <div class="anli">
 					<div class="left">
-						<img src="images/emotion-forum/4.jpg" alt="橘子情感--干货案例" />
+						<img src="images/emotion-forum/4.jpg" alt="橘子情感 - 干货案例" />
 					</div>
 					<div class="right">
 						<h3>
@@ -110,7 +109,7 @@
 							果，而从来都没有去考虑到底用什么样的方法才能够有效的去挽回。
 						</p>
 					</div>
-				</div>
+				</div> -->
 				<div class="anli">
 					<div class="left">
 						<img src="images/emotion-forum/5.jpg" alt="橘子情感--干货案例" />
@@ -149,7 +148,7 @@
 						</h3>
 						<p>
 							很多人在和女生正常聊天基本上不会有太多严重的错误，但是一旦遇到废物测试，
-							十有八九就掉进去了，要命的是自己还不会意识到这是废物测试。
+							十有八九就掉进去了，要命的是……
 						</p>
 					</div>
 				</div>
@@ -191,7 +190,7 @@
 						</h3>
 						<p>
 							有时明明知道这场恋爱已经完蛋定了，却还是不顾一切、用尽全力的、把它一路
-							谈到尽头去，撞壁撞山到灰飞烟灭也不管。为什么要这样？
+							谈到尽头去，撞壁撞山到灰飞……
 						</p>
 					</div>
 				</div>
@@ -205,8 +204,7 @@
 						</h3>
 						<p>
 							很多人在分手之后会很痛苦也很迷茫，痛苦的是分手后那种失落感和无助感以及
-							想起两个人之间的美好时的那种不甘心；迷茫的是对这段感情的无能为力和对彼
-							此的思念之情以及不知道该如何挽回。
+							想起两个人之间的美好时的那种不甘……
 						</p>
 					</div>
 				</div>
@@ -266,6 +264,20 @@
 						</p>
 					</div>
 				</div>
+				<div class="anli">
+					<div class="left">
+						<img src="images/emotion-forum/4.jpg" alt="橘子情感--干货案例" />
+					</div>
+					<div class="right">
+						<h3>
+							简直不敢相信，被拉黑的你这样做竟然让她重新爱上你
+						</h3>
+						<p>
+							真正的爱情呢，是让你透过一个人看到了全世界，而不是你的全世界只有她一个
+							人。
+						</p>
+					</div>
+				</div>
 			</div>
 			<p class="more">查看更多>>></p>
 		</div>
@@ -277,7 +289,6 @@
 	$(document).ready(function() {
 
 		var
-		  router,             loadCss,
 			openThirdPartyPage, moduleFourViewMore,
 			i           = 0,
 			imgLink     = $(' .module .main .top' ).find( '.left .swiper-slide' ),
@@ -286,126 +297,112 @@
 			anli        = $( '.module .main .bottom' ).find( '.anli-group .anli' ),
 			viewMore    = $( '.module .main .bottom' ).find( '.more' ),
 			serviceLink = $( '.module .main .top' ).find( '.right .top img' ),
-			rightLink   = $( '.module .main .top' ).find( '.right .bottom p a' ),
-			$container  = $( '#container' )
+			rightLink   = $( '.module .main .top' ).find( '.right .bottom p a' )
 			;
 
-		// 加载 html 文件
-		router = function( module ) {
-			$.ajax({
-				url: 'views/' + module + '.html',
-				success: function( data ) {
-					$container.html( data );
-					console.log('successed to load html file!');
-				},
-				error: function(error) {
-					console.log('failed to load html file!');
-				}
-			});
-		};
-		// 加载 css 文件
-		loadCss = function(module) {
-			$.ajax({
-				type: 'GET',
-				url: 'css/' + module + '.css',
-				success: function(data) {
-					cssLink.attr('href', 'css/' + module + '.css');
-					console.log('successed to load stylesheet!');
-				},
-				error: function(error) {
-					console.log('failed to load stylesheet!');
-				}
-			});
-		}
-
 		// 打开三级页面：十本好书推荐 - module 01 area
-		openThirdPartyPage = $(function() {
+		openThirdPartyPage = (function() {
 			$( imgLink[0] ).find( '.item a img' ).click(function() {
-				router( 'three-level-page/ten-books/books' );
-				loadCss( 'books' );
+				app.router.loadHtml( 'views/three-level-page/ten-books/books' );
+				app.router.loadCss( 'css/books' );
 			});
-
 			$( imgLink[1] ).find( '.item a img' ).click(function () {
-				router( 'dry-case/cis31' );
-				loadCss( 'dry-case' );
+				app.router.loadHtml( 'views/dry-case/cis31' );
+				app.router.loadCss( 'dry-case' );
 			});
-
 			$( imgLink[2] ).find( '.item a img' ).click(function () {
-				router( 'dry-case/cis32' );
-				loadCss( 'dry-case' );
+				app.router.loadHtml( 'views/dry-case/cis32' );
+				app.router.loadCss( 'css/dry-case' );
 			});
 
 			$( serviceLink ).click(function () {
-				router( 'service' );
-				loadCss( 'service' );
-				$.ajax({
-					type    : 'GET',
-					url     : 'js/service.js',
-					success : function ( data ) {
-						console.log( '请求 service.js 文件成功!' );
-					},
-					error   : function ( error ) {
-						console.log( '请求 service.js 文件失败!' );
-					}
-				});
+				app.router.loadHtml( 'views/service' );
+				app.router.loadCss( 'css/service' );
+				app.router.loadJs( 'js/service' );
 			});
-
 			$( rightLink[0] ).click(function () {
-				router( 'dry-case/cis30' );
-				loadCss( 'dry-case' );
+				app.router.loadHtml( 'views/dry-case/cis30' );
+				app.router.loadCss( 'css/dry-case' );
 			});
-
 			$( rightLink[1] ).click(function () {
-				router( 'dry-case/cis26' );
-				loadCss( 'dry-case' );
+				app.router.loadHtml( 'views/dry-case/cis26' );
+				app.router.loadCss( 'css/dry-case' );
 			});
-		});
+		}());
+
 		// 干货案例跳转
 		moduleFourViewMore = (function() {
-			// 加载模块
-			function router(module, container) {
-				container = container || $('#container');
-				// 请求模块结构
-				$.ajax({
-					url: 'views/dry-case/' + module + '.html',
-					success: function(data) {
-						container.html(data);
-					},
-					error: function(error) {
-						console.log(' 写入 HTML 失败！');
-					}
-				});
-			}
-			// 动态加载 css 文件
-			function loadCss(module) {
-				$.ajax({
-					url: 'css/dry-case.css',
-					success: function(data) {
-						var cssLink = $('link.dynamic');
-						cssLink.attr('href', 'css/dry-case.css');
-					},
-					error: function(error) {
-						console.log('请求外部 css 样式表失败！');
-					}
-				});
-			}
-
 			// 加载当前点击的案例
-			anli.click(function () {
-				i++;
-				router( 'cis' + i );
-				loadCss( 'dry-case' );
+			$( anli[0] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis1' );
+				app.router.loadCss( 'css/dry-case' );
 			});
-
+			$( anli[1] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis2' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[2] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis3' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[3] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis5' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[4] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis6' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[5] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis7' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[6] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis8' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[7] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis9' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[8] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis10' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[9] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis11' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[10] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis12' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[11] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis13' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[12] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis14' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[13] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis15' );
+				app.router.loadCss( 'css/dry-case' );
+			});
+			$( anli[14] ).click(function () {
+				app.router.loadHtml( 'views/dry-case/cis16' );
+				app.router.loadCss( 'css/dry-case' );
+			});
 		}());
 
 		// 查看更多案例
 		viewMore.click(function () {
-			console.log( 'ok' );
 			anli_group.animate({
 				height : '100%'
 			}, 300);
 			$( this ).css( 'display', 'none' );
+
+			return false;
 		});
 
 	});

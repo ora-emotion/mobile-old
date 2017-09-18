@@ -244,62 +244,31 @@ $(document).ready(function () {
     });
   }());
 
-  // 加载模块函数 - 三级页面
-  function routerThird(module,container){
-    container=container||$("#container");
-    // 请求模块结构
-    $.ajax({
-      url:"views/news/" + module + ".html",
-      success: function(data){
-        container.html(data);
-      }
-    });
-    // 请求外部 js 文件
-    // loadJs(module);
-    // 请求外部 css 文件
-    // loadCss(module);
-  }
-
-  // 动态加载外部 css 文件
-  function loadCss(module) {
-    $.ajax({
-      type: "get",
-      url: "css/" + module + ".css",
-      success: function (data) {
-        var cssLink = $("link.dynamic");
-        cssLink.attr("href", "css/" + module + ".css");
-      },
-      error: function (error) {
-        console.log("请求外部 css 样式表失败！");
-      }
-    });
-  }
-
   // 加载三级页面
   $(function () {
     $(".index-module04-more01").click(function() {
-      routerThird( 'news7' );
-      loadCss( 'news' );
+      app.router.loadHtml( 'views/news/news7' );
+      app.router.loadCss( 'css/news' );
     });
     $(".index-module04-more02").click(function() {
-      routerThird( 'news11' );
-      loadCss( 'news' );
+      app.router.loadHtml( 'views/news/news11' );
+      app.router.loadCss( 'css/news' );
     });
     $(".index-module04-more03").click(function() {
-      routerThird( 'news9' );
-      loadCss( 'news' );
+      app.router.loadHtml( 'views/news/news9' );
+      app.router.loadCss( 'css/news' );
     });
     $(".index-module04-more04").click(function() {
-      routerThird( 'news6' );
-      loadCss( 'news' );
+      app.router.loadHtml( 'views/news/news6' );
+      app.router.loadCss( 'css/news' );
     });
     $(".index-module04-more05").click(function() {
-      routerThird( 'news2' );
-      loadCss( 'news' );
+      app.router.loadHtml( 'views/news/news2' );
+      app.router.loadCss( 'css/news' );
     });
     $(".index-module04-more06").click(function() {
-      routerThird( 'news4' );
-      loadCss( 'news' );
+      app.router.loadHtml( 'views/news/news4' );
+      app.router.loadCss( 'css/news' );
     });
   }());
 
