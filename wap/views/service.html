@@ -370,36 +370,6 @@
 <script type="text/javascript">
   $(document).ready(function () {
 
-    // 加载模块
-    function router( module, container ) {
-      container = container || $('#container');
-      // 请求模块结构
-      $.ajax({
-        url: 'views/' + module + '.html',
-        success: function ( data ) {
-          container.html( data );
-        },
-        error  : function ( error ) {
-          console.log( ' 写入 HTML 失败！' );
-        }
-      });
-
-      loadCss( module );
-    }
-    // 动态加载 css 文件
-    function loadCss( module ) {
-      $.ajax({
-        url: 'css/' + module + '.css',
-        success: function ( data ) {
-          var cssLink = $('link.dynamic');
-          cssLink.attr( 'href', 'css/' + module + '.css' );
-        },
-        error  : function ( error ) {
-          console.log( '请求外部 css 样式表失败！' );
-        }
-      });
-    }
-
     // 加载视频预览页面
     var freeVideo = (function (){
       var
@@ -413,11 +383,11 @@
 
 
       videoImg.click(function () {
-        router( 'video' );
+        app.router.loadHtml( 'video' );
         videoPageTitle.text( '橘子情感 - 视频预览' );
       });
       videoTxt.click(function () {
-        router( 'video' );
+        app.router.loadHtml( 'video' );
         videoPageTitle.text( '橘子情感 - 视频预览' );
       });
       return false;
@@ -438,7 +408,7 @@
         if ( user_input != null
           && user_input != ''
           && user_input == 'juzi911' ) {
-            router( 'video-vip' );
+            app.router.loadHtml( 'video-vip' );
         }
         else {
           alert( '密码错误！' );
@@ -448,13 +418,11 @@
       videoVipImg.click(function () {
         user_input = prompt( pwd, '' );
         check_pwd();
-        // router( 'video-vip' );
         vipVideoPageTitle.text( '橘子情感 - 付费视频' );
       });
       videoVipTxt.click(function () {
         user_input = prompt( pwd, '' );
         check_pwd();
-        // router( 'video-vip' );
         vipVideoPageTitle.text( '橘子情感 - 付费视频' );
       });
 
