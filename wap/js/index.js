@@ -247,38 +247,26 @@ $(document).ready(function () {
   // 加载三级页面
   $(function () {
     $(".index-module04-more01").click(function() {
-      // routerThird( 'news7' );
-      // loadCss( 'news' );
       app.router.loadHtml( 'views/news/news7' );
       app.router.loadCss( 'css/news' );
     });
     $(".index-module04-more02").click(function() {
-      // routerThird( 'news11' );
-      // loadCss( 'news' );
       app.router.loadHtml( 'views/news/news11' );
       app.router.loadCss( 'css/news' );
     });
     $(".index-module04-more03").click(function() {
-      // routerThird( 'news9' );
-      // loadCss( 'news' );
       app.router.loadHtml( 'views/news/news9' );
       app.router.loadCss( 'css/news' );
     });
     $(".index-module04-more04").click(function() {
-      // routerThird( 'news6' );
-      // loadCss( 'news' );
       app.router.loadHtml( 'views/news/news6' );
       app.router.loadCss( 'css/news' );
     });
     $(".index-module04-more05").click(function() {
-      // routerThird( 'news2' );
-      // loadCss( 'news' );
       app.router.loadHtml( 'views/news/news2' );
       app.router.loadCss( 'css/news' );
     });
     $(".index-module04-more06").click(function() {
-      // routerThird( 'news4' );
-      // loadCss( 'news' );
       app.router.loadHtml( 'views/news/news4' );
       app.router.loadCss( 'css/news' );
     });
