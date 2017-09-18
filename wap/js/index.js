@@ -244,37 +244,6 @@ $(document).ready(function () {
     });
   }());
 
-  // 加载模块函数 - 三级页面
-  function routerThird(module,container){
-    container=container||$("#container");
-    // 请求模块结构
-    $.ajax({
-      url:"views/news/" + module + ".html",
-      success: function(data){
-        container.html(data);
-      }
-    });
-    // 请求外部 js 文件
-    // loadJs(module);
-    // 请求外部 css 文件
-    // loadCss(module);
-  }
-
-  // 动态加载外部 css 文件
-  function loadCss(module) {
-    $.ajax({
-      type: "get",
-      url: "css/" + module + ".css",
-      success: function (data) {
-        var cssLink = $("link.dynamic");
-        cssLink.attr("href", "css/" + module + ".css");
-      },
-      error: function (error) {
-        console.log("请求外部 css 样式表失败！");
-      }
-    });
-  }
-
   // 加载三级页面
   $(function () {
     $(".index-module04-more01").click(function() {
