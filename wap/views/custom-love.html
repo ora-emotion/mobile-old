@@ -603,45 +603,18 @@
     // 模块四：跳转链接
     $(function () {
       exampleLink = $( '.module-04 .main .item' );
-      // 请求案例 HTML
-      router = function ( module ) {
-        $.ajax({
-          type    : 'GET',
-          url     : 'views/dry-case/' + module + '.html',
-          success : function ( data ) {
-            $container.html( data );
-            console.log( '模块四案例 HTML 请求成功！' );
-          },
-          error   : function ( error ) {
-            console.log( '模块四案例 HTML 请求失败！' );
-          }
-        });
-      };
-      // 请求案例 CSS
-      loadCss = function () {
-        $.ajax({
-          type    : 'GET',
-          url     : 'css/dry-case.css',
-          success : function ( data ) {
-            $cssLink.attr( 'href', 'css/dry-case.css' );
-            console.log( '模块四案例 CSS 样式表请求成功！' );
-          },
-          error   : function ( error ) {
-            console.log( '模块四案例 CSS 样式表请求失败！' );
-          }
-        });
-      };
+
       $( exampleLink[0] ).click(function () {
-        router( 'cis38' );
-        loadCss();
+        app.router.loadHtml( 'views/dry-case/cis38' );
+        app.router.loadCss( 'css/dry-case' );
       });
       $( exampleLink[1] ).click(function () {
-        router( 'cis19' );
-        loadCss();
+        app.router.loadHtml( 'views/dry-case/cis19' );
+        app.router.loadCss( 'css/dry-case' );
       });
       $( exampleLink[2] ).click(function () {
-        router( 'cis9' );
-        loadCss();
+        app.router.loadHtml( 'views/dry-case/cis9' );
+        app.router.loadCss( 'css/dry-case' );
       });
     }());
 
