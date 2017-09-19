@@ -49,7 +49,7 @@ app.router = (function () {
       success : function ( data ) {
         css_link.attr( 'href', moduleCss + '.css' );
       },
-      error   : function ( erroe ) {
+      error   : function ( error ) {
         console.log( 'to load css file failed!' );
       }
     });
