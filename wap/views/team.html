@@ -78,49 +78,43 @@
 	</div>
 </div>
 
-<!--
-	作者：706861648@qq.com
-	时间：2017-09-08
-	描述：橘子情感首席导师
--->
+<!-- Start module 03 area: 橘子情感首席导师 -->
 <div class="module module-03">
 	<div class="main">
-		<div class="demo__card-cont">
-			<div class="demo__card">
-				<img src="images/team/daoshi-jieni.png" />
-			</div>
-			<div class="demo__card">
-				<img src="images/team/daoshi-haoyu.png" />
-			</div>
-			<div class="demo__card">
-				<img src="images/team/daoshi-asu.png" />
-			</div>
-			<div class="demo__card">
-				<img src="images/team/daoshi-lujia.png" />
-			</div>
-			<div class="demo__card">
-				<img src="images/team/daoshi-qianwu.png" />
-			</div>
-			<div class="demo__card">
-				<img src="images/team/daoshi-qiyue.png" />
-			</div>
-			<div class="demo__card">
-				<img src="images/team/daoshi-moyan.png" />
-			</div>
-			<div class="demo__card">
-				<img src="images/team/daoshi-jiawei.png" />
-			</div>
-		</div>
-		<div class="bottom">
-			<div class="left">
-				<p>左右滑动试一下</p>
-			</div>
-			<div class="right">
-				<img src="images/team/btn.png" />
-			</div>
-		</div>
+    <div class="swiper-container">
+    	<div class="swiper-wrapper">
+        <div class="swiper-slide">
+					<img src="images/team/daoshi-jiawei.png" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/team/daoshi-jieni.png" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/team/daoshi-lujia.png" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/team/daoshi-moyan.png" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/team/daoshi-qianwu.png" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/team/daoshi-qiyue.png" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/team/daoshi-asu.png" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/team/daoshi-haoyu.png" alt="">
+				</div>
+    	</div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-pagination"></div>
+    </div>
 	</div>
 </div>
+<!-- End module 03 area: 橘子情感首席导师 -->
 
 <script type="text/javascript">
 	//-------------------------------- 模块三 -------------------------------------
@@ -130,7 +124,7 @@
 		cardItem = $( '.module-03 .main .demo__card-cont' ).find( '.demo__card' ),
 		img_src,
 		loadCss, onClickCard
-	;
+	  ;
 
 	// 点击事件
 	// 功能：请求卡片对应的三级页面
@@ -213,5 +207,17 @@
 			return false;
 		});
 	}
+
+  $(document).ready(function () {
+		// 导师部分轮播图
+		var mySwiper = new Swiper('.module-03 .main .swiper-container', {
+			autoplay            : 5000,
+			loop                : true,
+			pagination          : '.swiper-pagination',
+			paginationClickable : true,
+			prevButton          : '.swiper-button-prev',
+      nextButton          : '.swiper-button-next'
+		});
+	});
 
 </script>

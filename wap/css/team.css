@@ -1,3 +1,5 @@
+@import "swiper/swiper.css";
+
 
 p{
 	line-height: .35rem;
@@ -123,84 +125,29 @@ p{
 	margin-top: .3rem;
 }
 
-
-
-.module-03 .main{
+.module-03 .main .swiper-container .swiper-wrapper .swiper-slide img {
 	width: 100%;
-	height: 5.2rem;
 }
-.demo__card-cont {
-  position: relative;
-  width: 100%;
-  height: 4.77rem;
-  margin: 0 auto;
-  overflow: hidden;
+.module-03 .main .swiper-container .swiper-button-prev,
+.module-03 .main .swiper-container .swiper-button-next {
+	width: .32rem;
+	height: .54rem;
 }
-.demo__card {
-  z-index: 2;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transform-origin: 50% 100%;
-      -ms-transform-origin: 50% 100%;
-          transform-origin: 50% 100%;
+.module-03 .main .swiper-container .swiper-button-prev {
+	background: url("../images/team/button-prev.png") no-repeat;
 }
-.demo__card img{
-	width: 7.32rem;
-	height: 4.77rem;
-	padding-left: .09rem;
+.module-03 .main .swiper-container .swiper-button-next {
+	background: url("../images/team/button-next.png") no-repeat;
 }
-.demo__card.reset {
-  -webkit-transition: -webkit-transform 0.3s;
-          transition: transform 0.3s;
-  -webkit-transform: translateX(0) !important;
-      -ms-transform: translateX(0) !important;
-          transform: translateX(0) !important;
+.module-03 .main .swiper-container .swiper-pagination-bullet {
+  width: .2rem;
+	height: .2rem;
+	border-radius: .2rem;
+	background: rgba(0, 0, 0, .5);
+	margin: 0 .12rem;
+	transition: all 1s;
 }
-.demo__card.reset .demo__card__choice {
-  -webkit-transition: opacity 0.3s;
-          transition: opacity 0.3s;
-  opacity: 0 !important;
-}
-.demo__card.inactive {
-  -webkit-transition: -webkit-transform 0.3s;
-          transition: transform 0.3s;
-}
-.demo__card.to-left {
-  -webkit-transform: translateX(-30rem) rotate(-30deg) !important;
-      -ms-transform: translateX(-30rem) rotate(-30deg) !important;
-          transform: translateX(-30rem) rotate(-30deg) !important;
-}
-.demo__card.to-right {
-  -webkit-transform: translate(30rem) rotate(30deg) !important;
-      -ms-transform: translate(30rem) rotate(30deg) !important;
-          transform: translate(30rem) rotate(30deg) !important;
-}
-.demo__card.below {
-  z-index: 1;
-}
-
-.module-03 .main .bottom{
-	width: 100%;
-	height: 1rem;
-	display: flex;
-	justify-content: space-between;
-}
-.module-03 .main .bottom .left{
-	padding-left: .2rem;
-	width: 2rem;
-	padding-top: .3rem;
-}
-.module-03 .main .bottom .right{
-	padding-right: .2rem;
-	/*background-color: #FF3232;
-	border-radius: 50%;*/
-	
-}
-.module-03 .main .bottom .right img{
-	width: .46rem;
-	height: .46rem;
-	padding-bottom: .3rem;
+.module-03 .main .swiper-container .swiper-pagination-bullet-active {
+	width: .5rem;
+	background: rgba(184, 185, 182, .7);
 }
