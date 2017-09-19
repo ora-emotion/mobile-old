@@ -1,16 +1,6 @@
 @import "swiper/swiper.css";
 
 
-/** Start back to home */
-
-.home {
-	display: none;
-}
-#bar {
-	left: -525px;
-}
-
-
 /** End back to home */
 
 

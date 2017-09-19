@@ -69,7 +69,7 @@ $(document).ready(function () {
     });
     // 服务介绍
     $( page_list[7] ).click(function () {
-      app.router.loadHtml( 'views/service' );
+      app.router.loadHtml( 'views/service', $('#container') );
       app.router.loadCss( 'css/service' );
       app.router.loadJs( 'js/service' );
       page_title.text( '橘子情感 - 服务介绍' );

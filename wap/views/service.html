@@ -383,11 +383,13 @@
 
 
       videoImg.click(function () {
-        app.router.loadHtml( 'video' );
+        app.router.loadHtml( 'views/video' );
+        app.router.loadCss('css/video');
         videoPageTitle.text( '橘子情感 - 视频预览' );
       });
       videoTxt.click(function () {
-        app.router.loadHtml( 'video' );
+        app.router.loadHtml( 'views/video' );
+        app.router.loadCss('css/video');
         videoPageTitle.text( '橘子情感 - 视频预览' );
       });
       return false;
@@ -408,7 +410,8 @@
         if ( user_input != null
           && user_input != ''
           && user_input == 'juzi911' ) {
-            app.router.loadHtml( 'video-vip' );
+            app.router.loadHtml( 'views/video-vip' );
+            app.router.loadCss('css/video-vip');
         }
         else {
           alert( '密码错误！' );
