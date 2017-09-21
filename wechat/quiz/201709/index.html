@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>随机出现</title>
+    <script src="js/jq/jquery-3.2.1.js" charset="utf-8"></script>
+    <style media="screen">
+      .hidden {
+        display: none;
+      }
+
+      .group p {
+        display: none;
+      }
+      .group p.active {
+        display: block;
+      }
+      .score p {
+        display: none;
+      }
+      .score p.active {
+        display: block;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function (){
+        var
+          btn_welcome, btn_next
+          ;
+
+        btn_welcome = $('.welcome button');
+
+        btn_welcome.click(function () {
+          $('.welcome').addClass('hidden');
+          $('.questions').removeClass('hidden');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="welcome">
+      <h1>Welcome to our emotional test.</h1>
+      <button type="button" name="button">Start your travel^^</button>
+    </div>
+    <div class="questions hidden">
+      <h1>这里是测试区域</h1>
+      <div class="group">
+        <p>para 1.</p>
+        <p>para 2.</p>
+        <p>para 3.</p>
+        <p>para 4.</p>
+        <p>para 5.</p>
+        <p>para 6.</p>
+        <p>para 7.</p>
+        <p>para 8.</p>
+        <p>para 9.</p>
+        <p>para 10.</p>
+      </div>
+      <button type="button" name="button">下一题</button>
+    </div>
+    <div class="score hidden">
+      <p>score 1: 0-20</p>
+      <p>score 2: 20-40</p>
+      <p>score 3: 40-60</p>
+      <p>score 4: 60-80</p>
+      <p>score 5: excellent! 爱情大师！</p>
+    </div>
+    <!-- <div class="group">
+      <p>para 1.</p>
+      <p>para 2.</p>
+      <p>para 3.</p>
+      <p>para 4.</p>
+      <p>para 5.</p>
+      <p>para 6.</p>
+      <p>para 7.</p>
+      <p>para 8.</p>
+      <p>para 9.</p>
+      <p>para 10.</p>
+    </div>
+    <div class="score">
+      <p>score 1: 0-20</p>
+      <p>score 2: 20-40</p>
+      <p>score 3: 40-60</p>
+      <p>score 4: 60-80</p>
+      <p>score 5: excellent! 爱情大师！</p>
+    </div> -->
+
+    <!-- <button type="button" name="button">按一下</button> -->
+
+    <script type="text/javascript">
+      var
+        btn,
+        changeRadom,
+        showScore,
+        arr,
+        newArr,
+        num,
+        para,
+        score
+        ;
+
+      btn = $('button');
+      arr = [],
+      scoreArr = [];
+      para = $('.group p');
+
+      changeRadom = (function () {
+        for (var i = 0; i < 100; i++) {
+          num = parseInt(Math.random()*10).toFixed(0);
+          if (arr.indexOf(num) == -1) {
+            arr.push(num);
+          }
+        }
+        $(para[arr[0]]).addClass('active');
+      }());
+      // console.log(arr);
+
+      showScore = function () {
+
+        $('.questions').addClass('hidden');
+        $('.score').removeClass('hidden');
+
+        for (var i = 0; i < 100; i++) {
+          num = parseInt(Math.random()*10).toFixed(0) - 5;
+
+          if (scoreArr.indexOf(num) == -1 && num >= 0) {
+            scoreArr.push(num);
+
+            switch (scoreArr[0]) {
+              case 0:
+                $($('.score p')[0]).addClass('active');
+                break;
+              case 1:
+                $($('.score p')[1]).addClass('active');
+                break;
+              case 2:
+                $($('.score p')[2]).addClass('active');
+                break;
+              case 3:
+                $($('.score p')[3]).addClass('active');
+                break;
+              case 4:
+                $($('.score p')[4]).addClass('active');
+                break;
+              default:
+                console.log('您是非人类嘛');
+            }
+
+          }
+        }
+
+      };
+
+      btn.click(function (){
+        arr.shift();
+        $('.group p.active').remove();
+        $(para[arr[0]]).addClass('active');
+
+        if (arr.length === 0) {
+          showScore();
+        }
+      });
+
+    </script>
+  </body>
+</html>
