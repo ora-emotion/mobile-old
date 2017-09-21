@@ -8,6 +8,7 @@ var insertModuleTitle = $(function (){
             type: "get",
             url: "components/module-title/module-title.html",
             success: function (dataHTML) {
+               $(document).scrollTop(0);
                 // 插入模板到页面
                 $(".module").prepend(dataHTML);
             },
@@ -60,7 +61,7 @@ var changePrefaceImg = $(function (){
 var moduleTwoBanner = $(function (){
 
     var moduleTwoSwiper = new Swiper('.module-01 .main .top .left .swiper-container', {
-      	autoplay: 5000,                     // 禁止自动播放
+        autoplay: 5000,                       // 禁止自动播放
         pagination : '.swiper-pagination',   // 显示分页器
         paginationClickable :true,           // 分页器可点击
     });
