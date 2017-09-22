@@ -3,164 +3,322 @@
   <head>
     <meta charset="utf-8">
     <title>随机出现</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
     <script src="js/jq/jquery-3.2.1.js" charset="utf-8"></script>
-    <style media="screen">
-      .hidden {
-        display: none;
-      }
-
-      .group p {
-        display: none;
-      }
-      .group p.active {
-        display: block;
-      }
-      .score p {
-        display: none;
-      }
-      .score p.active {
-        display: block;
-      }
-    </style>
-    <script type="text/javascript">
-      $(function (){
-        var
-          btn_welcome, btn_next
-          ;
-
-        btn_welcome = $('.welcome button');
-
-        btn_welcome.click(function () {
-          $('.welcome').addClass('hidden');
-          $('.questions').removeClass('hidden');
-        });
-      });
-    </script>
+    <script src="js/index.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="welcome">
-      <h1>Welcome to our emotional test.</h1>
-      <button type="button" name="button">Start your travel^^</button>
-    </div>
-    <div class="questions hidden">
-      <h1>这里是测试区域</h1>
-      <div class="group">
-        <p>para 1.</p>
-        <p>para 2.</p>
-        <p>para 3.</p>
-        <p>para 4.</p>
-        <p>para 5.</p>
-        <p>para 6.</p>
-        <p>para 7.</p>
-        <p>para 8.</p>
-        <p>para 9.</p>
-        <p>para 10.</p>
-      </div>
-      <button type="button" name="button">下一题</button>
-    </div>
-    <div class="score hidden">
-      <p>score 1: 0-20</p>
-      <p>score 2: 20-40</p>
-      <p>score 3: 40-60</p>
-      <p>score 4: 60-80</p>
-      <p>score 5: excellent! 爱情大师！</p>
-    </div>
-    <!-- <div class="group">
-      <p>para 1.</p>
-      <p>para 2.</p>
-      <p>para 3.</p>
-      <p>para 4.</p>
-      <p>para 5.</p>
-      <p>para 6.</p>
-      <p>para 7.</p>
-      <p>para 8.</p>
-      <p>para 9.</p>
-      <p>para 10.</p>
-    </div>
-    <div class="score">
-      <p>score 1: 0-20</p>
-      <p>score 2: 20-40</p>
-      <p>score 3: 40-60</p>
-      <p>score 4: 60-80</p>
-      <p>score 5: excellent! 爱情大师！</p>
-    </div> -->
+			<div class="wen">
+				<div class="wenp" id="style-2">
+					<p>hi，恭喜你关注了一个神奇的账号</p>
+					<p>据说,关注这个账号之后</p>
+					<p>会让烂桃花跑光，</p>
+					<p>正缘大驾光临哦！</p>
+					<p>我们每天提供最实际的爱情方法论，</p>
+					<p>过目不忘，随学随用！</p>
+					<p>2017年9月25日至10月30日，</p>
+					<p>“超10000元红包”有奖问答活动来了，</p>
+					<p>橘子情感为你准备了一份大惊喜！</p>
+					<p>只为你能更了解橘子情感！</p>
+					<p>并支持我们！</p>
+				</div>
+			</div>
+			<div class="start"></div>
+		</div>
 
-    <!-- <button type="button" name="button">按一下</button> -->
+		<div class="questions hidden">
+			<div class="neirong">
+				<div class="group">
+					<div class="ti">
+						<div class="head">
+							<div class="tihao">
+								<span>1</span>
+							</div>
+							<img src="images/1.png" />
+						</div>
+						<div class="body">
+							<ul>
+								<li>
+									<div class="bg"></div>
+									<p>A . 对于他的过去不管不问，只要当下爱你就好。</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>B . 对于他的过去不管不问，只要当下爱你就好只要当下爱你就好</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>C . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>D . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问，只要当下爱你就好</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="ti">
+						<div class="head">
+							<div class="tihao">
+								<span>1</span>
+							</div>
+							<img src="images/1.png" />
+						</div>
+						<div class="body">
+							<ul>
+								<li>
+									<div class="bg"></div>
+									<p>A . 对于他的过去不管不问，只要当下爱你就好。</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>B . 对于他的过去不管不问，只要当下爱你就好只要当下爱你就好</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>C . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>D . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问，只要当下爱你就好</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="ti">
+						<div class="head">
+							<div class="tihao">
+								<span>1</span>
+							</div>
+							<img src="images/1.png" />
+						</div>
+						<div class="body">
+							<ul>
+								<li>
+									<div class="bg"></div>
+									<p>A . 对于他的过去不管不问，只要当下爱你就好。</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>B . 对于他的过去不管不问，只要当下爱你就好只要当下爱你就好</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>C . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>D . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问，只要当下爱你就好</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="ti">
+						<div class="head">
+							<div class="tihao">
+								<span>1</span>
+							</div>
+							<img src="images/1.png" />
+						</div>
+						<div class="body">
+							<ul>
+								<li>
+									<div class="bg"></div>
+									<p>A . 对于他的过去不管不问，只要当下爱你就好。</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>B . 对于他的过去不管不问，只要当下爱你就好只要当下爱你就好</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>C . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>D . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问，只要当下爱你就好</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="ti">
+						<div class="head">
+							<div class="tihao">
+								<span>1</span>
+							</div>
+							<img src="images/1.png" />
+						</div>
+						<div class="body">
+							<ul>
+								<li>
+									<div class="bg"></div>
+									<p>A . 对于他的过去不管不问，只要当下爱你就好。</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>B . 对于他的过去不管不问，只要当下爱你就好只要当下爱你就好</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>C . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>D . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问，只要当下爱你就好</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="ti">
+						<div class="head">
+							<div class="tihao">
+								<span>1</span>
+							</div>
+							<img src="images/1.png" />
+						</div>
+						<div class="body">
+							<ul>
+								<li>
+									<div class="bg"></div>
+									<p>A . 对于他的过去不管不问，只要当下爱你就好。</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>B . 对于他的过去不管不问，只要当下爱你就好只要当下爱你就好</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>C . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>D . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问，只要当下爱你就好</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="ti">
+						<div class="head">
+							<div class="tihao">
+								<span>1</span>
+							</div>
+							<img src="images/1.png" />
+						</div>
+						<div class="body">
+							<ul>
+								<li>
+									<div class="bg"></div>
+									<p>A . 对于他的过去不管不问，只要当下爱你就好。</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>B . 对于他的过去不管不问，只要当下爱你就好只要当下爱你就好</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>C . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>D . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问，只要当下爱你就好</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="ti">
+						<div class="head">
+							<div class="tihao">
+								<span>1</span>
+							</div>
+							<img src="images/1.png" />
+						</div>
+						<div class="body">
+							<ul>
+								<li>
+									<div class="bg"></div>
+									<p>A . 对于他的过去不管不问，只要当下爱你就好。</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>B . 对于他的过去不管不问，只要当下爱你就好只要当下爱你就好</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>C . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>D . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问，只要当下爱你就好</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="ti">
+						<div class="head">
+							<div class="tihao">
+								<span>1</span>
+							</div>
+							<img src="images/1.png" />
+						</div>
+						<div class="body">
+							<ul>
+								<li>
+									<div class="bg"></div>
+									<p>A . 对于他的过去不管不问，只要当下爱你就好。</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>B . 对于他的过去不管不问，只要当下爱你就好只要当下爱你就好</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>C . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>D . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问，只要当下爱你就好</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="ti">
+						<div class="head">
+							<div class="tihao">
+								<span>1</span>
+							</div>
+							<img src="images/1.png" />
+						</div>
+						<div class="body">
+							<ul>
+								<li>
+									<div class="bg"></div>
+									<p>A . 对于他的过去不管不问，只要当下爱你就好。</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>B . 对于他的过去不管不问，只要当下爱你就好只要当下爱你就好</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>C . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问</p>
+								</li>
+								<li>
+									<div class="bg"></div>
+									<p>D . 对于他的过去不管不问，只要当下爱你就好对于他的过去不管不问，只要当下爱你就好</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="btn"></div>
+			</div>
+		</div>
 
-    <script type="text/javascript">
-      var
-        btn,
-        changeRadom,
-        showScore,
-        arr,
-        newArr,
-        num,
-        para,
-        score
-        ;
-
-      btn = $('button');
-      arr = [],
-      scoreArr = [];
-      para = $('.group p');
-
-      changeRadom = (function () {
-        for (var i = 0; i < 100; i++) {
-          num = parseInt(Math.random()*10).toFixed(0);
-          if (arr.indexOf(num) == -1) {
-            arr.push(num);
-          }
-        }
-        $(para[arr[0]]).addClass('active');
-      }());
-      // console.log(arr);
-
-      showScore = function () {
-
-        $('.questions').addClass('hidden');
-        $('.score').removeClass('hidden');
-
-        for (var i = 0; i < 100; i++) {
-          num = parseInt(Math.random()*10).toFixed(0) - 5;
-
-          if (scoreArr.indexOf(num) == -1 && num >= 0) {
-            scoreArr.push(num);
-
-            switch (scoreArr[0]) {
-              case 0:
-                $($('.score p')[0]).addClass('active');
-                break;
-              case 1:
-                $($('.score p')[1]).addClass('active');
-                break;
-              case 2:
-                $($('.score p')[2]).addClass('active');
-                break;
-              case 3:
-                $($('.score p')[3]).addClass('active');
-                break;
-              case 4:
-                $($('.score p')[4]).addClass('active');
-                break;
-              default:
-                console.log('您是非人类嘛');
-            }
-
-          }
-        }
-
-      };
-
-      btn.click(function (){
-        arr.shift();
-        $('.group p.active').remove();
-        $(para[arr[0]]).addClass('active');
-
-        if (arr.length === 0) {
-          showScore();
-        }
-      });
-
-    </script>
+		<div class="score hidden">
+			<p class="result">您的得分是： <span class="num"></span></p>
+		</div>
   </body>
 </html>
