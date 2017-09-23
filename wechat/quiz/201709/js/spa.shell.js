@@ -35,8 +35,50 @@ spa.shell = (function (){
         + '<div class="spa-welcome-rule-btn"></div>',
       spa_question : String()
         + '<div class="spa-question-content">'
+
           + '<div class="spa-question-content-item">'
-            + '<div class="spa-question-content-item-wrap">'
+            + '<div class="spa-question-content-item-title">'
+              + '<span class="title-serial-num"></span>'
+              + '<img class="title-serial-txt" src="images/question-item-1.png">'
+            + '</div>'
+            + '<div class="spa-question-content-item-options">'
+              + '<div class="option-item">'
+                + '<span class="option-item-icon"></span>'
+                + '<div class="option-item-txt">'
+                  + 'A. 对于他的过去不过不问，只要当下爱<br>'
+                  + '你就好'
+                + '</div>'
+              + '</div>'
+              + '<div class="option-item">'
+                + '<span class="option-item-icon"></span>'
+                + '<div class="option-item-txt">'
+                  + 'B. 对于他的过去不过不问，只要当下爱<br>'
+                  + '你就好丢东方红飞个分隔的高度个发的 <br>'
+                  + '你就好丢东方红'
+                + '</div>'
+              + '</div>'
+              + '<div class="option-item">'
+                + '<span class="option-item-icon"></span>'
+                + '<div class="option-item-txt">'
+                    + 'C .对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                + '</div>'
+              + '</div>'
+              + '<div class="option-item">'
+                + '<span class="option-item-icon"></span>'
+                + '<div class="option-item-txt">'
+                  + 'D .对于他的过去不过不问，只要当下爱<br>'
+                  + '你就好'
+                + '</div>'
+              + '</div>'
+            + '</div>'
+            + '<div class="spa-question-content-item-next-btn">'
+              + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
+              + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+            + '</div>'
+          + '</div>'
+
+          + '<div class="spa-question-content-item">'
               + '<div class="spa-question-content-item-title">'
                 + '<span class="title-serial-num"></span>'
                 + '<img class="title-serial-txt" src="images/question-item-1.png">'
@@ -72,12 +114,348 @@ spa.shell = (function (){
                   + '</div>'
                 + '</div>'
               + '</div>'
-            + '</div>'
-            + '<div class="spa-question-content-item-next-btn">'
-              + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
-              + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
-            + '</div>'
+              + '<div class="spa-question-content-item-next-btn">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+              + '</div>'
           + '</div>'
+
+          + '<div class="spa-question-content-item">'
+              + '<div class="spa-question-content-item-title">'
+                + '<span class="title-serial-num"></span>'
+                + '<img class="title-serial-txt" src="images/question-item-1.png">'
+              + '</div>'
+              + '<div class="spa-question-content-item-options">'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'A. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'B. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好丢东方红飞个分隔的高度个发的 <br>'
+                    + '你就好丢东方红'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                      + 'C .对于他的过去不过不问，只要当下爱<br>'
+                      + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'D .对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+              + '</div>'
+              + '<div class="spa-question-content-item-next-btn">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+              + '</div>'
+          + '</div>'
+
+          + '<div class="spa-question-content-item">'
+              + '<div class="spa-question-content-item-title">'
+                + '<span class="title-serial-num"></span>'
+                + '<img class="title-serial-txt" src="images/question-item-1.png">'
+              + '</div>'
+              + '<div class="spa-question-content-item-options">'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'A. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'B. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好丢东方红飞个分隔的高度个发的 <br>'
+                    + '你就好丢东方红'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                      + 'C .对于他的过去不过不问，只要当下爱<br>'
+                      + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'D .对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+              + '</div>'
+              + '<div class="spa-question-content-item-next-btn">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+              + '</div>'
+          + '</div>'
+
+          + '<div class="spa-question-content-item">'
+              + '<div class="spa-question-content-item-title">'
+                + '<span class="title-serial-num"></span>'
+                + '<img class="title-serial-txt" src="images/question-item-1.png">'
+              + '</div>'
+              + '<div class="spa-question-content-item-options">'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'A. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'B. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好丢东方红飞个分隔的高度个发的 <br>'
+                    + '你就好丢东方红'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                      + 'C .对于他的过去不过不问，只要当下爱<br>'
+                      + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'D .对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+              + '</div>'
+              + '<div class="spa-question-content-item-next-btn">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+              + '</div>'
+          + '</div>'
+
+          + '<div class="spa-question-content-item">'
+              + '<div class="spa-question-content-item-title">'
+                + '<span class="title-serial-num"></span>'
+                + '<img class="title-serial-txt" src="images/question-item-1.png">'
+              + '</div>'
+              + '<div class="spa-question-content-item-options">'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'A. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'B. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好丢东方红飞个分隔的高度个发的 <br>'
+                    + '你就好丢东方红'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                      + 'C .对于他的过去不过不问，只要当下爱<br>'
+                      + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'D .对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+              + '</div>'
+              + '<div class="spa-question-content-item-next-btn">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+              + '</div>'
+          + '</div>'
+
+          + '<div class="spa-question-content-item">'
+              + '<div class="spa-question-content-item-title">'
+                + '<span class="title-serial-num"></span>'
+                + '<img class="title-serial-txt" src="images/question-item-1.png">'
+              + '</div>'
+              + '<div class="spa-question-content-item-options">'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'A. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'B. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好丢东方红飞个分隔的高度个发的 <br>'
+                    + '你就好丢东方红'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                      + 'C .对于他的过去不过不问，只要当下爱<br>'
+                      + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'D .对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+              + '</div>'
+              + '<div class="spa-question-content-item-next-btn">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+              + '</div>'
+          + '</div>'
+
+          + '<div class="spa-question-content-item">'
+              + '<div class="spa-question-content-item-title">'
+                + '<span class="title-serial-num"></span>'
+                + '<img class="title-serial-txt" src="images/question-item-1.png">'
+              + '</div>'
+              + '<div class="spa-question-content-item-options">'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'A. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'B. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好丢东方红飞个分隔的高度个发的 <br>'
+                    + '你就好丢东方红'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                      + 'C .对于他的过去不过不问，只要当下爱<br>'
+                      + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'D .对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+              + '</div>'
+              + '<div class="spa-question-content-item-next-btn">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+              + '</div>'
+          + '</div>'
+
+          + '<div class="spa-question-content-item">'
+              + '<div class="spa-question-content-item-title">'
+                + '<span class="title-serial-num"></span>'
+                + '<img class="title-serial-txt" src="images/question-item-1.png">'
+              + '</div>'
+              + '<div class="spa-question-content-item-options">'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'A. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'B. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好丢东方红飞个分隔的高度个发的 <br>'
+                    + '你就好丢东方红'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                      + 'C .对于他的过去不过不问，只要当下爱<br>'
+                      + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'D .对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+              + '</div>'
+              + '<div class="spa-question-content-item-next-btn">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+              + '</div>'
+          + '</div>'
+
+          + '<div class="spa-question-content-item">'
+              + '<div class="spa-question-content-item-title">'
+                + '<span class="title-serial-num"></span>'
+                + '<img class="title-serial-txt" src="images/question-item-1.png">'
+              + '</div>'
+              + '<div class="spa-question-content-item-options">'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'A. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'B. 对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好丢东方红飞个分隔的高度个发的 <br>'
+                    + '你就好丢东方红'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                      + 'C .对于他的过去不过不问，只要当下爱<br>'
+                      + '你就好'
+                  + '</div>'
+                + '</div>'
+                + '<div class="option-item">'
+                  + '<span class="option-item-icon"></span>'
+                  + '<div class="option-item-txt">'
+                    + 'D .对于他的过去不过不问，只要当下爱<br>'
+                    + '你就好'
+                  + '</div>'
+                + '</div>'
+              + '</div>'
+              + '<div class="spa-question-content-item-next-btn">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+              + '</div>'
+          + '</div>'
+
         + '</div>',
       spa_score : String() + '分数页',
       spa_modal_rule : String()
@@ -237,6 +615,12 @@ spa.shell = (function (){
   //   // 在当前显示的问题前面加上序号
   //   // 可以使用 stateMap.score_arr_total 数组中元素的索引值作为序号使用
   // };
+
+  // changeQuestion()
+  //
+  // changeQuestion = function () {
+  //
+  // };
   //------------------------------ DOM 操作 ------------------------------------
 
   //------------------------ jQuery 事假处理程序 --------------------------------
@@ -295,10 +679,15 @@ spa.shell = (function (){
 
       // 隐藏 ‘rule’ 模态框并跳转到问答页面
       jqueryMap.$container.find('.modal-close-btn').click(function (){
+        var
+          index, question_item, current_item,
+          question_btn;
+
         jqueryMap.$container.find('.spa-welcome').css('display', 'none');
         jqueryMap.$container.find('.spa-question')
           .html(configMap.spa_question)
           .css('display', 'block');
+
         jqueryMap.$container.find('.modal-content').animate(
           { 'top' : '-20rem' },
           300,
@@ -306,11 +695,34 @@ spa.shell = (function (){
             jqueryMap.$container.find('.spa-modal').css({ 'display' : 'none' });
           }
         );
-      });
 
+        question_item = jqueryMap.$container.find('.spa-question-content-item');
+        current_item  = $(question_item)[stateMap.random_question_arr[0]];
+        // index         = $(current_item).index();
+        $(current_item).addClass('active');
+
+        question_btn = $('.spa-question-next-btn');
+        question_btn.click(function () {
+          $($(question_item)[stateMap.random_question_arr[0]]).remove();
+          random_question_arr = stateMap.random_question_arr.shift();
+          $($(question_item)[stateMap.random_question_arr[0]]).addClass('active');
+
+          // 当做完题目时，渲染分数页面
+          if ($($(question_item)[stateMap.random_question_arr[0]]).length === 0) {
+            jqueryMap.$container.find('.spa-question').css('display', 'none');
+            jqueryMap.$container
+              .find('.spa-score')
+              .html('得分页：<br>得分 ' + stateMap.random_score + ' 分');
+          }
+
+        });
+      });
     });
 
   };
+
+
+
   //------------------------ jQuery 事假处理程序 --------------------------------
 
   //----------------------------- 公开方法 -------------------------------------
@@ -318,15 +730,15 @@ spa.shell = (function (){
     stateMap.$container = $container;
     $container.html(configMap.main_html);
     // !!! 调试完再解开
-    // $container.find('.spa-welcome').html(configMap.spa_welcome);
+    $container.find('.spa-welcome').html(configMap.spa_welcome);
     setJqueryMap();
     changeFontSize();
     randomQuestion();
     randomScore();
     onClick();
-    jqueryMap.$container.find('.spa-question')
-      .html(configMap.spa_question)
-      .css('display', 'block');
+    // jqueryMap.$container.find('.spa-question')
+    //   .html(configMap.spa_question)
+    //   .css('display', 'block');
 
     console.log('题目随机：' + stateMap.random_question_arr);
     console.log('分数随机：' + stateMap.random_score);
