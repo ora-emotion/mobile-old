@@ -15,19 +15,20 @@ $(function (){
   var
     para,
     score,
-    random_num, welcome_btn, question_btn,
     arr      = [],
     frontArr = [],
     midArr   = [],
     lastArr  = [],
     totalArr = [],
     stateMap = {},
-    changeRadom, showScore, concatArr, changeFontSize
+    random_num,  welcome_btn, question_btn, question_num,
+    changeRadom, showScore,   concatArr,    changeFontSize
     ;
 
   welcome_btn  = $('.start');
   question_btn = $('.questions .btn');
   item = $('.questions .group .ti');
+  question_num = 1;
 
   /** 字体大小自适应 */
   changeFontSize = (function() {
