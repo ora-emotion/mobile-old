@@ -457,7 +457,8 @@ spa.shell = (function (){
           + '</div>'
 
         + '</div>',
-      spa_score : String() + '分数页',
+      spa_score : String()
+        ,
       spa_modal_rule : String()
         + '<div class="spa-modal-welcome-rule">'
           + '<div class="modal-opacity"></div>'
@@ -713,6 +714,8 @@ spa.shell = (function (){
             jqueryMap.$container
               .find('.spa-score')
               .html('得分页：<br>得分 ' + stateMap.random_score + ' 分');
+
+
           }
 
         });
