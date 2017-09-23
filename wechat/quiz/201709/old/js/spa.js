@@ -14,7 +14,6 @@
 var spa = (function () {
   var initModule = function ($container) {
     spa.shell.initModule($container);
-    spa.data.initModule();
   };
 
   return { initModule: initModule };
