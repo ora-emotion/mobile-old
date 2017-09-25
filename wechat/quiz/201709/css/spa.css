@@ -32,8 +32,6 @@ body {
   left: 0;
 }
 
-.spa-score { background: green; }
-
 /* spa-welcome stylesheets */
 .spa-welcome {
   width: 100%;
@@ -300,4 +298,10 @@ body {
 }
 .spa-question-content-item-next-btn .spa-question-submit-btn {
   display: none;
+}
+
+.spa-score {
+  display: none;
+  background: url("../images/score.png") no-repeat center center;
+  background-size: 6.99rem 5.96rem;
 }

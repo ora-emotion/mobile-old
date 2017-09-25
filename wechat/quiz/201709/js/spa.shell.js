@@ -506,9 +506,10 @@ spa.shell = (function (){
       is_option_checked   : null
     },
     jqueryMap = {},
-    root_ele,     device_width,    random_question,
-    setJqueryMap, changeFontSize,  randomQuestion,
-    randomScore,  createSerialNum, onClick,         initModule;
+    root_ele,        device_width,    random_question,
+    setJqueryMap,    changeFontSize,  randomQuestion,
+    randomScore,     createSerialNum, onClick,
+    renderScorePage, initModule;
   //-------------------------- 模块内可用的变量 ---------------------------------
 
   //----------------------------- 不操作 DOM -----------------------------------
@@ -614,6 +615,21 @@ spa.shell = (function (){
   //------------------------------ DOM 操作 ------------------------------------
 
   //------------------------ jQuery 事假处理程序 --------------------------------
+  // renderScorePage()
+  // 渲染分数页面
+  //
+  renderScorePage = function () {
+    var
+      $question_item = jqueryMap.$question_item;
+      $last_question = $($question_item)[stateMap.random_question_arr[0]],
+      $submit_btn    = $($last_question).find('.spa-question-submit-btn');
+
+    $submit_btn.click(function () {
+      spa.score.toggleScoreModal();
+    });
+
+  };
+
   // onClick()
   //
   onClick = function () {
@@ -650,7 +666,6 @@ spa.shell = (function (){
 
     });
 
-
     // 弹出 rule 模态框
     jqueryMap.$test_start.click(function () {
       jqueryMap.$container
@@ -671,7 +686,7 @@ spa.shell = (function (){
       jqueryMap.$container.find('.modal-close-btn').click(function (){
         var
           question_item,   current_item, question_btn,
-          question_option, question_option_checked,    question_submit_btn;
+          question_option;
 
         jqueryMap.$container.find('.spa-welcome').css('display', 'none');
         jqueryMap.$container.find('.spa-question').css('display', 'block');
@@ -685,14 +700,13 @@ spa.shell = (function (){
         );
 
         question_item = jqueryMap.$container.find('.spa-question-content-item');
-        question_btn = $('.spa-question-next-btn');
+        question_btn  = $('.spa-question-next-btn');
         current_item  = $(question_item)[stateMap.random_question_arr[0]];
         $(current_item).addClass('active');
         createSerialNum();
 
         // 激活选项
         question_option = jqueryMap.$question_option;
-        console.log(question_option);
         question_option.click(function () {
           // 激活选项前面的图标
           question_option.find('.option-item-icon').css(
@@ -709,9 +723,9 @@ spa.shell = (function (){
           $($(question_item)[stateMap.random_question_arr[0]])
             .find('.spa-question-submit-btn')
             .attr('src', 'images/question-submit-btn-active.png');
+          renderScorePage();
 
           stateMap.is_option_checked = true;
-          console.log(stateMap.is_option_checked);
           //
           // 下一题
           // console.log(jqueryMap.$container.f
@@ -722,8 +736,6 @@ spa.shell = (function (){
                 if (stateMap.random_question_arr.length > 1) {
                   $($(question_item)[stateMap.random_question_arr[0]]).hide();
                   stateMap.random_question_arr.shift();
-
-                  console.log(stateMap.random_question_arr.length);
 
                   $($(question_item)[stateMap.random_question_arr[0]])
                     .addClass('active');
@@ -743,15 +755,6 @@ spa.shell = (function (){
 
         });
 
-
-
-        // if (stateMap.random_question_arr.length === 2) {
-        //   question_btn.hide();
-        // }
-
-
-
-        // question_submit_btn.click(function () {});
       });
     });
 

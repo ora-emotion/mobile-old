@@ -31,12 +31,17 @@ spa.score = (function (){
 
   // 当题目做完时，渲染每个得分情况
   toggleScoreModal = function () {
-    alert('渲染每种得分情况');
+    jqueryMap.$score.css({
+      'display'  : 'block',
+      'position' : 'absolute'
+    });
   };
 
+  //------------------------------ 公开方法 ------------------------------------
   initModule = function ($container) {
     stateMap.$container = $container;
     $container.html(configMap.main_html);
+    setJqueryMap();
 
   };
 
