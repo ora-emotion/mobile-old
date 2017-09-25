@@ -667,7 +667,7 @@ spa.shell = (function (){
 
       // 隐藏 ‘rule’ 模态框并跳转到问答页面
       jqueryMap.$container.find('.modal-close-btn').click(function (){
-        var question_item, current_item, question_btn, active_option;
+        var question_item, current_item, question_btn, question_option;
 
         jqueryMap.$container.find('.spa-welcome').css('display', 'none');
         jqueryMap.$container.find('.spa-question').css('display', 'block');
