@@ -291,10 +291,13 @@ body {
   bottom: 0;
   right: 0;
 }
-.spa-question-content-item-next-btn .spa-question-next-btn {
+.spa-question-content-item-next-btn .spa-question-next-btn,
+.spa-question-content-item-next-btn .spa-question-submit-btn {
   width: 2.2rem;
   height: .86rem;
   bottom: 2.18rem;
   right: 1.03rem;
 }
-.spa-question-content-item-next-btn .spa-question-submit-btn { display: none; }
+.spa-question-content-item-next-btn .spa-question-submit-btn {
+  display: none;
+}
