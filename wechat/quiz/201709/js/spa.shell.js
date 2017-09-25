@@ -620,7 +620,7 @@ spa.shell = (function (){
   //
   renderScorePage = function () {
     var
-      $question_item = jqueryMap.$question_item;
+      $question_item = jqueryMap.$question_item,
       $last_question = $($question_item)[stateMap.random_question_arr[0]],
       $submit_btn    = $($last_question).find('.spa-question-submit-btn');
 
