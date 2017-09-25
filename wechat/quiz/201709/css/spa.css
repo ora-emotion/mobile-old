@@ -240,6 +240,9 @@ body {
 }
 .spa-question-content-item-title .title-serial-num {
   display: inline-block;
+  text-align: center;
+  font-size: .39rem;
+  color: #fff;
   width: .55rem;
   height: .55rem;
   border-radius: 50%;

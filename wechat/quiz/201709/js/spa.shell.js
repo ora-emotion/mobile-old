@@ -591,7 +591,8 @@ spa.shell = (function (){
     jqueryMap = {
       $container : $container,
       $test_start : $container.find('.spa-welcome-start-btn'),
-      $test_rule  : $container.find('.spa-welcome-rule-btn')
+      $test_rule  : $container.find('.spa-welcome-rule-btn'),
+      $question_item : $container.find('.spa-question-content-item')
       // $question_serial_num : $container.find('.spa-question-serial-num')
     };
   };
@@ -612,16 +613,20 @@ spa.shell = (function (){
   // 设置   ：无
   // 返回值 ：无
   //
-  // createSerialNum = function () {
-  //   // 在当前显示的问题前面加上序号
-  //   // 可以使用 stateMap.score_arr_total 数组中元素的索引值作为序号使用
-  // };
+  createSerialNum = function () {
+    // 在当前显示的问题前面加上序号
+    var
+      i,
+      question_item       = jqueryMap.$question_item,
+      random_question_arr = stateMap.random_question_arr,
+      question_serial_num = stateMap.random_question_arr;
 
-  // changeQuestion()
-  //
-  // changeQuestion = function () {
-  //
-  // };
+    for (i = 0; i < question_item.length; i++) {
+      $( $(question_item[random_question_arr[i]]).find('.title-serial-num') )
+        .html(i+1);
+    }
+  };
+
   //------------------------------ DOM 操作 ------------------------------------
 
   //------------------------ jQuery 事假处理程序 --------------------------------
@@ -685,9 +690,7 @@ spa.shell = (function (){
           question_btn;
 
         jqueryMap.$container.find('.spa-welcome').css('display', 'none');
-        jqueryMap.$container.find('.spa-question')
-          .html(configMap.spa_question)
-          .css('display', 'block');
+        jqueryMap.$container.find('.spa-question').css('display', 'block');
 
         jqueryMap.$container.find('.modal-content').animate(
           { 'top' : '-20rem' },
@@ -699,8 +702,8 @@ spa.shell = (function (){
 
         question_item = jqueryMap.$container.find('.spa-question-content-item');
         current_item  = $(question_item)[stateMap.random_question_arr[0]];
-        // index         = $(current_item).index();
         $(current_item).addClass('active');
+        createSerialNum();
 
         question_btn = $('.spa-question-next-btn');
         question_btn.click(function () {
@@ -714,8 +717,6 @@ spa.shell = (function (){
             jqueryMap.$container
               .find('.spa-score')
               .html('得分页：<br>得分 ' + stateMap.random_score + ' 分');
-
-
           }
 
         });
@@ -734,6 +735,7 @@ spa.shell = (function (){
     $container.html(configMap.main_html);
     // !!! 调试完再解开
     $container.find('.spa-welcome').html(configMap.spa_welcome);
+    $container.find('.spa-question').html(configMap.spa_question);
     setJqueryMap();
     changeFontSize();
     randomQuestion();
