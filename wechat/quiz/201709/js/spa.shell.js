@@ -571,10 +571,11 @@ spa.shell = (function (){
     var $container = stateMap.$container;
 
     jqueryMap = {
-      $container : $container,
-      $test_start : $container.find('.spa-welcome-start-btn'),
-      $test_rule  : $container.find('.spa-welcome-rule-btn'),
-      $question_item : $container.find('.spa-question-content-item')
+      $container       : $container,
+      $test_start      : $container.find('.spa-welcome-start-btn'),
+      $test_rule       : $container.find('.spa-welcome-rule-btn'),
+      $question_item   : $container.find('.spa-question-content-item'),
+      $question_option : $container.find('.option-item')
       // $question_serial_num : $container.find('.spa-question-serial-num')
     };
   };
@@ -666,7 +667,7 @@ spa.shell = (function (){
 
       // 隐藏 ‘rule’ 模态框并跳转到问答页面
       jqueryMap.$container.find('.modal-close-btn').click(function (){
-        var question_item, current_item, question_btn;
+        var question_item, current_item, question_btn, active_option;
 
         jqueryMap.$container.find('.spa-welcome').css('display', 'none');
         jqueryMap.$container.find('.spa-question').css('display', 'block');
@@ -684,6 +685,19 @@ spa.shell = (function (){
         $(current_item).addClass('active');
         createSerialNum();
 
+        // 激活选项
+        question_option = jqueryMap.$question_option;
+        console.log(question_option);
+        question_option.click(function () {
+          question_option.find('.option-item-icon').css(
+            'background-image', 'url("images/question-option-icon-normal.png")'
+          );
+          $(this).find('.option-item-icon').css(
+            'background-image', 'url("images/question-option-icon-active.png")'
+          );
+        });
+
+        // 下一题
         question_btn = $('.spa-question-next-btn');
         question_btn.click(function () {
           $($(question_item)[stateMap.random_question_arr[0]]).remove();
