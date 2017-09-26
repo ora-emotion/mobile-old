@@ -1,13 +1,6 @@
 @import "swiper/swiper.css";
 
 
-/** Start back to home */
-
-.home {
-	display: none;
-}
-
-
 /** End back to home */
 
 
@@ -145,39 +138,39 @@
 }
 
 .slide .img1 {
-	width: 40%;
-	height: 40%;
+	width: 50%;
+	height: 45%;
 	top: 30%;
 	left: -50%;
 	z-index: 1;
 }
 
 .slide .img2 {
-	width: 60%;
-	height: 60%;
+	width: 70%;
+	height: 65%;
 	top: 20%;
-	left: -20%;
+	left: -10%;
 	z-index: 2;
 }
 
 .slide .img3 {
-	width: 80%;
-	height: 80%;
+	width: 90%;
+	height: 85%;
 	top: 10%;
-	left: 10%;
+	left: 5%;
 	z-index: 3;
 }
 .slide .img4 {
-	width: 60%;
-	height: 60%;
+	width: 70%;
+	height: 65%;
 	top: 20%;
-	left: 60%;
+	left: 80%;
 	z-index: 2;
 }
 
 .slide .img5 {
-	width: 40%;
-	height: 40%;
+	width: 50%;
+	height: 45%;
 	top: 30%;
 	left: 110%;
 	z-index: 1;

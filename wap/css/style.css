@@ -1,5 +1,4 @@
 @import "../components/module-title/module-title.css";
-@import "../components/home/home.css";
 
 /** Start stylesheet reset */
 * {
@@ -9,15 +8,30 @@
 html {
     width: 100%;
     height: 100%;
+    font-family: "Microsoft YaHei";
 }
 ol, ul, dl {
     list-style: none;
 }
+a, img {
+    border: 0;
+}
 a {
     text-decoration: none;
 }
+a:link{
+	text-underline: none;
+}
+a:visited{
+	text-underline: none;
+}
+a:hover{
+	text-underline: none;
+	color: #FF3232;
+}
 a:active {
     text-underline: none;
+    color: #FF3232;
 }
 
 p {
@@ -36,6 +50,7 @@ header {
     width: 100%;
     height: .77rem;
     background: #fff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .3);
 
     display: flex;
     justify-content: space-between;
@@ -44,7 +59,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 4;
+    z-index: 15;
 }
 
 header .logo {
@@ -162,3 +177,123 @@ footer .column:first-child img {
     height: 1.25rem;
 }
 /** End footer area */
+
+
+/** Start slider bar */
+#bar {
+    position: fixed;
+    top: .77rem;
+    left: -455px;
+    z-index: 5;
+
+    width: 524px;
+    height: 956px;
+    background: transparent;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#bar .content {
+    width: 453px;
+    height: 100%;
+    background: #2f2f31;
+    position: relative;
+}
+#bar .content .slider-bar-title {
+    color: #fff;
+    font-size: 26px;
+    line-height: 76px;
+    width: 100%;
+    height: 76px;
+    text-align: center;
+    background: #212123;
+}
+#bar .content .list .list-item {
+    width: 445px;
+    height: 100%;
+    border-left: 8px solid transparent;
+}
+#bar .content .list .list-item.active {
+    border-left: 8px solid #fb2d2d;
+    background: #212123;
+    width: 445px;
+}
+#bar .content .list .list-item p {
+    color: #fff;
+    font-size: 26px;
+    line-height: 88px;
+    height: 88px;
+    width: 382px;
+    border-bottom: 1px solid #212123;
+    margin: 0 auto;
+}
+#bar .content .list .list-item p .icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding-left: 48px;
+    padding-right: 44px;
+    vertical-align: middle;
+}
+#bar .content .list .list-item:nth-child(1) p .icon {
+    background: url("../images/slider-bar/btn-back-home.png") no-repeat center center;
+}
+#bar .content .list .list-item:nth-child(2) p .icon {
+    background: url("../images/slider-bar/btn-save-love.png") no-repeat center center;
+}
+#bar .content .list .list-item:nth-child(3) p .icon {
+    background: url("../images/slider-bar/btn-save-marriage.png") no-repeat center center;
+}
+#bar .content .list .list-item:nth-child(4) p .icon {
+    background: url("../images/slider-bar/btn-separate-mistress.png") no-repeat center center;
+}
+#bar .content .list .list-item:nth-child(5) p .icon {
+    background: url("../images/slider-bar/btn-custom-love.png") no-repeat center center;
+}
+#bar .content .list .list-item:nth-child(6) p .icon {
+    background: url("../images/slider-bar/btn-emotion-forum.png") no-repeat center center;
+}
+#bar .content .list .list-item:nth-child(7) p .icon {
+    background: url("../images/slider-bar/btn-team.png") no-repeat center center;
+}
+#bar .content .list .list-item:nth-child(8) p .icon {
+    background: url("../images/slider-bar/btn-service.png") no-repeat center center;
+}
+#bar .content .list .list-item:nth-child(9) p .icon {
+    background: url("../images/slider-bar/btn-about.png") no-repeat center center;
+}
+#bar .content .btn-retracted {
+    width: 100%;
+    height: 80px;
+}
+#bar .content .btn-retracted .icon {
+    width: 18px;
+    height: 32px;
+    position: absolute;
+    bottom: 25px;
+    /*right: 52px;*/
+    right: -25px;
+    opacity: 0;
+
+    background: url("../images/slider-bar/btn-retracted.png") no-repeat center center;
+}
+#bar .btn-wrap {
+    position: relative;
+    right: 0;
+    width: 59px;
+    height: 138px;
+    background: #979798;
+    border-radius: 0 10px 10px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bar .btn-wrap .btn {
+    background: url("../images/slider-bar/btn.png") no-repeat -40px 0;
+    width: 40px;
+    height: 63px;
+    overflow: hidden;
+}
+/** End slider bar */

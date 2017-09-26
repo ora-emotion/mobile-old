@@ -119,10 +119,12 @@
 .module-02 .main .swiper-pagination .swiper-pagination-bullet {
     width: .16rem;
     height: .16rem;
-    background: #e3e4e8;
+    background: #b8b8b8;
+
+    margin: 0 .08rem;
 }
 .module-02 .main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: #cbcccf;
+    background: #b1b1b1;
 }
 /** End module 02 area */
 
@@ -151,7 +153,7 @@
     height: 100%;
 }
 .module-03 .main .item .txt-group {
-    width: 5.15rem;
+    width: 5.3rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -176,10 +178,15 @@
 }
 /** End module 03 area */
 
-
 /** Start module 04 area */
 .module-04 .main .row {
     padding: .24rem 0;
+}
+.module-04 .main .row:first-child {
+    background: #f9f9f9;
+}
+.module-04 .main .row:last-child {
+    background: #ececec;
 }
 .module-04 .main .row p {
     padding-left: .3rem;
@@ -199,21 +206,109 @@
     padding-right: .22rem;
     padding-left: .1rem;
 }
-.module-04 .main .row:last-child {
-    background: #ececec;
-}
 /** End module 04 area */
 
 
+/*
+ * 能够提供的挽回爱情服务 module-06
+ */
+.module-06{
+	width: 100%;
+}
+.module-06 .main{
+	background: url(../images/save-love/service-bgimg.png) center center no-repeat;
+	background-size: contain;
+	height: 5.1rem;
+}
+/*/////////////////*/
+
+/*
+ * 成功案例 module-07
+ */
+.module-07{
+	width: 100%;
+	height: 4.3rem;
+}
+.module-07 .main{
+	padding-left: .2rem;
+}
+.module-07 .main img{
+	width: 100%;
+	height: 100%;
+}
+.module-07 .main .tu1, .module-07 .main .tu2{
+	float:left;
+	width: 2.5rem;
+	height: 1.8rem;
+	padding-right: .2rem;
+}
+.module-07 .main .wen1,.wen2{
+	/*width: 4.45rem;*/
+	height: 2rem;
+	padding-left: .2rem;
+}
+.module-07 .main h3{
+	font-size: .28rem;
+}
+.module-07 .main p{
+	line-height: .35rem;
+}
+.module-07 .main p .link {
+    color: #fd3232;
+}
+.module-07 .main a{
+	color: #2d2d2d;
+	font-size: .26rem;
+}
+.module-07 .main a:hover{
+	color: #FF3232;
+}
+.module-07 .main a:active{
+	color: #FF3232;
+}
+/*////////////////*/
 
 
+/*
+ * 导师团队 module-08
+ */
+.module-08 {
+	width: 100%;
+	/*height: 10rem;*/
+}
+.module-08 img{
+	width: 2.65rem;
+	height: 3.72rem;
+}
+.module-08 .main{
+	width: 5.6rem;
+	height: 7.8rem;
+	margin: 0 auto;
+}
+.module-08 .main .tu1,
+.module-08 .main .tu2 {
+    display: flex;
+}
+.module-08 .main .tu1 img,
+.module-08 .main .tu2 img {
+    padding: .1rem .1rem;
+}
+/*.module-08 .main .tu2{*/
+	/*width: 100%;*/
+/*}*/
+/*//////////////*/
 
 
+/*
+ * 服务步骤 module-09
+ */
 
-
-
-
-
-
-
-
+.module-09-bg{
+	background: url(../images/save-love/servicewen_bg.png) no-repeat center center;
+	-webkit-background-size: cover;
+    background-size: 7.04rem 100%;
+    width: 100%;
+    height: 7.67rem;
+    margin-top: .3rem;
+}
+/*////////////////*/
