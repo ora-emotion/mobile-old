@@ -69,8 +69,8 @@ spa.shell = (function (){
               + '</div>'
             + '</div>'
             + '<div class="spa-question-content-item-next-btn">'
-              + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
-              + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+              + '<img class="spa-question-next-btn" src="images/question-next-btn-normal.png">'
+              + '<img class="spa-question-submit-btn" src="images/question-submit-btn-normal.png">'
             + '</div>'
           + '</div>'
 
@@ -110,8 +110,8 @@ spa.shell = (function (){
                 + '</div>'
               + '</div>'
               + '<div class="spa-question-content-item-next-btn">'
-                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
-                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn-normal.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn-normal.png">'
               + '</div>'
           + '</div>'
 
@@ -150,8 +150,8 @@ spa.shell = (function (){
                 + '</div>'
               + '</div>'
               + '<div class="spa-question-content-item-next-btn">'
-                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
-                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn-normal.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn-normal.png">'
               + '</div>'
           + '</div>'
 
@@ -191,8 +191,8 @@ spa.shell = (function (){
                 + '</div>'
               + '</div>'
               + '<div class="spa-question-content-item-next-btn">'
-                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
-                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn-normal.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn-normal.png">'
               + '</div>'
           + '</div>'
 
@@ -232,8 +232,8 @@ spa.shell = (function (){
                 + '</div>'
               + '</div>'
               + '<div class="spa-question-content-item-next-btn">'
-                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
-                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn-normal.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn-normal.png">'
               + '</div>'
           + '</div>'
 
@@ -273,8 +273,8 @@ spa.shell = (function (){
                 + '</div>'
               + '</div>'
               + '<div class="spa-question-content-item-next-btn">'
-                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
-                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn-normal.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn-normal.png">'
               + '</div>'
           + '</div>'
 
@@ -314,8 +314,8 @@ spa.shell = (function (){
                 + '</div>'
               + '</div>'
               + '<div class="spa-question-content-item-next-btn">'
-                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
-                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn-normal.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn-normal.png">'
               + '</div>'
           + '</div>'
 
@@ -355,8 +355,8 @@ spa.shell = (function (){
                 + '</div>'
               + '</div>'
               + '<div class="spa-question-content-item-next-btn">'
-                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
-                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn-normal.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn-normal.png">'
               + '</div>'
           + '</div>'
 
@@ -395,8 +395,8 @@ spa.shell = (function (){
                 + '</div>'
               + '</div>'
               + '<div class="spa-question-content-item-next-btn">'
-                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
-                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn-normal.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn-normal.png">'
               + '</div>'
           + '</div>'
 
@@ -435,8 +435,8 @@ spa.shell = (function (){
                 + '</div>'
               + '</div>'
               + '<div class="spa-question-content-item-next-btn">'
-                + '<img class="spa-question-next-btn" src="images/question-next-btn.png">'
-                + '<img class="spa-question-submit-btn" src="images/question-submit-btn.png">'
+                + '<img class="spa-question-next-btn" src="images/question-next-btn-normal.png">'
+                + '<img class="spa-question-submit-btn" src="images/question-submit-btn-normal.png">'
               + '</div>'
           + '</div>'
 
@@ -502,12 +502,14 @@ spa.shell = (function (){
     stateMap  = {
       $container          : null,
       random_question_arr : [],
-      random_score        : null
+      random_score        : null,
+      is_option_checked   : null
     },
     jqueryMap = {},
-    root_ele,     device_width,    random_question,
-    setJqueryMap, changeFontSize,  randomQuestion,
-    randomScore,  createSerialNum, onClick,         initModule;
+    root_ele,        device_width,    random_question,
+    setJqueryMap,    changeFontSize,  randomQuestion,
+    randomScore,     createSerialNum, onClick,
+    renderScorePage, initModule;
   //-------------------------- 模块内可用的变量 ---------------------------------
 
   //----------------------------- 不操作 DOM -----------------------------------
@@ -575,7 +577,8 @@ spa.shell = (function (){
       $test_start      : $container.find('.spa-welcome-start-btn'),
       $test_rule       : $container.find('.spa-welcome-rule-btn'),
       $question_item   : $container.find('.spa-question-content-item'),
-      $question_option : $container.find('.option-item')
+      $question_option : $container.find('.option-item'),
+      $spa_score       : $container.find('.spa-score')
       // $question_serial_num : $container.find('.spa-question-serial-num')
     };
   };
@@ -612,6 +615,21 @@ spa.shell = (function (){
   //------------------------------ DOM 操作 ------------------------------------
 
   //------------------------ jQuery 事假处理程序 --------------------------------
+  // renderScorePage()
+  // 渲染分数页面
+  //
+  renderScorePage = function () {
+    var
+      $question_item = jqueryMap.$question_item,
+      $last_question = $($question_item)[stateMap.random_question_arr[0]],
+      $submit_btn    = $($last_question).find('.spa-question-submit-btn');
+
+    $submit_btn.click(function () {
+      spa.score.toggleScoreModal();
+    });
+
+  };
+
   // onClick()
   //
   onClick = function () {
@@ -648,7 +666,6 @@ spa.shell = (function (){
 
     });
 
-
     // 弹出 rule 模态框
     jqueryMap.$test_start.click(function () {
       jqueryMap.$container
@@ -667,7 +684,9 @@ spa.shell = (function (){
 
       // 隐藏 ‘rule’ 模态框并跳转到问答页面
       jqueryMap.$container.find('.modal-close-btn').click(function (){
-        var question_item, current_item, question_btn, active_option;
+        var
+          question_item,   current_item, question_btn,
+          question_option;
 
         jqueryMap.$container.find('.spa-welcome').css('display', 'none');
         jqueryMap.$container.find('.spa-question').css('display', 'block');
@@ -681,38 +700,61 @@ spa.shell = (function (){
         );
 
         question_item = jqueryMap.$container.find('.spa-question-content-item');
+        question_btn  = $('.spa-question-next-btn');
         current_item  = $(question_item)[stateMap.random_question_arr[0]];
         $(current_item).addClass('active');
         createSerialNum();
 
         // 激活选项
         question_option = jqueryMap.$question_option;
-        console.log(question_option);
         question_option.click(function () {
+          // 激活选项前面的图标
           question_option.find('.option-item-icon').css(
             'background-image', 'url("images/question-option-icon-normal.png")'
           );
           $(this).find('.option-item-icon').css(
             'background-image', 'url("images/question-option-icon-active.png")'
           );
-        });
+          // 激活 “下一题” 按钮
+          $($(question_item)[stateMap.random_question_arr[0]])
+            .find('.spa-question-next-btn')
+            .attr('src', 'images/question-next-btn-active.png');
+          // 激活 “提交” 按钮
+          $($(question_item)[stateMap.random_question_arr[0]])
+            .find('.spa-question-submit-btn')
+            .attr('src', 'images/question-submit-btn-active.png');
+          renderScorePage();
 
-        // 下一题
-        question_btn = $('.spa-question-next-btn');
-        question_btn.click(function () {
-          $($(question_item)[stateMap.random_question_arr[0]]).remove();
-          stateMap.random_question_arr.shift();
-          $($(question_item)[stateMap.random_question_arr[0]]).addClass('active');
+          stateMap.is_option_checked = true;
+          //
+          // 下一题
+          // console.log(jqueryMap.$container.f
+          if (stateMap.random_question_arr.length >= 2) {
+            question_btn.click(function () {
+              if (stateMap.is_option_checked) {
+                // 点击 “下一题” 按钮时，隐藏之前的题目
+                if (stateMap.random_question_arr.length > 1) {
+                  $($(question_item)[stateMap.random_question_arr[0]]).hide();
+                  stateMap.random_question_arr.shift();
 
-          // 当做完题目时，渲染分数页面
-          if ($($(question_item)[stateMap.random_question_arr[0]]).length === 0) {
-            jqueryMap.$container.find('.spa-question').css('display', 'none');
-            jqueryMap.$container
-              .find('.spa-score')
-              .html('得分页：<br>得分 ' + stateMap.random_score + ' 分');
+                  $($(question_item)[stateMap.random_question_arr[0]])
+                    .addClass('active');
+                  stateMap.is_option_checked = false;
+                }
+                // 当做完题目时，渲染分数页面
+                if (stateMap.random_question_arr.length === 1) {
+                  $($(question_item)[stateMap.random_question_arr[0]])
+                    .find('.spa-question-next-btn').hide()
+                    .siblings().show();
+                }
+              }
+
+            });
           }
 
+
         });
+
       });
     });
 
@@ -730,16 +772,22 @@ spa.shell = (function (){
     $container.find('.spa-welcome').html(configMap.spa_welcome);
     $container.find('.spa-question').html(configMap.spa_question);
     setJqueryMap();
+
+    spa.score.initModule(jqueryMap.$spa_score);
+
     changeFontSize();
     randomQuestion();
     randomScore();
     onClick();
+
+
     // jqueryMap.$container.find('.spa-question')
     //   .html(configMap.spa_question)
     //   .css('display', 'block');
 
     console.log('题目随机：' + stateMap.random_question_arr);
     console.log('分数随机：' + stateMap.random_score);
+    $('.spa-score').find('.final-score').html(stateMap.random_score);
   };
 
   return { initModule : initModule };
