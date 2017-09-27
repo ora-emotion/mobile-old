@@ -100,7 +100,21 @@
 
 <!-- Start module 04 area: 橘子动态  -->
 <div class="module module-04">
-
+  <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/about/module04-pic01.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/about/module04-pic02.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/about/module04-pic03.png">
+          </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+  </div>
 </div>
 <!-- Start module 04 area: 橘子动态  -->
 
@@ -215,7 +229,7 @@
 
   var
     i,          viewMore,          newsItem,
-    prefaceImg, insertModuleTitle, moduleFourViewMore;
+    prefaceImg, insertModuleTitle, moduleFourBanner;
 
   // 动态更换头图图片
   var changePrefaceImg = $(function (){
@@ -269,100 +283,15 @@
 
     }());
 
-    // 模块四查看更多
-    moduleFourViewMore = (function () {
-  		// 加载模块
-  		function router(module, container) {
-  			container = container || $('#container');
-  			// 请求模块结构
-  			$.ajax({
-  				url: 'views/news/' + module + '.html',
-  				success: function(data) {
-            $(document).scrollTop(0);
-  					container.html(data);
-  				},
-  				error: function(error) {
-  					console.log(' 写入 HTML 失败！');
-  				}
-  			});
-
-  		}
-  		// 动态加载 css 文件
-  		function loadCss(module) {
-  			$.ajax({
-  				url: 'css/' + module + '.css',
-  				success: function(data) {
-  					var cssLink = $('link.dynamic');
-  					cssLink.attr('href', 'css/' + module + '.css');
-  				},
-  				error: function(error) {
-  					console.log('请求外部 css 样式表失败！');
-  				}
-  			});
-  		}
-
-      viewMore = $('.module-04 .main .content .bottom').find('.more p');
-      viewMore.click(function () {
-        $(this).css( 'display', 'none' );
-        $('.module-04 .main .content .bottom').find('.item.hidden')
-          .removeClass('hidden');
-        return true;
+    // 模块四轮播图
+    moduleFourBanner = (function (){
+      var mySwiper = new Swiper('.swiper-container', {
+        initialSlide   : 1,
+        slidesPerView  : 2,
+        centeredSlides : true,
+        pagination     : '.swiper-pagination'
       });
-
-      // newsItem = $('.module-04 .main .content .top').find('.item');
-      // for ( i = 0; i < newsItem.length; i++ ) {
-      //   $( newsItem[i] ).click(function () {
-      //     router( 'news' + ( i+1 ) );
-      //     loadCss( 'news' );
-      //   });
-      // }
-
-      $('.module-04 .main .content .top').find('.item:first-child')
-      	.click(function () {
-      		router( 'news2' );
-      		loadCss('news');
-      	});
-      $('.module-04 .main .content .top').find('.item:last-child')
-      	.click(function () {
-      		router( 'news3' );
-      		loadCss('news');
-      	});
-     	$('.module-04 .main .content .bottom').find('.item:nth-child(1)')
-      	.click(function () {
-      		router( 'news1' );
-      		loadCss('news');
-      	});
-     	$('.module-04 .main .content .bottom').find('.item:nth-child(2)')
-      	.click(function () {
-      		router( 'news4' );
-      		loadCss('news');
-      	});
-      $('.module-04 .main .content .bottom').find('.item:nth-child(3)')
-      	.click(function () {
-      		router( 'news5' );
-      		loadCss('news');
-      	});
-      $('.module-04 .main .content .bottom').find('.item:nth-child(4)')
-      	.click(function () {
-      		router( 'news6' );
-      		loadCss('news');
-      	});
-      $('.module-04 .main .content .bottom').find('.item:nth-child(6)')
-      	.click(function () {
-      		router( 'news7' );
-      		loadCss('news');
-      	});
-      $('.module-04 .main .content .bottom').find('.item:nth-child(7)')
-      	.click(function () {
-      		router( 'news8' );
-      		loadCss('news');
-      	});
-      $('.module-04 .main .content .bottom').find('.item:nth-child(8)')
-      	.click(function () {
-      		router( 'news9' );
-      		loadCss('news');
-      	});
-
     }());
+
   });
 </script>

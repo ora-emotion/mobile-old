@@ -164,6 +164,16 @@ p {
 /* End module 03 area: 橘子情感 */
 
 /* Start module 04 area: 橘子动态 */
+.module-04 .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: .3;
+}
+.module-04 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: .8;
+}
 /* End module 04 area: 橘子动态 */
 
 /* Start module 05 area: 荣获杰出诚信企业称号 */
