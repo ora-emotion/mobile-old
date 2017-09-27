@@ -164,11 +164,19 @@ p {
 /* End module 03 area: 橘子情感 */
 
 /* Start module 04 area: 橘子动态 */
+.module-04 .swiper-slide-title {
+  width: 470px;
+  text-align: center;
+  font-size: .26rem;
+  color: #2d2d2d;
+  height: .36rem;
+  line-height: .36rem;
+  position: relative;
+  top: -.15rem;
+}
 .module-04 .swiper-pagination.swiper-pagination-bullets {
-  bottom: 0;
+  bottom: .4rem;
   height: .6rem;
-  /*left: 0;
-  width: 100%;*/
 }
 .module-04 .swiper-pagination-bullet {
   width: 15px;
