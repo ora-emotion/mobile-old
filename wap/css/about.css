@@ -1,4 +1,4 @@
-
+@import "swiper/swiper.css";
 
 /* Start stylesheet reset */
 p {
@@ -13,6 +13,12 @@ p {
 }
 .text-right {
   text-align: right;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
 }
  /* End stylesheet reset */
 
@@ -158,73 +164,109 @@ p {
 /* End module 03 area: 橘子情感 */
 
 /* Start module 04 area: 橘子动态 */
-.module-04 .main .content .top {
-  display: flex;
-  justify-content: center;
-  border-bottom: 1px solid #707070;
-  padding: 0 .16rem .2rem;
+.module-04 .swiper-pagination.swiper-pagination-bullets {
+  bottom: 0;
+  height: .6rem;
+  /*left: 0;
+  width: 100%;*/
 }
-.module-04 .main .content .top .item {
+.module-04 .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: .3;
+  position: relative;
+  top: -.8rem;
+}
+.module-04 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: .8;
+}
+/* End module 04 area: 橘子动态 */
+
+/* Start module 05 area: 荣获杰出诚信企业称号 */
+.module-05 .main {
+  width: 100%;
+}
+.module-05 .main .top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: .22rem;
+}
+.module-05 .main .top .item-group {
+  display: flex;
+  justify-content: space-between;
+  margin: .11rem 0;
+  padding: 0 .21rem;
+}
+.module-05 .main .top .item-group .item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.module-04 .main .content .top .item img {
-  width: 3.53rem;
-  height: 2.18rem;
+.module-05 .main .top .item-group .item .item-img {
+  width: 3.45rem;
+  height: 2.16rem;
+  color: #333333;
 }
-.module-04 .main .content .top .item img:first-child {
-  padding-right: .075rem;
+.module-05 .main .top .item-group .item .item-title {
+  width: 3.14rem;
+  font-size: .26rem;
+  line-height: .36rem;
+  padding-top: .08rem;
 }
-.module-04 .main .content .top .item img:last-child {
-  padding-left: .075rem;
+.module-05 .main .top .item-group .item .item-link {
+  width: 100%;
+  height: .36rem;
+  line-height: .36rem;
+  padding-top: .05rem;
+  padding-right: .02rem;
+  text-align: right;
+  font-size: .22rem;
+  color: #919191;
+  float: right;
 }
-.module-04 .main .content .top .item p {
-  padding: .18rem 0;
-}
-.module-04 .main .content .bottom {
-  /*padding: 0 .16rem;*/
-  padding-top: .2rem;
-}
-.module-04 .main .content .bottom .item {
-  display: flex;
-  justify-content: flex-start;
-  padding: .1rem .16rem;
-  margin: .18rem 0;
-  background: #f6f6f6;
-  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
-}
-.module-04 .main .content .bottom .item.hidden {
-  display: none;
-}
-.module-04 .main .content .bottom .more>p {
-  padding-left: .16rem;
-  color: #fd3232;
-}
-.module-04 .main .content .bottom .item img {
-  width: 1.9rem;
-  height: 1.18rem;
-}
-.module-04 .main .content .bottom .item .txt-group {
-  padding-left: .12rem;
+.module-05 .main .bottom {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 5rem;
+  background: #f8f8f8;
+  padding-top: .18rem;
+  padding-bottom: .08rem;  /* 添加新闻后，删除该语句 */
 }
-.module-04 .main .content .bottom .item .txt-group a {
-  width: 80%;
+.module-05 .main .bottom .item-group .item {
+  padding: 0 .17rem;
+  display: flex;
+  justify-content: space-between;
+  height: .52rem;
+  line-height: .52rem;
+}
+.module-05 .main .bottom .item-group .item .item-title {
   font-size: .26rem;
-  color: #ed2929;
-  line-height: .36rem;
-  height: .36rem;
-  padding-top: .05rem;
+  color: #333;
 }
-/* End module 04 area: 橘子动态 */
+.module-05 .main .bottom .item-group .item .item-link {
+  font-size: .22rem;
+  color: #919191;
+  padding-right: .04rem;
+}
+.module-05 .main .bottom .more {
+  display: inline-block;
+  width: 100%;
+  height: .6rem;
+  line-height: .6rem;
+  padding-bottom: .06rem;
+  color: #fd3232;
+  text-align: center;
+  font-size: .26rem;
+}
+/* End module 05 area: 荣获杰出诚信企业称号 */
 
-/* Start module 05 area: 服务步骤内容 */
-.module-05-bg{
+/* Start module 06 area: 服务步骤内容 */
+.module-06-bg{
   background: url("../images/save-love/servicewen_bg.png") no-repeat center center;
   -webkit-background-size: cover;
   background-size: 7.04rem 100%;
@@ -232,16 +274,16 @@ p {
   height: 7.67rem;
   margin-top: .3rem;
 }
-/* End module 05 area: 服务步骤内容 */
+/* End module 06 area: 服务步骤内容 */
 
-/* Start module 06 area: 四大保障 */
-.module-06 .main {
+/* Start module 07 area: 四大保障 */
+.module-07 .main {
   width: 100%;
   height: 9.35rem;
-  background: url("../images/about/module06-bg.png") no-repeat center center;
+  background: url("../images/about/module07-bg.png") no-repeat center center;
   background-size: cover;
 }
-.module-06 .main .txt-group {
+.module-07 .main .txt-group {
   width: 3.68rem;
   height: 100%;
   padding-left: .2rem;
@@ -249,23 +291,23 @@ p {
   flex-direction: column;
   justify-content: center;
 }
-.module-06 .main .txt-group .item {
+.module-07 .main .txt-group .item {
   padding: .1rem;
 }
-.module-06 .main .txt-group .item:first-child {
+.module-07 .main .txt-group .item:first-child {
   padding-top: .24rem;
 }
-.module-06 .main .txt-group .item:last-child {
+.module-07 .main .txt-group .item:last-child {
   padding-bottom: .24rem;
 }
-.module-06 .main .txt-group .item .txt-title {
+.module-07 .main .txt-group .item .txt-title {
   font-weight: bold;
 }
 /* End module 06 area: 四大保障 */
 
 /* Start module 07 area: 合作媒体 */
-.module-07 .main .bg {
-  background: url("../images/about/module07-bg.png") no-repeat center center;
+.module-08 .main .bg {
+  background: url("../images/about/module08-bg.png") no-repeat center center;
   width: 6.85rem;
   height: 2.1rem;
   margin: 0 auto;
