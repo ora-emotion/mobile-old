@@ -164,12 +164,20 @@ p {
 /* End module 03 area: 橘子情感 */
 
 /* Start module 04 area: 橘子动态 */
+.module-04 .swiper-pagination.swiper-pagination-bullets {
+  bottom: 0;
+  height: .6rem;
+  /*left: 0;
+  width: 100%;*/
+}
 .module-04 .swiper-pagination-bullet {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background: #fff;
   opacity: .3;
+  position: relative;
+  top: -.8rem;
 }
 .module-04 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   opacity: .8;
@@ -227,6 +235,7 @@ p {
   justify-content: flex-start;
   background: #f8f8f8;
   padding-top: .18rem;
+  padding-bottom: .08rem;  /* 添加新闻后，删除该语句 */
 }
 .module-05 .main .bottom .item-group .item {
   padding: 0 .17rem;

@@ -150,23 +150,20 @@
     <div class="bottom">
       <div class="item-group">
         <div class="item">
-          <span class="item-title">橘子情感，行业导师培植计划</span>
+          <span class="item-title">客户远道而来，送来锦旗向导师团队致谢</span>
           <span class="item-link">点击查看>>></span>
         </div>
         <div class="item">
-          <span class="item-title">“暖爱计划”婚恋知识公益讲座</span>
+          <span class="item-title">正确恋爱观讲座</span>
           <span class="item-link">点击查看>>></span>
         </div>
         <div class="item">
-          <span class="item-title">青岛市市南区区长社会保障局局长亲临</span>
-          <span class="item-link">点击查看>>></span>
-        </div>
-        <div class="item">
-          <span class="item-title">橘子情感，行业导师培植计划</span>
+          <span class="item-title">团队理论研发</span>
           <span class="item-link">点击查看>>></span>
         </div>
       </div>
-      <span class="more">查看更多</span>
+      <!-- 添加新闻之后，显示该按钮 -->
+      <!-- <span class="more">查看更多</span> -->
     </div>
   </div>
 </div>
@@ -285,12 +282,88 @@
 
     // 模块四轮播图
     moduleFourBanner = (function (){
-      var mySwiper = new Swiper('.swiper-container', {
-        initialSlide   : 1,
-        slidesPerView  : 2,
-        centeredSlides : true,
-        pagination     : '.swiper-pagination'
+      var
+        $swiper_slide, $page_title,
+        $news_group,     $news_list,
+        mySwiper = new Swiper('.swiper-container', {
+          initialSlide   : 1,
+          slidesPerView  : 2,
+          centeredSlides : true,
+          pagination     : '.swiper-pagination'
+        });
+
+      $page_title   = $('head title');
+      $swiper_slide = $('.module-04 .swiper-slide');
+      $news_group   = $('.module-05 .top .item-group');
+      $news_list    = $('.module-05 .bottom .item-group');
+
+      $($swiper_slide[0]).click(function (){
+        app.router.loadHtml( 'views/news/news2' );
+        app.router.loadCss('css/news');
+        $page_title.text( '橘子情感 - 新闻' );
       });
+      $($swiper_slide[1]).click(function (){
+        app.router.loadHtml( 'views/news/news9' );
+        app.router.loadCss('css/news');
+        $page_title.text( '橘子情感 - 新闻' );
+      });
+      $($swiper_slide[2]).click(function (){
+        app.router.loadHtml( 'views/news/news12' );
+        app.router.loadCss('css/news');
+        $page_title.text( '橘子情感 - 新闻' );
+      });
+
+      $($($news_group[0])
+        .find('.item:first-child .item-link'))
+        .click(function (){
+          app.router.loadHtml( 'views/news/news1' );
+          app.router.loadCss('css/news');
+          $page_title.text( '橘子情感 - 新闻' );
+        });
+      $($($news_group[0])
+        .find('.item:last-child .item-link'))
+        .click(function (){
+          app.router.loadHtml( 'views/news/news4' );
+          app.router.loadCss('css/news');
+          $page_title.text( '橘子情感 - 新闻' );
+        });
+      $($($news_group[1])
+        .find('.item:first-child .item-link'))
+        .click(function (){
+          app.router.loadHtml( 'views/news/news5' );
+          app.router.loadCss('css/news');
+          $page_title.text( '橘子情感 - 新闻' );
+        });
+      $($($news_group[1])
+        .find('.item:last-child .item-link'))
+        .click(function (){
+          app.router.loadHtml( 'views/news/news6' );
+          app.router.loadCss('css/news');
+          $page_title.text( '橘子情感 - 新闻' );
+        });
+
+      $($($news_list)
+        .find('.item:nth-child(1) .item-link'))
+        .click(function (){
+          app.router.loadHtml( 'views/news/news7' );
+          app.router.loadCss('css/news');
+          $page_title.text( '橘子情感 - 新闻' );
+        });
+      $($($news_list)
+        .find('.item:nth-child(2) .item-link'))
+        .click(function (){
+          app.router.loadHtml( 'views/news/news8' );
+          app.router.loadCss('css/news');
+          $page_title.text( '橘子情感 - 新闻' );
+        });
+      $($($news_list)
+        .find('.item:nth-child(3) .item-link'))
+        .click(function (){
+          app.router.loadHtml( 'views/news/news11' );
+          app.router.loadCss('css/news');
+          $page_title.text( '橘子情感 - 新闻' );
+        });
+
     }());
 
   });
