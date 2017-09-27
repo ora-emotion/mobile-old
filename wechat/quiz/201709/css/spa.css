@@ -54,11 +54,13 @@ body {
   background: url("../images/btn-welcome-start.png") no-repeat center center;
   background-size: 100% 100%;
   top: 8.77rem;
+  left: 22.5%;
 }
 .spa-welcome-rule-btn {
   background: url("../images/btn-welcome-rule.png") no-repeat center center;
   background-size: 100% 100%;
   top: 10.37rem;
+  left: 22.5%;
 }
 
 /* spa-modal */
@@ -137,7 +139,8 @@ body {
   height: 1.3rem;
   border-radius: 50%;
   position: absolute;
-  top: 10rem;
+  top: 9.38rem;
+  left: 40.8%;
   z-index: 2;
   background: transparent;
 }
@@ -233,7 +236,7 @@ body {
   display: flex;
   justify-content: flex-start;
   position: relative;
-  top: -2.85rem;
+  top: -2.2rem;
   left: .2rem;
 }
 .spa-question-content-item-title .title-serial-num {
@@ -243,6 +246,7 @@ body {
   color: #fff;
   width: .55rem;
   height: .55rem;
+  line-height: .55rem;
   border-radius: 50%;
   background: #fd4c95;
   position: absolute;
@@ -260,6 +264,7 @@ body {
   align-items: flex-start;
   position: absolute;
   bottom: 3.4rem;
+  left: 11%;
 }
 .spa-question-content-item-options .option-item {
   padding-left: .23rem;
