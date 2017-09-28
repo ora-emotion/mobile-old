@@ -185,7 +185,7 @@ p {
   background: #fff;
   opacity: .3;
   position: relative;
-  top: -.8rem;
+  top: -.6rem;
 }
 .module-04 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   opacity: .8;
@@ -246,6 +246,10 @@ p {
   padding-bottom: .08rem;  /* 添加新闻后，删除该语句 */
 }
 .module-05 .main .bottom .item-group .item {
+  display: none;
+}
+.module-05 .main .bottom .item-group .item.active {
+  display: block;
   padding: 0 .17rem;
   display: flex;
   justify-content: space-between;
@@ -255,6 +259,10 @@ p {
 .module-05 .main .bottom .item-group .item .item-title {
   font-size: .26rem;
   color: #333;
+  width: 5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .module-05 .main .bottom .item-group .item .item-link {
   font-size: .22rem;
