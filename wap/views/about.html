@@ -152,21 +152,29 @@
     </div>
     <div class="bottom">
       <div class="item-group">
-        <div class="item">
+        <div class="item active">
           <span class="item-title">客户远道而来，送来锦旗向导师团队致谢</span>
           <span class="item-link">点击查看>>></span>
         </div>
-        <div class="item">
+        <div class="item active">
           <span class="item-title">正确恋爱观讲座</span>
           <span class="item-link">点击查看>>></span>
         </div>
-        <div class="item">
+        <div class="item active">
           <span class="item-title">团队理论研发</span>
+          <span class="item-link">点击查看>>></span>
+        </div>
+        <div class="item active">
+          <span class="item-title">橘子情感联合青岛大学商学院举办创业就业经验分享讲座</span>
+          <span class="item-link">点击查看>>></span>
+        </div>
+        <div class="item">
+          <span class="item-title">橘子情感联合山东省创业中心举办中俄新兴行业交流会</span>
           <span class="item-link">点击查看>>></span>
         </div>
       </div>
       <!-- 添加新闻之后，显示该按钮 -->
-      <!-- <span class="more">查看更多</span> -->
+      <span class="more">查看更多</span>
     </div>
   </div>
 </div>
@@ -229,7 +237,7 @@
 
   var
     i,          viewMore,          newsItem,
-    prefaceImg, insertModuleTitle, moduleFourBanner;
+    prefaceImg, insertModuleTitle, moduleFourBanner, moduleFiveNews;
 
   // 动态更换头图图片
   var changePrefaceImg = $(function (){
@@ -317,28 +325,28 @@
       });
 
       $($($news_group[0])
-        .find('.item:first-child .item-link'))
+        .find('.item:first-child'))
         .click(function (){
           app.router.loadHtml( 'views/news/news1' );
           app.router.loadCss('css/news');
           $page_title.text( '橘子情感 - 新闻' );
         });
       $($($news_group[0])
-        .find('.item:last-child .item-link'))
+        .find('.item:last-child'))
         .click(function (){
           app.router.loadHtml( 'views/news/news4' );
           app.router.loadCss('css/news');
           $page_title.text( '橘子情感 - 新闻' );
         });
       $($($news_group[1])
-        .find('.item:first-child .item-link'))
+        .find('.item:first-child'))
         .click(function (){
           app.router.loadHtml( 'views/news/news5' );
           app.router.loadCss('css/news');
           $page_title.text( '橘子情感 - 新闻' );
         });
       $($($news_group[1])
-        .find('.item:last-child .item-link'))
+        .find('.item:last-child'))
         .click(function (){
           app.router.loadHtml( 'views/news/news6' );
           app.router.loadCss('css/news');
@@ -346,27 +354,46 @@
         });
 
       $($($news_list)
-        .find('.item:nth-child(1) .item-link'))
+        .find('.item:nth-child(1)'))
         .click(function (){
           app.router.loadHtml( 'views/news/news7' );
           app.router.loadCss('css/news');
           $page_title.text( '橘子情感 - 新闻' );
         });
       $($($news_list)
-        .find('.item:nth-child(2) .item-link'))
+        .find('.item:nth-child(2)'))
         .click(function (){
           app.router.loadHtml( 'views/news/news8' );
           app.router.loadCss('css/news');
           $page_title.text( '橘子情感 - 新闻' );
         });
       $($($news_list)
-        .find('.item:nth-child(3) .item-link'))
+        .find('.item:nth-child(3)'))
         .click(function (){
           app.router.loadHtml( 'views/news/news11' );
           app.router.loadCss('css/news');
           $page_title.text( '橘子情感 - 新闻' );
         });
+      $($($news_list)
+        .find('.item:nth-child(5)'))
+        .click(function (){
+          app.router.loadHtml( 'views/news/news14' );
+          app.router.loadCss('css/news');
+          $page_title.text( '橘子情感 - 新闻' );
+        });
 
+    }());
+
+    // 假模块五 - 新闻列表
+    moduleFiveNews = (function (){
+      var
+        view_more = $('.module-05 .main .bottom span.more'),
+        news_list = $('.module-05 .main .bottom .item-group');
+        
+      view_more.click(function (){
+        $(this).hide();
+        news_list.find('.item').addClass('active');
+      });
     }());
 
   });
