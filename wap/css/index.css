@@ -273,14 +273,7 @@
 .module-04 .main .control .swiper-pagination-bullet {
     width: .13rem;
     height: .13rem;
-    /*width: .13rem;*/
-    /*height: .13rem;*/
     background: #9f9d9e;
-
-    /*-webkit-border-radius: 50%;*/
-    /*-moz-border-radius: 50%;*/
-    /*border-radius: 50%;*/
-
     margin: 0 .06rem;
 }
 .module-04 .main .control .swiper-pagination-bullet-active {
