@@ -313,7 +313,8 @@
       $news_list    = $('.module-05 .bottom .item-group');
 
       $($swiper_slide[0]).click(function (){
-        app.router.loadHtml( 'views/news/news2' );
+        // app.router.loadHtml( 'views/news/news2' );
+        app.router.loadHtml( 'views/news/news13' );
         app.router.loadCss('css/news');
         $page_title.text( '橘子情感 - 新闻' );
       });
@@ -338,7 +339,8 @@
       $($($news_group[0])
         .find('.item:last-child'))
         .click(function (){
-          app.router.loadHtml( 'views/news/news4' );
+          // app.router.loadHtml( 'views/news/news4' );
+          app.router.loadHtml( 'views/news/news14' );
           app.router.loadCss('css/news');
           $page_title.text( '橘子情感 - 新闻' );
         });

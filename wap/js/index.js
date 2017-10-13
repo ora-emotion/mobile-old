@@ -263,11 +263,13 @@ $(document).ready(function () {
       app.router.loadCss( 'css/news' );
     });
     $(".index-module04-more05").click(function() {
-      app.router.loadHtml( 'views/news/news2' );
+      // app.router.loadHtml( 'views/news/news2' );
+      app.router.loadHtml( 'views/news/news13' );
       app.router.loadCss( 'css/news' );
     });
     $(".index-module04-more06").click(function() {
-      app.router.loadHtml( 'views/news/news4' );
+      // app.router.loadHtml( 'views/news/news4' );
+      app.router.loadHtml( 'views/news/news14' );
       app.router.loadCss( 'css/news' );
     });
   }());
